@@ -2,5 +2,63 @@
 {% load static %}
 
 {% block content %}
-<h1 class="display-4 text-success">It works!</h1>
+<main>
+    <!-- HERO IMAGE -->
+    <div class="container-fluid hero-outer d-flex align-items-end justify-content-center">
+        <a href="" id="scroll-to-about"><i class="fa-solid fa-circle-chevron-down"><span class="sr-only">Scroll
+                    to
+                    about section</span></i></a>
+    </div>
+    <!-- ABOUT SECTION (Who are we?) -->
+    <section class="container-fluid homepage-section" id="about">
+        <div class="row justify-content-center">
+            <div class="col-sm-10 col-lg-8 text-center">
+                <h2 class="heading">about us</h2>
+                <hr class="block-divider">
+                <p>
+                    (about us section)
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- LESSONS WE OFFER SECTION -->
+    <section class="container-fluid homepage-section">
+        <!-- Schedule-overview heading -->
+        <div class="row justify-content-center ">
+            <div class="col-sm-10 col-lg-8 text-center">
+                <h2 class="heading">lessons we offer</h2>
+                <hr class="block-divider">
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <!-- Loop through available lessons and create a card for each -->
+            (lessons section)
+            <!-- <div class="col-12 col-md-6 col-lg-3">
+                <div class="schedule-card">
+                    <h3 class="heading"></h3>
+                    <hr class="block-divider block-divider-short">
+                    <h4 class="fixed-height-heading"></h4>
+                    <h4>5pm</h4>
+                    <a class="btn btn-lg btn-blue" href="">Full Details</a>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <!-- TESTIMONIALS -->
+    <section class="container-fluid homepage-section">
+        <!-- Testimonials heading -->
+        <div class="row justify-content-center ">
+            <div class="col-sm-10 col-lg-8 text-center">
+                <h2 class="heading">testimonials</h2>
+                <hr class="block-divider">
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <!-- Carousel of reviews -->
+            (testimonials section)
+        </div>
+    </section>
+</main>
+
 {% endblock %}
