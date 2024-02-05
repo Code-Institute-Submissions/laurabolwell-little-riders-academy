@@ -36,24 +36,20 @@
 </head>
 
 <body>
-  <header class="container-fluid fixed-top">
+  <header class="container-fluid">
     <div class="row justify-content-between">
-      <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-start">
+      <div class="col-12 col-lg-4 my-auto text-center text-lg-start">
         <a href="{% url 'home' %}" class="nav-link">
           <h2 class="my-0">Little Riders Academy</h2>
         </a>
       </div>
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-        <ul class="list-inline list-unstyled text-center text-lg-end my-0">
-          <li class="list-inline-item dropdown">
-            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              <div class="text-center">
-                <div><i class="fa-solid fa-user fa-lg"></i></div>
-                <p class="my-0">My Account</p>
-              </div>
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+        <ul class="list-inline text-center text-lg-end my-auto">
+          <li class="list-inline-item nav-item dropdown">
+            <div class="dropdown-toggle" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="text-center"><i class="fa-solid fa-user fa-lg"></i></div>My Account
+            </div>
+            <div class="dropdown-menu border-0" aria-labelledby="dropdownMenuLink">
               {% if request.user.is_authenticated %}
               {% if request.user.is_superuser %}
               <a href="" class="dropdown-item">Product Management</a>
@@ -70,11 +66,11 @@
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
               <div class="text-center">
                 <div><i class="fa-solid fa-basket-shopping fa-lg"></i></div>
-                <p class="my-0">
+                <p class="">
                   {% if grand_total %}
                   £{{ grand_total|floatformat:2 }}
                   {% else %}
-                  $0.00
+                  £0.00
                   {% endif %}
                 </p>
               </div>
