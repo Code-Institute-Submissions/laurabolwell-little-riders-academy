@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<main>
+
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h2>{{ lesson.name }}</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                    <div class="image-container my-5">
+                        <img src="{{ lesson.image.url }}" class="card-img-top" alt="{{ lesson.name }}">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                    <h5 class="">{{ lesson.name }}</h5>
+                    <p class="">{{ lesson.description }}</p>
+                    <p class="">{{ lesson.day }}s at {{ lesson.time }}</p>
+                    <p class="">Maximum class size {{ lesson.class_size }}</p>
+                    <p class="">Recommended for ages {{ lesson.min_age }} to {{ lesson.max_age }}</p>
+                    <a href="#" class="btn btn-primary">Add to basket</a>
+                    <a href="{% url 'lessons' %}" class="btn btn-primary">Back</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="lesson-container col-12 col-s-10 offset-s-1 col-xl-12 offset-xl-0">
+                <div class="row"></div>
+                <div class="row justify-content-center">
+                    {% for lesson in lessons %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{ lesson.image.url }}" class="card-img-top" alt="{{ lesson.name }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ lesson.name }}</h5>
+                                <p class="card-text text-truncate">{{ lesson.description }}</p>
+                                <p class="card-text">{{ lesson.day }}s at {{ lesson.time }}</p>
+                                <p class="card-text">Recommended for ages {{ lesson.min_age }} to {{ lesson.max_age }}
+                                </p>
+                                <a href="#" class="btn btn-primary">Full details</a>
+                                <a href="#" class="btn btn-primary">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}

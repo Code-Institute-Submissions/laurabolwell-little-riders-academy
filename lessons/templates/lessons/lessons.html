@@ -24,7 +24,7 @@
                               <p class="card-text text-truncate">{{ lesson.description }}</p>
                               <p class="card-text">{{ lesson.day }}s at {{ lesson.time }}</p>
                               <p class="card-text">Recommended for ages {{ lesson.min_age }} to {{ lesson.max_age }}</p>
-                              <a href="#" class="btn btn-primary">Full details</a>
+                              <a href="{% url 'lesson_details' lesson.id %}" class="btn btn-primary">Full details</a>
                               <a href="#" class="btn btn-primary">Book Now</a>
                             </div>
                           </div>
