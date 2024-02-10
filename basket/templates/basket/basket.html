@@ -15,8 +15,42 @@
             <div class="col">
                 {% if basket_items %}
                 <div class="table-responsive">
-                    {{ basket_items }}
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Lesson</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Quantity</th>
+                                <th scope="col">Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for item in basket_items %}
+                            <tr>
+                                <th scope="row">{{ item.lesson.name }}</th>
+                                <td>{{ item.date }}</td>
+                                <td>£{{ item.lesson.price }}</td>
+                                <td>{{ item.quantity }}</td>
+                                <td>{{ item.lesson.price }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class=""><strong>Basket Total: £{{ total|floatformat:2 }}</strong></h6>
+                        <hr>
+                        <a href="{% url 'lessons' %}" class="btn btn-primary">
+                            <span class="text-uppercase">Keep Shopping <i class="fa-solid fa-chevron-left"></i></span>
+                        </a>
+                        <a href="" class="btn btn-primary">
+                            <span class="text-uppercase">Secure Checkout <i class="fa-solid fa-lock"></i></span>
+                        </a>
+                    </div>
+                </div>
+
                 {% else %}
                 <p>Your basket is empty</p>
                 <a href="{% url 'lessons' %}" class="btn btn-success"><i class="fa-solid fa-chevron-left"></i> Back</a>
