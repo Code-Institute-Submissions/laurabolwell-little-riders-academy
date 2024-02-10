@@ -5,9 +5,9 @@ def basket_contents(request):
     lesson_count = 0
 
     context = {
-        'basket_items',
-        'total',
-        'lesson_count',
+        'basket_items': basket_items,
+        'total': total,
+        'lesson_count': lesson_count,
     }
 
     return context
