@@ -24,37 +24,50 @@
                     <p class="">{{ lesson.day }}s at {{ lesson.time }}</p>
                     <p class="">Maximum class size {{ lesson.class_size }}</p>
                     <p class="">Recommended for ages {{ lesson.min_age }} to {{ lesson.max_age }}</p>
-                    <a href="#" class="btn btn-primary">Add to basket</a>
-                    <a href="{% url 'lessons' %}" class="btn btn-primary">Back</a>
+                    <form class="form" action="{% url 'add_to_basket' lesson.id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="row form-group">
+                            <div class="col-12">
+                                <div class="input-group date mb-3" id="datepicker">
+                                    <label for="date" class="form-label"><strong>Date:</strong></label>
+                                    <input type="text" class="form-control ms-2" name="date"
+                                        id="id_date_{{ lesson.id }}">
+                                    <span class="input-group-append">
+                                        <span class="input-group-text d-block">
+                                            <i class="fa-solid fa-calendar"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="input-group">
+                                    <label for="quantity" class="form-label"><strong>Quantity:</strong></label>
+                                    <input class="form-control qty_input ms-2" type="number" name="quantity" value="1"
+                                        min="1" max="{{ lesson.class_size }}" data-item_id="{{ lesson.id }}" id="id_qty_{{ lesson.id }}">
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <a href="{% url 'lessons' %}" class="btn btn-primary">Back</a>
+                                <input type="submit" class="btn btn-primary text-uppercase mt-5" value="Add to Basket">
+                            </div>
+                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="lesson-container col-12 col-s-10 offset-s-1 col-xl-12 offset-xl-0">
-                <div class="row"></div>
-                <div class="row justify-content-center">
-                    {% for lesson in lessons %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="{{ lesson.image.url }}" class="card-img-top" alt="{{ lesson.name }}">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ lesson.name }}</h5>
-                                <p class="card-text text-truncate">{{ lesson.description }}</p>
-                                <p class="card-text">{{ lesson.day }}s at {{ lesson.time }}</p>
-                                <p class="card-text">Recommended for ages {{ lesson.min_age }} to {{ lesson.max_age }}
-                                </p>
-                                <a href="#" class="btn btn-primary">Full details</a>
-                                <a href="#" class="btn btn-primary">Book Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
     </div>
 
 </main>
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
+    $(function () {
+        $('#datepicker').datepicker();
+    });
+</script>
 {% endblock %}
