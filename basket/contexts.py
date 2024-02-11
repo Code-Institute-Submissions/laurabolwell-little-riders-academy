@@ -9,10 +9,10 @@ def basket_contents(request):
     lesson_count = 0
     basket = request.session.get('basket', {})
 
-    for lesson_id, details in basket.items():
+    for lesson_id, lesson_data in basket.items():
         lesson = get_object_or_404(Lesson, pk=lesson_id)
-        for date in details:
-            quantity = details[date]
+        for date in lesson_data:
+            quantity = lesson_data[date]
             total += quantity * lesson.price
             lesson_count += quantity
             basket_items.append({
