@@ -89,3 +89,24 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
+
+def checkout_success(request, booking_number):
+    """
+    Handle successful checkouts
+    """
+    save_info = request.session.get('save_info')
+    booking = get_object_or_404(Booking, booking_number=booking_number)
+    messages.success(request, f'Booking successful! \
+        Your booking number is {booking_number}. A \
+        confirmation email will be sent to {booking.email}.')
+
+    if 'basket' in request.session:
+        del request.session['basket']
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'booking': booking,
+    }
+
+    return render(request, template, context)
