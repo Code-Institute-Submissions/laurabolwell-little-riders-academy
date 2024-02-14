@@ -28,7 +28,7 @@ class Booking(models.Model):
 
     def _generate_booking_number(self):
         """
-        Generate a random, unique order number using UUID
+        Generate a random, unique booking number using UUID
         """
         return uuid.uuid4().hex.upper()
 
@@ -37,16 +37,16 @@ class Booking(models.Model):
         Update booking total each time a booking item is added
         """
         self.booking_total = self.bookingitems.aggregate(
-            Sum('bookingitem_total'))['bookingitem_total__sum']
+            Sum('bookingitem_total'))['bookingitem_total__sum'] or 0
         self.save()
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the order number
+        Override the original save method to set the booking number
         if it hasn't already been set
         """
-        if not self.order_number:
-            self.order_number = self._generate_order_number()
+        if not self.booking_number:
+            self.booking_number = self._generate_booking_number()
         super().save(*args, **kwargs)
 
     def __str__(self):
