@@ -49,7 +49,11 @@ def checkout(request):
         }
         booking_form = BookingForm(form_data)
         if booking_form.is_valid():
-            booking = booking_form.save()
+            booking = booking_form.save(commit=False)
+            pid = request.POST.get('client_secret').split('_secret')[0]
+            booking.stripe_pid = pid
+            booking.original_basket = json.dumps(basket)
+            booking.save()
             for lesson_id, lesson_data in basket.items():
                 try:
                     lesson = Lesson.objects.get(id=lesson_id)

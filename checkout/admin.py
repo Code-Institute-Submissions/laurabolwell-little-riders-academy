@@ -9,13 +9,16 @@ class BookingItemAdminInline(admin.TabularInline):
 
 class BookingAdmin(admin.ModelAdmin):
     inlines = (BookingItemAdminInline,)
-    readonly_fields = ('booking_number', 'date', 'booking_total')
+    readonly_fields = (
+        'booking_number', 'date', 'booking_total',
+        'original_basket', 'stripe_pid'
+    )
 
     fields = (
         'booking_number', 'full_name', 'email',
         'phone_number', 'street_address1', 'street_address2',
         'town_or_city', 'postcode', 'country',
-        'date', 'booking_total',
+        'date', 'booking_total', 'original_basket', 'stripe_pid'
     )
 
     list_display = (
