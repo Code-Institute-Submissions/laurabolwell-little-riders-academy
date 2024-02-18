@@ -112,4 +112,35 @@ h2 {
     cursor: pointer;
 }
 
+/* FOOTER */
+
+footer {
+    position: sticky;
+    top: 100vh;
+}
+
+footer {
+    background-color: var(--navy);
+    height: 70px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+footer i {
+    padding: 13px 0;
+    /* border-radius: 50%; */
+    font-size: 28px;
+    text-align: center;
+    color: var(--yellow);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+footer a i:hover {
+    color: var(--yellow);
+    background-color: var(--sky-blue);
+}
+
 /* MEDIA QUERIES */
