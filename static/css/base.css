@@ -1,0 +1,58 @@
+:root {
+    --navy: #192841;
+    --yellow: #FFFD37;
+    --light-blue: #BCE1F0;
+    --white: #FFF;
+}
+
+
+.navbar {
+    background: var(--navy);
+}
+
+.text-yellow {
+    colour: #FFFD37;
+}
+
+.btn-navy {
+    background: var(--navy);
+}
+
+.navbar-nav .nav-link {
+    color: var(--yellow);
+    font-family: 'Aboreto', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: right;
+    padding-right: 24px;
+}
+
+.navbar-toggler, navbar-toggler i {
+        color: var(--yellow) !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 2px solid var(--yellow);
+}
+
+.basket-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: var(--yellow) !important;
+    /* font-size: 50px; */
+}
+
+.fa-basket-shopping:before {
+    color: var(--yellow);
+}
+
+.basket-link {
+    cursor: pointer;
+}
