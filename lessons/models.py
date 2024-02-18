@@ -40,9 +40,8 @@ class Lesson(models.Model):
         validators=[MinValueValidator(4), MaxValueValidator(15)],
         null=False, blank=False
     )
-    duration = models.DecimalField(
-        max_digits=4, decimal_places=2,
-        default=1, null=False, blank=False
+    duration = models.PositiveIntegerField(
+        default=45, null=False, blank=False
     )
     price = models.DecimalField(
         max_digits=4, decimal_places=2,
