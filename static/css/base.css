@@ -22,13 +22,13 @@ body {
     color: var(--navy);
 }
 .text-yellow {
-    colour: var(--yellow);
+    color: var(--yellow);
 }
 .text-sky-blue {
-    colour: var(--sky-blue);
+    color: var(--sky-blue);
 }
 .text-light-blue {
-    colour: var(--light-blue);
+    color: var(--light-blue);
 }
 .bg-navy {
     background-color: var(--navy);
@@ -45,10 +45,11 @@ body {
 
 /* Headings */
 
-h2 {
+h2, .heading {
     font-family: 'Aboreto', sans-serif;
     text-transform: uppercase;
 }
+
 
 /* Buttons */
 .btn {
@@ -70,6 +71,19 @@ h2 {
     color: var(--yellow);
 }
 
+.btn-light-blue {
+    background-color: var(--light-blue);
+    color: var(--navy);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.btn-navy:hover {
+    background-color: var(--navy);
+    color: var(--light-blue);
+}
 /* Navbar */
 .navbar {
     background: var(--navy);
