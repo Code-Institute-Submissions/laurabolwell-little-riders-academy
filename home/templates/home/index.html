@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
 {% block content %}
 <main>
     <!-- HERO IMAGE -->
     <div class="container-fluid hero-outer d-flex align-items-end justify-content-center">
-        <a href="" id="scroll-to-about"><i class="fa-solid fa-circle-chevron-down"><span class="sr-only">Scroll
-                    to
-                    about section</span></i></a>
+        <div id="hero-logo">
+            <img class="logo" src="/media/logo.png" alt="Little riders academy logo">
+        </div>
     </div>
     <!-- ABOUT SECTION (Who are we?) -->
     <section class="container-fluid homepage-section" id="about">

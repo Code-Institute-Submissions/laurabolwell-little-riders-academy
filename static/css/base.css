@@ -1,17 +1,72 @@
 :root {
     --navy: #192841;
     --yellow: #FFFD37;
-    --light-blue: #BCE1F0;
-    --white: #FFF;
+    --sky-blue: #0ACDFF;
+    --light-blue: #D6F7FF;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
+/* Custom text and background colour classes */
+.text-navy {
+    color: var(--navy);
+}
+.text-yellow {
+    colour: var(--yellow);
+}
+.text-sky-blue {
+    colour: var(--sky-blue);
+}
+.text-light-blue {
+    colour: var(--light-blue);
+}
+.bg-navy {
+    background-color: var(--navy);
+}
+.bg-yellow {
+    background-color: var(--yellow);
+}
+.bg-sky-blue {
+    background-color: var(--sky-blue);
+}
+.bg-light-blue {
+    background-color: var(--light-blue);
+}
+
+/* Headings */
+
+h2 {
+    font-family: 'Aboreto', sans-serif;
+    text-transform: uppercase;
+}
+
+/* HOMEPAGE */
+
+.hero-outer {
+    height: calc(100vh - 124px);
+    background: url("/media/hero-image.jpg") no-repeat right top;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    position: relative;
+}
+
+#hero-logo {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    height: 100px;
+}
+.logo {
+    width: 500px;
+    height: auto;
+    opacity: 90%;
+}
 .navbar {
     background: var(--navy);
-}
-
-.text-yellow {
-    colour: #FFFD37;
 }
 
 .btn-navy {
@@ -56,3 +111,5 @@
 .basket-link {
     cursor: pointer;
 }
+
+/* MEDIA QUERIES */
