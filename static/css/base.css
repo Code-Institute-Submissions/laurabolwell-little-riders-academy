@@ -8,6 +8,9 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+.page-section {
+    padding: 50px 40px;
+}
 
 /* Custom text and background colour classes */
 .text-navy {
@@ -61,35 +64,6 @@ h2 {
     background-color: var(--navy);
     color: var(--yellow);
 }
-
-/* HOMEPAGE */
-
-.hero-outer {
-    height: calc(100vh - 124px);
-    background: url("/media/hero-image.jpg") no-repeat right top;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    position: relative;
-}
-
-#hero-logo {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    height: 100px;
-}
-.logo {
-    width: 500px;
-    height: auto;
-    opacity: 90%;
-}
-.page-section {
-    padding: 50px 40px;
-}
-
-/* Lessons */
 
 /* Navbar */
 .navbar {
