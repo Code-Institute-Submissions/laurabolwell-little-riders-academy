@@ -42,6 +42,26 @@ h2 {
     text-transform: uppercase;
 }
 
+/* Buttons */
+.btn {
+    font-family: 'Aboreto', sans-serif;
+    text-transform: uppercase;
+}
+
+.btn-navy {
+    background-color: var(--navy);
+    color: var(--light-blue);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.btn-navy:hover {
+    background-color: var(--navy);
+    color: var(--yellow);
+}
+
 /* HOMEPAGE */
 
 .hero-outer {
@@ -65,11 +85,14 @@ h2 {
     height: auto;
     opacity: 90%;
 }
-.navbar {
-    background: var(--navy);
+.page-section {
+    padding: 50px 40px;
 }
 
-.btn-navy {
+/* Lessons */
+
+/* Navbar */
+.navbar {
     background: var(--navy);
 }
 
@@ -94,6 +117,7 @@ h2 {
     border: 2px solid var(--yellow);
 }
 
+/* Mobile basket button */
 .basket-button {
     height: 42px;
     width: 42px;
