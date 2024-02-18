@@ -8,6 +8,11 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
+html,
+body {
+    height: 100%;
+}
+
 .page-section {
     padding: 50px 40px;
 }
@@ -112,7 +117,7 @@ h2 {
 
 /* FOOTER */
 
-footer {
+body>footer {
     position: sticky;
     top: 100vh;
 }
