@@ -1,0 +1,66 @@
+[
+{
+    "model": "lessons.lesson",
+    "pk": 1,
+    "fields": {
+        "name": "Balance Bikes",
+        "description": "This session is for young children to have fun scooting around in a safe environment! This is the first step of the learning to ride journey.\r\n\r\nBalance bikes are fantastic for developing children’s balance and basic skills to help them learn to ride alone,  quicker than using traditional stabilisers. Over a few sessions, riders will be able to scoot and glide, while having fun through an obstacle course, under the limbo pole and over ramps.\r\n\r\nChildren will need to be supported by a parent or carer.\r\n\r\nChildren are encouraged to bring their own helmet to this session. We have a limited number of helmets available which are cleaned before and after each session. \r\n\r\nStabilizers are not allowed / used during the session.",
+        "min_age": 2,
+        "max_age": 5,
+        "class_size": 12,
+        "duration": 45,
+        "price": "4.75",
+        "day": "Saturday",
+        "time": "12:00pm",
+        "image": "balance-bikes_5WZhuAP.jpg"
+    }
+},
+{
+    "model": "lessons.lesson",
+    "pk": 2,
+    "fields": {
+        "name": "Learn to Ride",
+        "description": "When children can hold a straight line on a balance bike while lifting their legs off the ground, they are ready to progress to pedals. The coach will teach them the basics to get them riding, starting and stopping all by themselves.\r\n\r\nRiders must be confident on a balance bike to take part in these sessions.\r\n\r\nChildren will need to be supported by a parent or carer.\r\n\r\nChildren are encouraged to bring their own helmet to this session. We have a limited number of helmets available which are cleaned before and after each  session. \r\n\r\nStabilizers are not allowed / used during the session.",
+        "min_age": 4,
+        "max_age": 5,
+        "class_size": 4,
+        "duration": 60,
+        "price": "8.50",
+        "day": "Saturday",
+        "time": "1:00pm",
+        "image": "learn-to-ride_H5osLzB.jpg"
+    }
+},
+{
+    "model": "lessons.lesson",
+    "pk": 3,
+    "fields": {
+        "name": "Pedal Basics",
+        "description": "This session focuses on day to day riding skills and covers riding a narrow track, moving around cones and also how to walk, stand and check your bike. Riders will learn how to look around their surroundings when riding and how to use their brakes correctly without losing control.\r\n\r\nChildren are encouraged to bring their own helmet to this session. We have a limited number of helmets available which are cleaned before and after each session. \r\n\r\nStabilizers are not allowed / used during the session.",
+        "min_age": 4,
+        "max_age": 7,
+        "class_size": 8,
+        "duration": 60,
+        "price": "5.75",
+        "day": "Saturday",
+        "time": "2:00pm",
+        "image": "pedal-basics_Is8OWoQ.jpg"
+    }
+},
+{
+    "model": "lessons.lesson",
+    "pk": 4,
+    "fields": {
+        "name": "Cycle Skills",
+        "description": "This session will further develop children’s bike handling and group riding skills.\r\n\r\nRiders will learn techniques such as cornering, correctly mounting and dismounting a bike, gear selection and how to ride slowly. They will also learn how to lead, follow and ride next to each other. \r\n\r\nChildren are encouraged to bring their own helmet to this session. We have a limited number of helmets available which are cleaned before and after each  session. \r\n\r\nStabilizers are not allowed / used during the session.",
+        "min_age": 6,
+        "max_age": 10,
+        "class_size": 10,
+        "duration": 60,
+        "price": "5.50",
+        "day": "Saturday",
+        "time": "3:00pm",
+        "image": "cycle-skills_2iPX4Ad.jpg"
+    }
+}
+]
