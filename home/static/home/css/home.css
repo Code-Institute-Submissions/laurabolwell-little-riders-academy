@@ -2,7 +2,7 @@
 
 .hero-outer {
     height: calc(100vh - 124px);
-    background: url("/media/hero-image.jpg") no-repeat right top;
+    background: url("/media/hero-image.webp") no-repeat right top;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
