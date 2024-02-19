@@ -28,7 +28,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', False)
 
-ALLOWED_HOSTS = ['8000-laurabolwel-littlerider-fpc0w2i4ki8.ws-eu108.gitpod.io', 'https://little-riders-academy-7a3f050ed053.herokuapp.com/']
+ALLOWED_HOSTS = ['8000-laurabolwel-littlerider-fpc0w2i4ki8.ws-eu108.gitpod.io', 'little-riders-academy-7a3f050ed053.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-laurabolwel-littlerider-fpc0w2i4ki8.ws-eu108.gitpod.io']
 
