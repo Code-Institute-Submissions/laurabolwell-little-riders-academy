@@ -39,13 +39,42 @@ def add_lesson(request):
             messages.success(request, 'Successfully added lesson!')
             return redirect(reverse('lessons'))
         else:
-            messages.error(request, 'Failed to add lesson. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add lesson. Please ensure the form is valid.'
+            )
     else:
         form = LessonForm()
 
     template = 'lessons/add_lesson.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_lesson(request, lesson_id):
+    """ Edit a product in the store """
+    lesson = get_object_or_404(Lesson, pk=lesson_id)
+    if request.method == 'POST':
+        form = LessonForm(request.POST, request.FILES, instance=lesson)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated product!')
+            return redirect(reverse('lesson_details', args=[lesson.id]))
+        else:
+            messages.error(
+                request, 'Failed to update product. Please ensure the form is valid.'
+            )
+    else:
+        form = LessonForm(instance=lesson)
+        messages.info(request, f'You are editing {lesson.name}')
+
+    template = 'lessons/edit_lesson.html'
+    context = {
+        'form': form,
+        'lesson': lesson
     }
 
     return render(request, template, context)

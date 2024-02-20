@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<main>
+    <div class="container page-section">
+        <div class="row">
+            <div class="col text-center">
+                <h2>Site Management</h2>
+                <h5 class="heading">Edit a Lesson</h5>
+                <hr>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <form method="POST" action="{% url 'edit_lesson' lesson.id %}" class="form mt-3" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="text-center">
+                        <a class="btn btn-navy" href="{% url 'lessons' %}">Cancel</a>
+                        <button class="btn btn-navy" type="submit">Update Lesson</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}
