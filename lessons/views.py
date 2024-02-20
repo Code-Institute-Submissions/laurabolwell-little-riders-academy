@@ -35,9 +35,9 @@ def add_lesson(request):
     if request.method == 'POST':
         form = LessonForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            lesson = form.save()
             messages.success(request, 'Successfully added lesson!')
-            return redirect(reverse('lessons'))
+            return redirect(reverse('lesson_details', args=[lesson.id]))
         else:
             messages.error(
                 request,
@@ -55,17 +55,18 @@ def add_lesson(request):
 
 
 def edit_lesson(request, lesson_id):
-    """ Edit a product in the store """
+    """ Edit a lesson's details """
     lesson = get_object_or_404(Lesson, pk=lesson_id)
     if request.method == 'POST':
         form = LessonForm(request.POST, request.FILES, instance=lesson)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully updated product!')
+            messages.success(request, 'Successfully updated lesson!')
             return redirect(reverse('lesson_details', args=[lesson.id]))
         else:
             messages.error(
-                request, 'Failed to update product. Please ensure the form is valid.'
+                request,
+                'Failed to update lesson. Please ensure the form is valid.'
             )
     else:
         form = LessonForm(instance=lesson)
@@ -78,3 +79,11 @@ def edit_lesson(request, lesson_id):
     }
 
     return render(request, template, context)
+
+
+def delete_lesson(request, lesson_id):
+    """ Delete a lesson from the site """
+    lesson = get_object_or_404(Lesson, pk=lesson_id)
+    lesson.delete()
+    messages.success(request, 'Lesson deleted!')
+    return redirect(reverse('lessons'))
