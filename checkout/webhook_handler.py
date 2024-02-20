@@ -28,7 +28,7 @@ class StripeWH_Handler:
             'checkout/confirmation_emails/confirmation_email_body.txt',
             {'booking': booking, 'contact_email': settings.DEFAULT_FROM_EMAIL}
         )
-        
+
         send_mail(
             subject,
             body,

@@ -1,4 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.contrib import messages
+
+from lessons.models import Lesson
 
 
 def view_basket(request):
@@ -8,6 +11,8 @@ def view_basket(request):
 
 
 def add_to_basket(request, lesson_id):
+    """ A view to add a lesson, including quantity and date, to the basket """
+    lesson = Lesson.objects.get(pk=lesson_id)
     date = request.POST.get('date')
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -21,6 +26,7 @@ def add_to_basket(request, lesson_id):
     else:
         basket[lesson_id] = {}
         basket[lesson_id][date] = quantity
+        messages.success(request, f'Added {lesson.name} on {date} to your basket')
 
     request.session['basket'] = basket
     return redirect(redirect_url)
