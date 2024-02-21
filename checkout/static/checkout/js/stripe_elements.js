@@ -1,3 +1,4 @@
+/* jshint esversion: 11, jquery: true */
 /*
     Core logic/payment flow for this comes from here:
     https://stripe.com/docs/payments/accept-a-payment
@@ -48,7 +49,33 @@ card.addEventListener('change', function (event) {
 
 // Handle form submit
 var form = document.getElementById('payment-form');
+let emailField = document.getElementById("id_email");
+let result;
 
+// listen to when a user types in the email input
+emailField.addEventListener("input", function() {
+    // [^@\\s]+@ plus the Django "domain_regex" pattern
+    // https://github.com/django/django/blob/main/django/core/validators.py#L186
+    /*
+        Django's GitHub code for "domain_regex"
+        domain_regex = _lazy_re_compile(
+            # max length for domain name labels is 63 characters per RFC 1034
+            r"((?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+)(?:[A-Z0-9-]{2,63}(?<!-))\Z",
+            re.IGNORECASE,
+        )
+    */
+    let pattern = new RegExp("^[^@\\s]+@((?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\\.)+)(?:[A-Z0-9-]{2,63}(?<!-))$", "ig");
+    let emailVal = emailField.value;
+    // if no match, result === null
+    result = emailVal.match(pattern);
+    if (result !== null) {
+        $('#submit-button').attr('disabled', false);
+    } else {
+        $('#submit-button').attr('disabled', true);
+    }
+});
+
+// only proceed with Stripe payment intent if result !== null
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
@@ -105,5 +132,5 @@ form.addEventListener('submit', function(ev) {
     }).fail(function () {
         // just reload the page, the error will be in django messages
         location.reload();
-    })
+    });
 });

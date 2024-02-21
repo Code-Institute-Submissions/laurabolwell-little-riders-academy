@@ -47,7 +47,7 @@ def checkout(request):
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
         }
-        booking_form = BookingForm(form_data)
+        booking_form = BookingForm(request.POST or None, form_data)
         if booking_form.is_valid():
             booking = booking_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
@@ -77,10 +77,13 @@ def checkout(request):
 
             request.session['save_info'] = 'save_info' in request.POST
             return redirect(reverse(
-                'checkout_success', args=[booking.booking_number]))
+                'checkout_success',
+                args=[booking.booking_number]
+            ))
         else:
             messages.error(request, 'There was an error with your form. \
                 Please double check your information ')
+            return redirect(reverse('checkout'))
 
     else:
         basket = request.session.get('basket', {})
