@@ -28,13 +28,13 @@
                         {% csrf_token %}
                         <div class="row">
                             <div class="col-12 col-sm-6">
-                                <label for="date" class="form-label"><strong>Date:</strong></label>
+                                <label for="id_date_{{ lesson.id }}" class="form-label"><strong>Date:</strong></label>
                                 <div class="input-group mb-3">
-                                    <input type='date' class='form-control' name="date" id="id_date_{{ lesson.id }}">
+                                    <input type='date' class='form-control' name="date" id="id_date_{{ lesson.id }}" required>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <label for="quantity" class="form-label me-2"><strong>Quantity:</strong></label>
+                                <label for="id_qty_{{ lesson.id }}" class="form-label me-2"><strong>Quantity:</strong></label>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text btn btn-light-blue"><i
                                             class="fa-solid fa-minus"></i></span>
@@ -70,9 +70,15 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<!-- <script>
     $(function () {
         $('#datepicker').datepicker();
     });
+</script> -->
+<script>
+    let now = new Date();
+    let minDate = now.toISOString().substring(0,10);
+    let startDate = document.getElementById("id_date_1");
+    startDate.setAttribute("min", minDate);
 </script>
 {% endblock %}
