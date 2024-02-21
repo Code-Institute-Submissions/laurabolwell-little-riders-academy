@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 from .models import Lesson
@@ -8,30 +9,31 @@ from .forms import LessonForm
 
 def all_lessons(request):
     """ A view to show all lessons """
-
     lessons = Lesson.objects.all()
-
     context = {
         'lessons': lessons,
     }
-
     return render(request, 'lessons/lessons.html', context)
 
 
 def lesson_details(request, lesson_id):
     """ A view to show individual lesson details """
-
     lesson = get_object_or_404(Lesson, pk=lesson_id)
-
     context = {
         'lesson': lesson,
     }
-
     return render(request, 'lessons/lesson_details.html', context)
 
 
+@login_required
 def add_lesson(request):
     """ Add a lesson to the site """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'You do not have permission to access this page.'
+        )
+        return redirect(reverse('lessons'))
+
     if request.method == 'POST':
         form = LessonForm(request.POST, request.FILES)
         if form.is_valid():
@@ -54,8 +56,15 @@ def add_lesson(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_lesson(request, lesson_id):
     """ Edit a lesson's details """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'You do not have permission to access this page.'
+        )
+        return redirect(reverse('lessons'))
+
     lesson = get_object_or_404(Lesson, pk=lesson_id)
     if request.method == 'POST':
         form = LessonForm(request.POST, request.FILES, instance=lesson)
@@ -81,8 +90,15 @@ def edit_lesson(request, lesson_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_lesson(request, lesson_id):
     """ Delete a lesson from the site """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'You do not have permission to access this page.'
+        )
+        return redirect(reverse('lessons'))
+
     lesson = get_object_or_404(Lesson, pk=lesson_id)
     lesson.delete()
     messages.success(request, 'Lesson deleted!')
