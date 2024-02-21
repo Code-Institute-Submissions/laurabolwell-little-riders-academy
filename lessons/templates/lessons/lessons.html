@@ -22,10 +22,20 @@
                         <p class="card-text">{{ lesson.day }}s at {{ lesson.time }}</p>
                         <p class="card-text">Recommended for ages {{ lesson.min_age }} to {{ lesson.max_age }}</p>
                         <a href="{% url 'lesson_details' lesson.id %}" class="btn btn-navy">Full details</a>
+                        {% if request.user.is_superuser %}
+                        <div class="text-center mt-3">
+                            <a href="{% url 'edit_lesson' lesson.id %}" class="btn btn-sm btn-light-blue px-3 me-2">Edit</a>
+                            <a href="{% url 'delete_lesson' lesson.id %}" class="btn btn-sm btn-danger ms-2">Delete</a>
+                        </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
             {% endfor %}
+            <div class="col-12 text-center">
+                <a href="{% url 'add_lesson' %}" class="btn btn-navy mt-3">Add a New Lesson</a>
+            </div>
+            
         </div>
     </div>
 
