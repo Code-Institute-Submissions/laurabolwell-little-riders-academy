@@ -8,4 +8,5 @@ class QuestionAdmin(admin.ModelAdmin):
         'question',
     )
 
+
 admin.site.register(Question, QuestionAdmin)

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<main>
+    <div class="container page-section">
+        <div class="row">
+            <div class="col text-center">
+                <h2>Site Management</h2>
+                <h5 class="heading my-3">Add a new frequently asked question</h5>
+                <hr>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <form method="POST" action="{% url 'add_question' %}" class="form mt-3" >
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="text-center">
+                        <a class="btn btn-navy" href="{% url 'faqs' %}">Cancel</a>
+                        <button class="btn btn-navy" type="submit">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %}
