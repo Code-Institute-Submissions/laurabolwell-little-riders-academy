@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
+from django.contrib import messages
+
 from .models import Question
 from .forms import QuestionForm
 
@@ -16,7 +18,20 @@ def view_faqs(request):
 
 def add_question(request):
     """ Add a question to the FAQs """
-    form = QuestionForm()
+    if request.method == "POST":
+        form = QuestionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added question')
+            return redirect(reverse('faqs'))
+        else:
+            messages.error(
+                request,
+                'Cannot add question. Please ensure the form is valid.'
+            )
+    else:
+        form = QuestionForm()
+
     template = 'faqs/add_question.html'
     context = {
         'form': form
