@@ -43,7 +43,21 @@ def add_question(request):
 def edit_question(request, question_id):
     """ Edit a question in the FAQs list """
     question = get_object_or_404(Question, pk=question_id)
-    form = QuestionForm(instance=question)
+
+    if request.method == "POST":
+        form = QuestionForm(request.POST, instance=question)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated question')
+            return redirect(reverse('faqs'))
+        else:
+            messages.error(
+                request,
+                'Cannot add question. Please ensure the form is valid.'
+            )
+
+    else:
+        form = QuestionForm(instance=question)
 
     template = 'faqs/edit_question.html'
     context = {
