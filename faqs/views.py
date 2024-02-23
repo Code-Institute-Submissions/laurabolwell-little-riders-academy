@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 
 from .models import Question
@@ -35,6 +35,20 @@ def add_question(request):
     template = 'faqs/add_question.html'
     context = {
         'form': form
+    }
+
+    return render(request, template, context)
+
+
+def edit_question(request, question_id):
+    """ Edit a question in the FAQs list """
+    question = get_object_or_404(Question, pk=question_id)
+    form = QuestionForm(instance=question)
+
+    template = 'faqs/edit_question.html'
+    context = {
+        'form': form,
+        'question': question
     }
 
     return render(request, template, context)
