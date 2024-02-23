@@ -222,4 +222,10 @@ footer a i:hover {
     border-bottom-color: #343a40 !important;
 }
 
+/* FAQs */
+
+/* Accordian header highlight */
+.accordion-button:not(.collapsed) {
+    background-color: var(--light-blue);
+
 /* MEDIA QUERIES */
