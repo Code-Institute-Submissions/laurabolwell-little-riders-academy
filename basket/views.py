@@ -21,8 +21,10 @@ def add_to_basket(request, lesson_id):
     if lesson_id in list(basket.keys()):
         if date in basket[lesson_id].keys():
             basket[lesson_id][date] += quantity
+            messages.success(request, f'Updated {lesson.name} on {date} quantity to {basket[lesson_id][date]}')
         else:
             basket[lesson_id][date] = quantity
+            messages.success(request, f'Added {lesson.name} on {date} to your basket')
     else:
         basket[lesson_id] = {}
         basket[lesson_id][date] = quantity
