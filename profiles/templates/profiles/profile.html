@@ -7,15 +7,33 @@
 
 {% block content %}
 <main>
-    <div class="container">
+    <section class="container page-section">
         <div class="row">
-            <div class="col">
-                <hr>
+            <div class="col text-center">
                 <h2>My Profile</h2>
                 <hr>
             </div>
         </div>
-    </div>
+    </section>
+    <section>
+        <div class="row justify-content-around">
+            <div class="col-10 col-md-6">
+                <h4 class="heading text-center mb-4">Booking Information</h4>
+                
+            </div>
+            <div class="col-10 col-md-4">
+                <h4 class="heading text-center mb-4">Default Billing Information</h4>
+                <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class="text-center">
+                        <button class="btn btn-navy my-3" type="submit">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
 </main>
 
 
