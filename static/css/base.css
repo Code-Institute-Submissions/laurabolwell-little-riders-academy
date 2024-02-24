@@ -178,6 +178,13 @@ footer a i:hover {
     height: 2px;
 }
 
+/* Limit height of basket contents div on success toast */
+.basket-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 
 /* FAQs */
 
