@@ -18,9 +18,11 @@
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-center">
-                        <a class="btn btn-navy" href="{% url 'lessons' %}">Cancel</a>
-                        <button class="btn btn-navy" type="submit">Update Lesson</button>
+                        <a class="btn btn-navy px-3 me-3" href="{% url 'lessons' %}">Cancel</a>
+                        <a href="#edit-lesson-{{ lesson.id }}-modal" class="btn btn-yellow px-3" data-bs-toggle="modal">Update</a>
                     </div>
+                    <!-- inject the modals partials-template -->
+                    {% include "includes/modals.html" %}
                 </form>
             </div>
         </div>
