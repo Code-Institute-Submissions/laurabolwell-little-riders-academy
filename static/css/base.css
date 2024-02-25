@@ -140,7 +140,9 @@ h2, .heading {
     color: var(--yellow);
 }
 
-.basket-link {
+.basket-link,
+.update-link,
+.remove-lesson {
     cursor: pointer;
 }
 
