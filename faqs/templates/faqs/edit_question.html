@@ -14,13 +14,16 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-8">
-                <form method="POST" action="{% url 'edit_question' question.id %}" class="form mt-3" >
+                <form method="POST" action="{% url 'edit_question' question.id %}" class="form mt-3">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="text-center">
-                        <a class="btn btn-navy" href="{% url 'faqs' %}">Cancel</a>
-                        <button class="btn btn-navy" type="submit">Update</button>
+                        <a class="btn btn-navy mx-2" href="{% url 'faqs' %}">Cancel</a>
+                        <a href="#edit-question-{{ question.id }}-modal" class="btn btn-yellow px-3 mx-2"
+                            data-bs-toggle="modal">Update</a>
                     </div>
+                    <!-- inject the modals partials-template -->
+                    {% include "faqs/includes/faq_modals.html" %}
                 </form>
             </div>
         </div>

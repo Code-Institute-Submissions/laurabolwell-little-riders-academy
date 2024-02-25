@@ -34,8 +34,11 @@
                         <div class="text-center mt-3">
                             <a href="{% url 'edit_question' question.id %}"
                                 class="btn btn-sm btn-light-blue mx-1">Edit</a>
-                            <a href="{% url 'delete_question' question.id %}"
-                                class="btn btn-sm btn-danger mx-1">Delete</a>
+                            <a href="#delete-question-{{ question.id }}-modal" class="btn btn-danger btn-sm mx-1"
+                                data-bs-toggle="modal">Delete</a>
+                            <!-- inject the modals partials-template -->
+                            {% include "faqs/includes/faq_modals.html" %}
+
                         </div>
                         {% endif %}
                     </div>
