@@ -81,8 +81,22 @@ h2, .heading {
     -o-transition: all 0.35s ease-in-out;
 }
 
-.btn-navy:hover {
+.btn-light-blue:hover {
     background-color: var(--navy);
+    color: var(--light-blue);
+}
+
+.btn-yellow {
+    background-color: var(--yellow);
+    color: var(--navy);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.btn-yellow:hover {
+    background-color: var(--yellow);
     color: var(--light-blue);
 }
 /* Navbar */
