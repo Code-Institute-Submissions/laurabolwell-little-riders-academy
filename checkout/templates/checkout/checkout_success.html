@@ -38,7 +38,7 @@
                                 <span class="text-uppercase fw-bolder">{{ item.lesson.name }}</span> on {{ item.date}}
                         </div>
                         <div class="col-12 col-md-6">
-                            <p class="small mb-0">For {{ item.quantity }}{% if item.quantity == 1 %}child{% else %}children{% endif %} @ £{{ item.lesson.price }} each</p>
+                            <p class="small mb-0">For {{ item.quantity }}{% if item.quantity == 1 %} child{% else %} children{% endif %} @ £{{ item.lesson.price }} each</p>
                         </div>
                     </div>
                     {% endfor %}
