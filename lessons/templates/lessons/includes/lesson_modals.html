@@ -1,0 +1,29 @@
+<!-- modal: confirm lesson deletion -->
+<div class="modal fade center-align" id="delete-lesson-{{ lesson.id }}-modal" tabindex="-1"
+    aria-labelledby="delete-lesson-{{ lesson.id }}-modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content text-center">
+            <h5 class="modal-title heading p-3">Are you sure you want to delete this lesson?</h5>
+            <p>This action cannot be undone.</p>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-navy" data-bs-dismiss="modal">No, go back</button>
+                <a href="{% url 'delete_lesson' lesson.id %}" class="btn btn-danger">Yes, delete permanently</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal: confirm lesson update -->
+<div class="modal fade center-align" id="edit-lesson-{{ lesson.id }}-modal" tabindex="-1"
+    aria-labelledby="edit-lesson-{{ lesson.id }}-modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content text-center">
+            <h5 class="modal-title heading p-3">Are you sure you want to make these changes?</h5>
+            <p>This action cannot be undone.</p>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-navy" data-bs-dismiss="modal">No, go back</button>
+                <button class="btn btn-yellow" type="submit">Yes, Update Lesson</button>
+            </div>
+        </div>
+    </div>
+</div>

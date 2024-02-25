@@ -58,7 +58,7 @@
                         <a href="{% url 'edit_lesson' lesson.id %}" class="btn btn-sm btn-yellow px-3 me-2">Edit</a>
                         <a href="#delete-lesson-{{ lesson.id }}-modal" class="btn btn-danger btn-sm px-3" data-bs-toggle="modal">Delete</a>
                         <!-- inject the modals partials-template -->
-                        {% include "includes/modals.html" %}
+                        {% include "lessons/includes/lesson_modals.html" %}
                     </div>
                     {% endif %}
                 </div>
