@@ -29,7 +29,7 @@
                             <div class="col-12 col-sm-6">
                                 <label for="id_date_{{ lesson.id }}" class="form-label"><strong>Date:</strong></label>
                                 <div class="input-group mb-3">
-                                    <input type='date' class='form-control' name="date" id="id_date_{{ lesson.id }}"
+                                    <input type='date' class='form-control datepicker' name="date" id="id_date_{{ lesson.id }}"
                                         required>
                                 </div>
                             </div>
@@ -37,13 +37,15 @@
                                 <label for="id_qty_{{ lesson.id }}"
                                     class="form-label me-2"><strong>Quantity:</strong></label>
                                 <div class="input-group mb-3">
-                                    <span class="input-group-text btn btn-light-blue"><i
-                                            class="fa-solid fa-minus"></i></span>
-                                    <input type="number" class="form-control text-center" aria-label="Quantity"
+                                    <button class="btn btn-light-blue decrement-qty" type="button"
+                                        data-item_id="{{ lesson.id }}" id="decrement-qty_{{ lesson.id }}"><i
+                                            class="fa-solid fa-minus"></i></button>
+                                    <input type="number" class="form-control text-center qty-input" aria-label="Quantity"
                                         name="quantity" value="1" min="1" max="{{ lesson.class_size }}"
                                         data-item_id="{{ lesson.id }}" id="id_qty_{{ lesson.id }}">
-                                    <span class="input-group-text btn btn-light-blue"><i
-                                            class="fa-solid fa-plus"></i></span>
+                                    <button class="btn btn-light-blue increment-qty" type="button"
+                                        data-item_id="{{ lesson.id }}" id="increment-qty_{{ lesson.id }}"><i
+                                            class="fa-solid fa-plus"></i></button>
                                 </div>
                             </div>
                             <div class="col-12 text-center">
@@ -56,7 +58,8 @@
                     {% if request.user.is_superuser %}
                     <div class="text-center mt-3">
                         <a href="{% url 'edit_lesson' lesson.id %}" class="btn btn-sm btn-yellow px-3 me-2">Edit</a>
-                        <a href="#delete-lesson-{{ lesson.id }}-modal" class="btn btn-danger btn-sm px-3" data-bs-toggle="modal">Delete</a>
+                        <a href="#delete-lesson-{{ lesson.id }}-modal" class="btn btn-danger btn-sm px-3"
+                            data-bs-toggle="modal">Delete</a>
                         <!-- inject the modals partials-template -->
                         {% include "lessons/includes/lesson_modals.html" %}
                     </div>
@@ -71,10 +74,17 @@
 
 {% block postloadjs %}
 {{ block.super }}
+{% include 'lessons/includes/quantity_input_script.html' %}
+{{ lesson.class_size | json_script:"id_lesson_class_size"}}
 <script>
-    let now = new Date();
-    let minDate = now.toISOString().substring(0, 10);
-    let startDate = document.getElementById("id_date_1");
-    startDate.setAttribute("min", minDate);
+    // let now = new Date();
+    // let minDate = now.toISOString().substring(0, 10);
+    // let startDate = document.getElementById("id_date_1");
+    // startDate.setAttribute("min", minDate);
+    $(document).ready(function(){
+            $('.datepicker').datepicker({
+                format: "yyyy-mm-dd",
+                minDate: new Date()
+            });
 </script>
 {% endblock %}

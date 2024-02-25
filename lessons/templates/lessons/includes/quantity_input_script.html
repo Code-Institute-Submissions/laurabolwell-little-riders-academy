@@ -1,0 +1,30 @@
+<script type="text/javascript">
+    function handleEnableDisable(lessonId) {
+        var class_size= $('#id_lesson_class_size').text()
+        var currentValue = parseInt($(`#id_qty_${lessonId}`).val());
+        var minusDisabled = currentValue <= 1;
+        var plusDisabled = currentValue >= class_size;
+        $(`#decrement-qty_${lessonId}`).prop('disabled', minusDisabled);
+        $(`#increment-qty_${lessonId}`).prop('disabled', plusDisabled);
+    }
+
+    // Increment quantity
+    $('.increment-qty').click(function(e) {
+        e.preventDefault();
+        var closestInput = $(this).closest('.input-group').find('.qty-input')[0];
+        var currentValue = parseInt($(closestInput).val());
+        $(closestInput).val(currentValue + 1);
+        var lessonId = $(this).data('item_id');
+        handleEnableDisable(lessonId);
+    });
+
+    // Decrement quantity
+    $('.decrement-qty').click(function(e) {
+        e.preventDefault();
+        var closestInput = $(this).closest('.input-group').find('.qty-input')[0];
+        var currentValue = parseInt($(closestInput).val());
+        $(closestInput).val(currentValue - 1);
+        var lessonId = $(this).data('item_id');
+        handleEnableDisable(lessonId);
+    });
+</script>
