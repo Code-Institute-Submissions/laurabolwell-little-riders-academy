@@ -29,8 +29,8 @@
                             <div class="col-12 col-sm-6">
                                 <label for="id_date_{{ lesson.id }}" class="form-label"><strong>Date:</strong></label>
                                 <div class="input-group mb-3">
-                                    <input type='date' class='form-control datepicker' name="date" id="id_date_{{ lesson.id }}"
-                                        required>
+                                    <input type='date' class='form-control datepicker' name="date"
+                                        id="id_date_{{ lesson.id }}" required>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
@@ -40,9 +40,10 @@
                                     <button class="btn btn-light-blue decrement-qty" type="button"
                                         data-item_id="{{ lesson.id }}" id="decrement-qty_{{ lesson.id }}"><i
                                             class="fa-solid fa-minus"></i></button>
-                                    <input type="number" class="form-control text-center qty-input" aria-label="Quantity"
-                                        name="quantity" value="1" min="1" max="{{ lesson.class_size }}"
-                                        data-item_id="{{ lesson.id }}" id="id_qty_{{ lesson.id }}">
+                                    <input type="number" class="form-control text-center qty-input"
+                                        aria-label="Quantity" name="quantity" value="1" min="1"
+                                        max="{{ lesson.class_size }}" data-item_id="{{ lesson.id }}"
+                                        id="id_qty_{{ lesson.id }}">
                                     <button class="btn btn-light-blue increment-qty" type="button"
                                         data-item_id="{{ lesson.id }}" id="increment-qty_{{ lesson.id }}"><i
                                             class="fa-solid fa-plus"></i></button>
@@ -77,14 +78,10 @@
 {% include 'lessons/includes/quantity_input_script.html' %}
 {{ lesson.class_size | json_script:"id_lesson_class_size"}}
 <script>
-    // let now = new Date();
-    // let minDate = now.toISOString().substring(0, 10);
-    // let startDate = document.getElementById("id_date_1");
-    // startDate.setAttribute("min", minDate);
-    $(document).ready(function(){
-            $('.datepicker').datepicker({
-                format: "yyyy-mm-dd",
-                minDate: new Date()
-            });
+    // Disable past dates on datepicker
+    let now = new Date();
+    let minDate = now.toISOString().substring(0, 10);
+    let startDate = document.getElementById("id_date");
+    startDate.setAttribute("min", minDate);
 </script>
 {% endblock %}
