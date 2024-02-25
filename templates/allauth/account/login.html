@@ -3,18 +3,18 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block extra_title %}{% trans "Sign In" %}{% endblock %}
+{% block extra_title %}- {% trans "Sign In" %}{% endblock %}
 
 {% block content %}
 
-<div class="container page-section">
+<section class="container page-section">
   <div class="row">
     <div class="col text-center">
       <h2>{% trans "Sign In" %}</h2>
       <hr>
     </div>
   </div>
-</div>
+</section>
 
 <section>
   <div class="row justify-content-center">
@@ -45,7 +45,7 @@
     </div>
   </div>
   <div class="row justify-content-center">
-    <div class="col-10 col-md-8 col-lg-6">
+    <div class="col-10 col-md-8 col-lg-6 my-4">
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form | crispy }}
@@ -53,7 +53,7 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
         <div class="text-center">
-          <button class="primaryAction btn btn-navy" type="submit">{% trans "Sign In" %}</button>
+          <button class="primaryAction btn btn-navy my-3" type="submit">{% trans "Sign In" %}</button>
         </div>
       </form>
     </div>
