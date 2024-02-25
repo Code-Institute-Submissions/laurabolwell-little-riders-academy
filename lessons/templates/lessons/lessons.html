@@ -23,8 +23,12 @@
                         <a href="{% url 'lesson_details' lesson.id %}" class="btn btn-navy">Full details</a>
                         {% if request.user.is_superuser %}
                         <div class="text-center mt-3">
-                            <a href="{% url 'edit_lesson' lesson.id %}" class="btn btn-sm btn-light-blue px-3 me-2">Edit</a>
-                            <a href="{% url 'delete_lesson' lesson.id %}" class="btn btn-sm btn-danger ms-2">Delete</a>
+                            <a href="{% url 'edit_lesson' lesson.id %}"
+                                class="btn btn-sm btn-light-blue px-3 me-2">Edit</a>
+                            <a href="#delete-lesson-{{ lesson.id }}-modal" class="btn btn-danger btn-sm px-3"
+                                data-bs-toggle="modal">Delete</a>
+                            <!-- inject the modals partials-template -->
+                            {% include "includes/modals.html" %}
                         </div>
                         {% endif %}
                     </div>
@@ -34,7 +38,7 @@
             <div class="col-12 text-center">
                 <a href="{% url 'add_lesson' %}" class="btn btn-navy mt-3">Add a New Lesson</a>
             </div>
-            
+
         </div>
     </section>
 </main>

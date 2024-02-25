@@ -29,11 +29,13 @@
                             <div class="col-12 col-sm-6">
                                 <label for="id_date_{{ lesson.id }}" class="form-label"><strong>Date:</strong></label>
                                 <div class="input-group mb-3">
-                                    <input type='date' class='form-control' name="date" id="id_date_{{ lesson.id }}" required>
+                                    <input type='date' class='form-control' name="date" id="id_date_{{ lesson.id }}"
+                                        required>
                                 </div>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <label for="id_qty_{{ lesson.id }}" class="form-label me-2"><strong>Quantity:</strong></label>
+                                <label for="id_qty_{{ lesson.id }}"
+                                    class="form-label me-2"><strong>Quantity:</strong></label>
                                 <div class="input-group mb-3">
                                     <span class="input-group-text btn btn-light-blue"><i
                                             class="fa-solid fa-minus"></i></span>
@@ -54,7 +56,9 @@
                     {% if request.user.is_superuser %}
                     <div class="text-center mt-3">
                         <a href="{% url 'edit_lesson' lesson.id %}" class="btn btn-sm btn-light-blue px-3 me-2">Edit</a>
-                        <a href="{% url 'delete_lesson' lesson.id %}" class="btn btn-sm btn-danger ms-2">Delete</a>
+                        <a href="#delete-lesson-{{ lesson.id }}-modal" class="btn btn-danger btn-sm px-3" data-bs-toggle="modal">Delete</a>
+                        <!-- inject the modals partials-template -->
+                        {% include "includes/modals.html" %}
                     </div>
                     {% endif %}
                 </div>
@@ -67,14 +71,9 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<!-- <script>
-    $(function () {
-        $('#datepicker').datepicker();
-    });
-</script> -->
 <script>
     let now = new Date();
-    let minDate = now.toISOString().substring(0,10);
+    let minDate = now.toISOString().substring(0, 10);
     let startDate = document.getElementById("id_date_1");
     startDate.setAttribute("min", minDate);
 </script>
