@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load basket_tools %}
 
 {% block extra_css%}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -37,8 +38,11 @@
                         <div class="col-12 col-md-6 ">
                                 <span class="text-uppercase fw-bolder">{{ item.lesson.name }}</span> on {{ item.date}}
                         </div>
-                        <div class="col-12 col-md-6">
-                            <p class="small mb-0">For {{ item.quantity }}{% if item.quantity == 1 %} child{% else %} children{% endif %} @ £{{ item.lesson.price }} each</p>
+                        <div class="col-6 col-md-4">
+                            <p class="small mb-0">(For {{ item.quantity }}{% if item.quantity == 1 %} child{% else %} children{% endif %} @ £{{ item.lesson.price }} each)</p>
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <p>£{{ item.lesson.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                     {% endfor %}
