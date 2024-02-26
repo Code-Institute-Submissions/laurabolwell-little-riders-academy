@@ -17,7 +17,7 @@
                 <div class="card mx-auto my-3 text-navy" style="width: 17rem;">
                     <img src="{{ lesson.image.url }}" class="card-img-top" alt="{{ lesson.name }}">
                     <div class="card-body text-center">
-                        <h5 class="card-title text-center pb-2">{{ lesson.name }}</h5>
+                        <h5 class="card-title text-center pb-2 heading">{{ lesson.name }}</h5>
                         <p class="card-text">{{ lesson.day }}s at {{ lesson.time }}</p>
                         <p class="card-text">Recommended for ages {{ lesson.min_age }} to {{ lesson.max_age }}</p>
                         <a href="{% url 'lesson_details' lesson.id %}" class="btn btn-navy">Full details</a>
