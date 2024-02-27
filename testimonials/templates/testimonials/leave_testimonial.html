@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<main>
+    <section class="container page-section">
+        <div class="row">
+            <div class="col text-center">
+                <h2>Leave a Testimonial</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row justify-content-center my-3">
+            <div class="col-8">
+                <form method="POST" action="{% url 'contact' %}" class="form mt-3" >
+                    {% csrf_token %}
+                    {{ testimonial_form | crispy }}
+                    <div class="text-center">
+                        <button class="btn btn-navy mt-3" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+{% endblock %}
