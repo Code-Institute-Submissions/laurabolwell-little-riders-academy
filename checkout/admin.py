@@ -15,7 +15,7 @@ class BookingAdmin(admin.ModelAdmin):
     )
 
     fields = (
-        'booking_number', 'full_name', 'email',
+        'booking_number', 'user_profile', 'full_name', 'email',
         'phone_number', 'street_address1', 'street_address2',
         'town_or_city', 'postcode', 'country',
         'date', 'booking_total', 'original_basket', 'stripe_pid'

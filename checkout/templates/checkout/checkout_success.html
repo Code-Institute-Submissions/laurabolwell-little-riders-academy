@@ -65,7 +65,11 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
+                {% if from_profile %}
+                <a class="btn btn-navy mt-3" href="{% url 'profile' %}">Back to profile</a>
+                {% else %}
                 <a class="btn btn-navy mt-3" href="{% url 'lessons' %}">Back to lessons</a>
+                {% endif %}
             </div>
         </div>
     </section>

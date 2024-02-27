@@ -5,7 +5,10 @@ from django.conf import settings
 
 from .forms import BookingForm
 from .models import Booking, BookingItem
+
 from lessons.models import Lesson
+from profiles.models import UserProfile
+from profiles.forms import UserProfileForm
 from basket.contexts import basket_contents
 
 import stripe
@@ -101,7 +104,24 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY
         )
 
-        booking_form = BookingForm()
+        if request.user.is_authenticated:
+            try:
+                profile = UserProfile.objects.get(user=request.user)
+                booking_form = BookingForm(initial={
+                    'full_name': profile.user.get_full_name(),
+                    'email': profile.user.email,
+                    'phone_number': profile.default_phone_number,
+                    'country': profile.default_country,
+                    'postcode': profile.default_postcode,
+                    'town_or_city': profile.default_town_or_city,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
+                    'county': profile.default_county,
+                })
+            except UserProfile.DoesNotExist:
+                booking_form = BookingForm()
+        else:
+            booking_form = BookingForm()
 
     if not stripe_public_key:
         messages.warning(request, 'Stripe public key is missing. \
@@ -123,6 +143,29 @@ def checkout_success(request, booking_number):
     """
     save_info = request.session.get('save_info')
     booking = get_object_or_404(Booking, booking_number=booking_number)
+
+    if request.user.is_authenticated:
+        profile = UserProfile.objects.get(user=request.user)
+        # Attach the user's profile to the booking
+        booking.user_profile = profile
+        booking.save()
+
+        # Save the user's info
+        if save_info:
+            profile_data = {
+                'default_phone_number': booking.phone_number,
+                'default_email': booking.email,
+                'default_country': booking.country,
+                'default_postcode': booking.postcode,
+                'default_town_or_city': booking.town_or_city,
+                'default_street_address1': booking.street_address1,
+                'default_street_address2': booking.street_address2,
+                'default_county': booking.county,
+            }
+            user_profile_form = UserProfileForm(profile_data, instance=profile)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
+
     messages.success(request, f'Booking successful! \
         Your booking number is {booking_number}. A \
         confirmation email will be sent to {booking.email}.')
