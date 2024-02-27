@@ -234,4 +234,20 @@ input[type=number] {
     box-shadow: none;
 }
 
+#ui-datepicker-div {
+    background-color: white !important;
+    /* border: 1px solid black !important; */
+    padding: 0.5em;
+}
+
+.ui-datepicker-prev {
+    margin-right: 1em !important;
+}
+
+.ui-datepicker-calendar tr {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
 /* MEDIA QUERIES */
