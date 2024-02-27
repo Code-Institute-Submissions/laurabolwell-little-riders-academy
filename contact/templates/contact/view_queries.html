@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <section class="container-fluid page-section" id="about">
+        <div class="row justify-content-center text-navy">
+            <div class="col-sm-10 col-lg-8 text-center">
+                <h2 class="heading">View Customer Queries</h2>
+                <hr class="block-divider">
+            </div>
+        </div>
+        <div class="accordion mt-3" id="faqsaccordian">
+            {% for query in queries %}
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="faqs_heading_{{ question.id }}">
+                    <button class="accordion-button {% if question.id != 1 %}collapsed{% endif %}" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapse_{{ question.id }}" aria-expanded="true"
+                        aria-controls="collapse_{{ question.id }}">
+                        <div class="col-3">From: {{ query.name }}</div>
+                        <div class="col-4">Email: {{ query.email }}</div>
+                        <div class="col-4">Sent on: {{ query.contact_date }}</div>
+                    </button>
+
+                </h2>
+                <div id="collapse_{{ question.id }}"
+                    class="accordion-collapse collapse {% if question.id == 1 %}show{% endif %}"
+                    aria-labelledby="faqs_heading_{{ question.id }}" data-bs-parent="#faqsaccordian">
+                    <div class="accordion-body">
+                        {{ query.booking_number }}
+                        {{ query.query }}
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
+
+{% endblock %}

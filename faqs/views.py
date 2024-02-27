@@ -13,7 +13,8 @@ def view_faqs(request):
         'questions': questions,
     }
 
-    return render(request, 'faqs/faqs.html', context)
+    template = 'faqs/faqs.html'
+    return render(request, template, context)
 
 
 def add_question(request):
