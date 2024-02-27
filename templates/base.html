@@ -35,6 +35,7 @@
   <script src="https://kit.fontawesome.com/d2b22e28d8.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
   <!-- Stripe -->
   <script src="https://js.stripe.com/v3/"></script>
   {% endblock %}
@@ -80,7 +81,7 @@
   {% include 'includes/footer.html' %}
 
   {% block postloadjs %}
-  <script type="text/javascript">
+  <script>
     // Toast initialisation
     let toastElList = [].slice.call(document.querySelectorAll('.toast'))
     let toastList = toastElList.map(function (toastEl) {
