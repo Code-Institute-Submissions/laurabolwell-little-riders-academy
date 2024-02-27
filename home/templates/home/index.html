@@ -42,7 +42,11 @@
         </div>
         <div class="row justify-content-around text-center">
             <!-- Carousel of reviews -->
-            <p>(testimonials section)</p>
+            {% for testimonial in testimonials %}
+            <p>{{ testimonial.display_name }}</p>
+            <p>{{ testimonial.rating }}</p>
+            <p>{{ testimonial.review }}</p>
+            {% endfor %}
         </div>
     </section>
 </main>
