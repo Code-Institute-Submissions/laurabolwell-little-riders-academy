@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 from profiles.models import UserProfile
@@ -42,8 +43,15 @@ def contact(request):
     return render(request, template, context)
 
 
+@login_required
 def view_queries(request):
     """ A view to display all queries """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'You do not have permission to access this page.'
+        )
+        return redirect(reverse('contact'))
+
     queries = Contact.objects.all()
 
     context = {
