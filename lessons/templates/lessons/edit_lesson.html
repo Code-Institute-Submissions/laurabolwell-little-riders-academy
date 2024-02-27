@@ -19,7 +19,7 @@
                     {{ form | crispy }}
                     <div class="text-center">
                         <a class="btn btn-navy px-3 me-3" href="{% url 'lessons' %}">Cancel</a>
-                        <a href="#edit-lesson-{{ lesson.id }}-modal" class="btn btn-yellow px-3" data-bs-toggle="modal">Update</a>
+                        <a href="#edit-lesson-{{ lesson.id }}-modal" class="btn btn-light-blue px-3" data-bs-toggle="modal">Update</a>
                     </div>
                     <!-- inject the modals partials-template -->
                     {% include "lessons/includes/lesson_modals.html" %}
