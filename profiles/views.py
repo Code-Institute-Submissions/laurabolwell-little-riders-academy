@@ -6,7 +6,6 @@ from .models import UserProfile
 from .forms import UserProfileForm
 
 from checkout.models import Booking
-from datetime import date
 
 
 @login_required
@@ -43,10 +42,13 @@ def profile(request):
 def booking_history(request, booking_number):
     booking = get_object_or_404(Booking, booking_number=booking_number)
 
-    messages.info(request, (
-        f'This is a past booking confirmation for booking number {booking_number}.'
-        f'A confirmation email was sent on {booking.date|date:"d m y"}.'
-    ))
+    messages.info(
+        request,
+        'This is a past booking confirmation for '
+        f'booking number {booking_number}.'
+        'A confirmation email was sent on '
+        f'{booking.date.strftime("%d %B %y")}.'
+    )
 
     template = 'checkout/checkout_success.html'
     context = {

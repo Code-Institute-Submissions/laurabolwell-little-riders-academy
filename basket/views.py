@@ -21,7 +21,11 @@ def add_to_basket(request, lesson_id):
     if lesson_id in list(basket.keys()):
         if date in basket[lesson_id].keys():
             basket[lesson_id][date] += quantity
-            messages.success(request, f'Updated {lesson.name} on {date} quantity to {basket[lesson_id][date]}')
+            messages.success(
+                request,
+                f'Updated {lesson.name} on {date} quantity '
+                f'to {basket[lesson_id][date]}'
+            )
         else:
             basket[lesson_id][date] = quantity
             messages.success(
@@ -47,7 +51,11 @@ def adjust_basket(request, lesson_id):
 
     if quantity > 0:
         basket[lesson_id][date] = quantity
-        messages.success(request, f'Updated {lesson.name} on {date} quantity to {basket[lesson_id][date]}')
+        messages.success(
+            request,
+            f'Updated {lesson.name} on {date} quantity to '
+            f'{basket[lesson_id][date]}'
+        )
     else:
         del basket[lesson_id][date]
         if not basket[lesson_id]:
