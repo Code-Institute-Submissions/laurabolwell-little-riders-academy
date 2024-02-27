@@ -81,7 +81,7 @@
     // Disable past dates on datepicker
     let now = new Date();
     let minDate = now.toISOString().substring(0, 10);
-    let startDate = document.getElementById("id_date");
-    startDate.setAttribute("min", minDate);
+    let startDate = document.getElementsByClassName("datepicker");
+    startDate[0].setAttribute("min", minDate);
 </script>
 {% endblock %}
