@@ -5,6 +5,9 @@ from django.contrib.auth.decorators import login_required
 from .models import UserProfile
 from .forms import UserProfileForm
 
+from checkout.models import Booking
+from datetime import date
+
 
 @login_required
 def profile(request):
@@ -16,14 +19,15 @@ def profile(request):
         if form.is_valid():
             form.save()
             messages.success(
-                request, 'Billing information updated successfully.'
+                request, 'Profile information updated successfully.'
             )
         else:
             messages.error(
                 request, 'Update failed. Please ensure the form is valid.'
             )
 
-    form = UserProfileForm(instance=profile)
+    else:
+        form = UserProfileForm(instance=profile)
     bookings = profile.bookings.all()
 
     template = 'profiles/profile.html'
@@ -31,6 +35,23 @@ def profile(request):
         'form': form,
         'bookings': bookings,
         'on_profile_page': True,
+    }
+
+    return render(request, template, context)
+
+
+def booking_history(request, booking_number):
+    booking = get_object_or_404(Booking, booking_number=booking_number)
+
+    messages.info(request, (
+        f'This is a past booking confirmation for booking number {booking_number}.'
+        f'A confirmation email was sent on {booking.date|date:"d m y"}.'
+    ))
+
+    template = 'checkout/checkout_success.html'
+    context = {
+        'booking': booking,
+        'from_profile': True,
     }
 
     return render(request, template, context)
