@@ -98,7 +98,7 @@
 {% for item in basket_items %}
 {{ item.lesson.class_size | json_script:"id_lesson_class_size"}}
 {% endfor %}
-<script type="text/javascript">
+<script>
     // Update quantity on click
     $('.update-link').click(function (e) {
         var form = $(this).parent().prev('.update-form');
