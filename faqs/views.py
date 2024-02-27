@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 from .models import Question
 from .forms import QuestionForm
@@ -17,8 +18,15 @@ def view_faqs(request):
     return render(request, template, context)
 
 
+@login_required
 def add_question(request):
     """ Add a question to the FAQs """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'You do not have permission to access this page.'
+        )
+        return redirect(reverse('faqs'))
+
     if request.method == "POST":
         form = QuestionForm(request.POST)
         if form.is_valid():
@@ -41,8 +49,15 @@ def add_question(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_question(request, question_id):
     """ Edit a question in the FAQs list """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'You do not have permission to access this page.'
+        )
+        return redirect(reverse('contact'))
+
     question = get_object_or_404(Question, pk=question_id)
 
     if request.method == "POST":
