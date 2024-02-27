@@ -12,7 +12,7 @@
         </div>
         <div class="row justify-content-center my-3">
             <div class="col-8">
-                <form method="POST" action="{% url 'contact' %}" class="form mt-3" >
+                <form method="POST" action="{% url 'leave_testimonial' %}" class="form mt-3" >
                     {% csrf_token %}
                     {{ testimonial_form | crispy }}
                     <div class="text-center">
