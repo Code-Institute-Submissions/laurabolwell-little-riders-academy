@@ -8,9 +8,15 @@ from .forms import TestimonialForm
 def leave_testimonial(request):
     """ A view to return the testimonial form """
     if request.method == "POST":
-        testimonial_form = TestimonialForm(request.POST)
-        if testimonial_form.is_valid():
-            testimonial_form.save()
+        form = TestimonialForm(request.POST)
+        if form.is_valid():
+            if request.user.is_authenticated:
+                user = request.user
+                new_testimonial = form.save(commit=False)
+                new_testimonial.user = user
+                new_testimonial.save()
+            else:
+                form.save()
             messages.success(
                 request,
                 'Testimonial saved, thank you!'
