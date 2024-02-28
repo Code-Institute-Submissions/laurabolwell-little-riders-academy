@@ -27,11 +27,8 @@
                         {% csrf_token %}
                         <div class="row">
                             <div class="col-12 col-sm-6">
-                                <label for="id_date" class="form-label"><strong>Date:</strong></label>
-                                <div class="input-group mb-3">
-                                    <input type='text' class='form-control datepicker' name="date"
-                                        id="id_date" required>
-                                </div>
+                                <label for="datepicker" class="form-label" ><strong>Select a date:</strong></label>
+                                <input type="date" name="date" id="datepicker" class="form-control" placeholder="Select date">
                             </div>
                             <div class="col-12 col-sm-6">
                                 <label for="id_qty_{{ lesson.id }}"
@@ -78,50 +75,43 @@
 {% include 'lessons/includes/quantity_input_script.html' %}
 {{ lesson.class_size | json_script:"id_lesson_class_size"}}
 <script>
-    // Disable past dates on datepicker
-    let now = new Date();
-    let minDate = now.toISOString().substring(0, 10);
-    let startDate = document.getElementsByClassName("datepicker");
-    startDate[0].setAttribute("min", minDate);
-</script>
+    document.addEventListener("DOMContentLoaded", function () {
+        flatpickr("#datepicker", {
+            altInput: true,
+            altFormat: "d F Y",
+            dateFormat: "Y-m-d",
+            // Disable all past dates
+            minDate: "today",
+            // Only enable dates up to 6 weeks in advance
+            maxDate: new Date().fp_incr(42),
+            "enable": [
+                function (date) {
+                    // Convert day of the week to numerical value
+                    function dayNameToNumber(dayName) {
+                        const dayMap = {
+                            "Sunday": 0,
+                            "Monday": 1,
+                            "Tuesday": 2,
+                            "Wednesday": 3,
+                            "Thursday": 4,
+                            "Friday": 5,
+                            "Saturday": 6
+                        };
 
-<script>
-    function dayNameToNumber(dayName) {
-        const dayMap = {
-            "Sunday": 0,
-            "Monday": 1,
-            "Tuesday": 2,
-            "Wednesday": 3,
-            "Thursday": 4,
-            "Friday": 5,
-            "Saturday": 6
-        };
-        
-        return dayMap[dayName];
-    }
-    const dayNumber = dayNameToNumber("{{ lesson.day|safe }}");
+                        return dayMap[dayName];
+                    }
+                    // Get lesson day and convert to numerical value
+                    const dayNumber = dayNameToNumber("{{ lesson.day|safe }}");
+                    // Only enable days when a lesson is taking place
+                    return (date.getDay() === dayNumber);
 
-    let allowedDays = dayNumber.toString();
-    
-    function enableDays(date) {
-        let day = date.getDay();
-        // console.log(day)
-        return [allowedDays.includes(day)];
-    }
-
-    $("#id_date").datepicker({
-        minDate: 0,
-        beforeShowDay: enableDays,
-        // beforeShow: function(input, inst) {
-        //     let rect = input.getBoundingClientRect();
-        //     setTimeout(function() {
-        //         // Adjust the position of the DatePicker widget
-        //         inst.dpDiv.css({ 
-        //             top: rect.top - inst.dpDiv.height() - 10, // 10px for margin
-        //             left: rect.left
-        //         });
-        //     }, 0);
-        // }
+                }
+            ],
+            "locale": {
+                "firstDayOfWeek": 1 // start week on Monday
+            }
+        });
     });
 </script>
+
 {% endblock %}
