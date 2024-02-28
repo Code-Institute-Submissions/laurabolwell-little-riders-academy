@@ -20,33 +20,60 @@
                 <h2 class="heading">about us</h2>
                 <hr class="block-divider">
                 <p>
-                    Little Riders Academy gets your children riding a bike confidently and safely through balance and pedal training. We teach children from age 2 upwards, taking them on the whole journey from just starting out on a balance bike through to more advanced pedal bike skills. Our lessons are fun and exciting and we aim to kickstart a love for cycling that will last a lifetime.
+                    Little Riders Academy gets your children riding a bike confidently and safely through balance and
+                    pedal training. We teach children from age 2 upwards, taking them on the whole journey from just
+                    starting out on a balance bike through to more advanced pedal bike skills. Our lessons are fun and
+                    exciting and we aim to kickstart a love for cycling that will last a lifetime.
                 </p>
                 <p>
-                    All lessons take place at Cwmbran Leisure Centre and may be held indoors or outdoors depending on the weather.
+                    All lessons take place at Cwmbran Leisure Centre and may be held indoors or outdoors depending on
+                    the weather.
                 </p>
                 <a class="btn btn-navy btn-lg mt-3" href="{% url 'lessons' %}">Lessons We Offer</a>
             </div>
         </div>
     </section>
 
-    
     <!-- TESTIMONIALS -->
     <section class="container-fluid page-section">
         <!-- Testimonials heading -->
         <div class="row justify-content-center ">
             <div class="col-sm-10 col-lg-8 text-center">
                 <h2 class="heading">testimonials</h2>
-                <hr class="block-divider">
+                <hr class="block-divider mb-4">
             </div>
         </div>
         <div class="row justify-content-around text-center">
             <!-- Carousel of reviews -->
-            {% for testimonial in testimonials %}
-            <p>{{ testimonial.display_name }}</p>
-            <p>{{ testimonial.rating }}</p>
-            <p>{{ testimonial.review }}</p>
-            {% endfor %}
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    {% for testimonial in testimonials %}
+                    <div class="carousel-item {% if testimonial.id == 1 %}active{% endif %}">
+                        <div class="card text-center">
+                            <div class="card-header star-container" data-stars="{{testimonial.rating}}">
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">{{ testimonial.review }}</p>
+                            </div>
+                            <div class="card-footer text-body-secondary">
+                                Left by {{ testimonial.display_name }} on
+                                {{ testimonial.testimonial_date | date:"j F y" }}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </section>
 </main>
