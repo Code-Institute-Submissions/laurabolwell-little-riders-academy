@@ -79,3 +79,23 @@
 </main>
 
 {% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Function to generate stars based on the rating
+        const starContainers = document.getElementsByClassName("star-container");
+        for (let i = 0; i < starContainers.length; i++) {
+            let starDiv = starContainers[i];
+            stars = starDiv.getAttribute('data-stars'); // testimonial rating out of 5
+            for (let i = 1; i <= 5; i++) {
+                const star = document.createElement("i");
+                star.className = i <= stars ? "fa-solid fa-star" : "fa-regular fa-star";
+                starDiv.appendChild(star);
+            }
+        };
+    });
+</script>
+
+{% endblock %}
