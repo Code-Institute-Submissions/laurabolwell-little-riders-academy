@@ -9,7 +9,7 @@ from .forms import LessonForm
 
 def all_lessons(request):
     """ A view to show all lessons """
-    lessons = Lesson.objects.all()
+    lessons = Lesson.objects.order_by("min_age", "max_age")
     context = {
         'lessons': lessons,
     }
