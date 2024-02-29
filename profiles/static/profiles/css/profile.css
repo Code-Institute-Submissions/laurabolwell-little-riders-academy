@@ -1,7 +1,0 @@
-#profile-update-form input::placeholder {
-    color: var(--navy);
-}
-
-.booking-history {
-    max-height: 498px;
-}
