@@ -5,19 +5,19 @@
 {% block extra_title %}- {% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<div class="container page-section">
+<section class="container page-section">
   <div class="row">
     <div class="col text-center">
       <h2>{% trans "Sign Up" %}</h2>
       <hr>
     </div>
   </div>
-</div>
+</section>
 
-<section>
+<section class="container">
   <div class="row justify-content-center mb-3">
     <div class="col-10 col-md-8 col-lg-6 text-center">
-      {% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" class="btn btn-navy btn-sm">sign in</a>.{% endblocktrans %}
+      {% blocktrans %}Already have an account? Then please <a href="{{ login_url }}" class="btn btn-navy btn-sm">sign in</a>{% endblocktrans %}
     </div>
   </div>
   <div class="row justify-content-center">
