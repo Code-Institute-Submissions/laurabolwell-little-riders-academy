@@ -12,7 +12,7 @@ class TestimonialForm(forms.ModelForm):
         placeholders = {
             'display_name': 'Anonymous',
             'rating': 'Rating',
-            'review': 'Review'
+            'review': 'Please write your review here'
         }
         labels = {
             'display_name': 'Name (to be displayed with the review)',
