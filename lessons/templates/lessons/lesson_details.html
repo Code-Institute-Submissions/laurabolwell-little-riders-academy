@@ -27,8 +27,9 @@
                         {% csrf_token %}
                         <div class="row">
                             <div class="col-12 col-sm-6">
-                                <label for="datepicker" class="form-label" ><strong>Select a date:</strong></label>
-                                <input type="date" name="date" id="datepicker" class="form-control" placeholder="Select date">
+                                <label for="datepicker" class="form-label"><strong>Select a date:</strong></label>
+                                <input type="text" name="date" id="datepicker" class="form-control date"
+                                    placeholder="Select date" required>
                             </div>
                             <div class="col-12 col-sm-6">
                                 <label for="id_qty_{{ lesson.id }}"
@@ -76,10 +77,12 @@
 {{ lesson.class_size | json_script:"id_lesson_class_size"}}
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        flatpickr("#datepicker", {
+        let f = flatpickr("#datepicker", {
+            allowInput: true,
             altInput: true,
             altFormat: "d F Y",
             dateFormat: "Y-m-d",
+            noCalendar: false,
             // Disable all past dates
             minDate: "today",
             // Only enable dates up to 6 weeks in advance
@@ -111,6 +114,7 @@
                 "firstDayOfWeek": 1 // start week on Monday
             }
         });
+        f._input.onkeypress = () => false;
     });
 </script>
 
