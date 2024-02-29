@@ -13,7 +13,7 @@
     </section>
     <section>
         <div class="row justify-content-around">
-            <div class="col-10 col-md-6">
+            <div class="col-10 col-md-7">
                 <h4 class="heading text-center mb-4">Booking Information</h4>
                 <div class="booking-history table-responsive">
                     <table class="table table-sm">
@@ -36,12 +36,12 @@
                                     <ul class="list-unstyled">
                                         {% for item in booking.bookingitems.all %}
                                         <li class="small">
-                                            {{ item.lesson.name}} on {{ item.date }} for {{ item.quantity }} {% if quantity == 1 %}child{% else %}children{% endif %}
+                                            {{ item.lesson.name}} on {{ item.date | date:"j F y" }} for {{ item.quantity }} {% if quantity == 1 %}child{% else %}children{% endif %}
                                         </li>
                                         {% endfor %}
                                     </ul>
                                 </td>
-                                <td>{{ booking.date }}</td>
+                                <td>{{ booking.date | date:"j F y" }}</td>
                                 <td>£{{ booking.booking_total }}</td>
                             </tr>
                             {% endfor %}
@@ -49,7 +49,7 @@
                     </table>
                 </div>
             </div>
-            <div class="col-10 col-md-6 px-5">
+            <div class="col-10 col-md-5 px-5">
                 <h4 class="heading text-center mb-4">Default Billing Information</h4>
                 <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}

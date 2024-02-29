@@ -23,7 +23,7 @@
                         aria-controls="collapse_{{ query.id }}">
                         <div class="col-3">From: {{ query.name }}</div>
                         <div class="col-4">Email: {{ query.email }}</div>
-                        <div class="col-4">Sent on: {{ query.contact_date }}</div>
+                        <div class="col-4">Sent on: {{ query.contact_date | date:"j F y" }}</div>
                     </button>
 
                 </h2>

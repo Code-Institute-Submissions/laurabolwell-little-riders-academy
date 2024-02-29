@@ -29,7 +29,7 @@
                             {% for item in basket_items %}
                             <tr class="align-items-center">
                                 <th scope="row" class="text-uppercase">{{ item.lesson.name }}</th>
-                                <td>{{ item.date }}</td>
+                                <td>{{ item.date | date:"j F Y" }}</td>
                                 <td>£{{ item.lesson.price }}</td>
                                 <td>
                                     <form class="form update-form" method="POST" action="{% url 'adjust_basket' item.lesson_id %}">

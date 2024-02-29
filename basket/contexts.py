@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404
 from lessons.models import Lesson
+from datetime import datetime
 
 
 def basket_contents(request):
@@ -17,7 +18,7 @@ def basket_contents(request):
             lesson_count += quantity
             basket_items.append({
                 'lesson_id': lesson_id,
-                'date': date,
+                'date': datetime.strptime(date, "%Y-%m-%d").date(),
                 'quantity': quantity,
                 'lesson': lesson,
                 })

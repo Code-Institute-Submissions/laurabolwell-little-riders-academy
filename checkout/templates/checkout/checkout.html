@@ -21,26 +21,28 @@
             <div class="col-12 col-lg-5 order-lg-last mb-5">
                 <p class="text-muted">Booking Summary ({{ lesson_count }})</p>
                 <div class="row">
-                    <div class="col-7 offset-2">
+                    <div class="col-8">
                         <p class="mb-1 mt-0 small text-muted">Lesson</p>
                     </div>
-                    <div class="col-3 text-right">
+                    <div class="col-4 text-center">
                         <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                     </div>
                 </div>
                 {% for item in basket_items %}
                 <div class="row">
-                    <div class="col-7">
-                        <p class="my-0"><strong>{{ item.lesson.name }}</strong></p>
-                        <p class="my-0 small">Date: {{ item.date }}</p>
-                        <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                    <div class="col-8">
+                        <p class="my-0 text-uppercase"><strong>{{ item.lesson.name }}</strong></p>
+                        <div class="d-flex justify-content-between">
+                            <span class="my-0 small">Date: {{ item.date | date:"j F Y"}}</span>
+                            <span class="my-0 small text-muted">Qty: {{ item.quantity }}</span>
+                        </div>
                     </div>
-                    <div class="col-3 text-right">
+                    <div class="col-4 text-end">
                         <p class="my-0 small text-muted">£{{ item.lesson.price | calc_subtotal:item.quantity }}</p>
                     </div>
                 </div>
                 {% endfor %}
-                <hr class="my-0">
+                <hr class="my-2">
                 <div class="row text-black text-right">
                     <div class="col-7 offset-2">
                         <p class="my-0">Booking Total:</p>

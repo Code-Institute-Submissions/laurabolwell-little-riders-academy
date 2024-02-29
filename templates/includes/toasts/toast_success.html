@@ -16,13 +16,13 @@
         <div class="basket-notification-wrapper">
             {% for item in basket_items %}
             <div class="row mb-2">
-                <div class="col-4">
+                <div class="col-4 text-uppercase small">
                     {{ item.lesson }}
                 </div>
-                <div class="col-5">
-                    Date: {{ item.date }}
+                <div class="col-5 small">
+                    Date: {{ item.date | date:"j F y" }}
                 </div>
-                <div class="col-3">
+                <div class="col-3 small">
                     Qty: {{ item.quantity }}
                 </div>
             </div>
