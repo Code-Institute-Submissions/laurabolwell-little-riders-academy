@@ -52,7 +52,7 @@ def view_queries(request):
         )
         return redirect(reverse('contact'))
 
-    queries = Contact.objects.all()
+    queries = Contact.objects.order_by('-contact_date')
 
     context = {
         'queries': queries,
