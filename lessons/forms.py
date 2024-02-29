@@ -9,7 +9,9 @@ class LessonForm(forms.ModelForm):
         model = Lesson
         fields = '__all__'
 
-    image = forms.ImageField(widget=CustomClearableFileInput, label='Image', required=True)
+    image = forms.ImageField(
+        widget=CustomClearableFileInput, label='Image', required=True
+    )
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
