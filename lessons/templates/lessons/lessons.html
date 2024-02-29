@@ -35,9 +35,11 @@
                 </div>
             </div>
             {% endfor %}
+            {% if request.user.is_superuser %}
             <div class="col-12 text-center">
                 <a href="{% url 'add_lesson' %}" class="btn btn-navy mt-3">Add a New Lesson</a>
             </div>
+            {% endif %}
 
         </div>
     </section>
