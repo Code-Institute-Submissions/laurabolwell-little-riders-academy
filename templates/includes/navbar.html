@@ -28,8 +28,8 @@
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <li><a href="{% url 'add_lesson' %}" class="dropdown-item">Add a lesson</a></li>
-                        <li><a href="{% url 'add_lesson' %}" class="dropdown-item">Add a FAQ</a></li>
-                        <li><a href="{% url 'add_lesson' %}" class="dropdown-item">View Customer Queries</a></li>
+                        <li><a href="{% url 'add_question' %}" class="dropdown-item">Add a FAQ</a></li>
+                        <li><a href="{% url 'view_queries' %}" class="dropdown-item">View Customer Queries</a></li>
                         {% endif %}
                         <li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
                         <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
