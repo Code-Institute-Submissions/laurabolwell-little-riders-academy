@@ -1,21 +1,11 @@
+/* GLOBAL STYLES */
+
+/* COLOURS */
 :root {
     --navy: #192841;
     --yellow: #FFFD37;
     --sky-blue: #0ACDFF;
     --light-blue: #D6F7FF;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    color: var(--navy);
-}
-html,
-body {
-    height: 100%;
-}
-
-.page-section {
-    padding: 50px 40px;
 }
 
 /* Custom text and background colour classes */
@@ -44,13 +34,26 @@ body {
     background-color: var(--light-blue);
 }
 
-/* Headings */
+/* WHOLE SITE */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--navy);
+}
 
+html,
+body {
+    height: 100%;
+}
+
+.page-section {
+    padding: 50px 40px;
+}
+
+/* Headings */
 h2, .heading {
     font-family: 'Aboreto', sans-serif;
     text-transform: uppercase;
 }
-
 
 /* Buttons */
 .btn {
@@ -86,19 +89,6 @@ h2, .heading {
     color: var(--light-blue);
 }
 
-.btn-yellow {
-    background-color: var(--yellow);
-    color: var(--navy);
-    transition: all 0.35s ease-in-out;
-    -moz-transition: all 0.35s ease-in-out;
-    -webkit-transition: all 0.35s ease-in-out;
-    -o-transition: all 0.35s ease-in-out;
-}
-
-.btn-yellow:hover {
-    background-color: var(--yellow);
-    color: var(--light-blue);
-}
 /* Navbar */
 .navbar {
     background: var(--navy);
@@ -125,6 +115,14 @@ h2, .heading {
     border: 2px solid var(--yellow);
 }
 
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: var(--light-blue);
+}
+
+.dropdown-item {
+    color: var(--navy);
+}
+
 /* Mobile basket button */
 .basket-button {
     z-index: 9999;
@@ -134,7 +132,6 @@ h2, .heading {
     bottom: 10px;
     right: 10px;
     color: var(--yellow) !important;
-    /* font-size: 50px; */
 }
 
 .fa-basket-shopping:before {
@@ -152,7 +149,6 @@ h2, .heading {
 }
 
 /* FOOTER */
-
 body>footer {
     position: sticky;
     top: 100vh;
@@ -178,12 +174,10 @@ footer i {
 }
 
 footer a i:hover {
-    color: var(--yellow);
-    background-color: var(--sky-blue);
+    color: var(--sky-blue);
 }
 
 /* BOOTSTRAP TOASTS */
-
 .toast-container {
     position: absolute;
     top: 120px;
@@ -201,13 +195,37 @@ footer a i:hover {
 
 /* Limit height of basket contents div on success toast */
 .basket-notification-wrapper {
-    height: 100px;
+    max-height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
-/* HOMEPAGE */
+/* ALLAUTH */
+.allauth label:not([for='id_remember']) {
+    display: none;
+}
 
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth button,
+.allauth input[type='submit'] {
+    background-color: var(--navy);
+    color: var(--light-blue);
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.allauth button:hover,
+.allauth input[type='submit']:hover {
+    background-color: var(--navy);
+    color: var(--yellow);
+}
+
+/* HOMEPAGE */
 .hero-outer {
     height: calc(100vh - 124px);
     background: url("/media/hero-image.webp") no-repeat right top;
@@ -231,7 +249,7 @@ footer a i:hover {
 }
 
 /* LESSON DETAILS PAGE */
-/* HIDE BUILT IN QUANTITY SELECTOR ARROWS FROM FORM NUMBER INPUT */
+/* Hide built in quantity selector arrows from form number input */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -242,36 +260,29 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--sky-blue);
+}
+
+.flatpickr-day {
+    color: var(--navy);
 }
 
 /* FAQs */
-
-/* Accordian header highlight */
+/* Remove accordian header highlight */
 .accordion-button:not(.collapsed) {
     background-color: var(--light-blue);
 }
 
 .accordion-button:focus {
     z-index: 3;
-    border-color: var(--bs-accordion-btn-focus-border-color);
+    border-color: var(--sky-blue);
     outline: 0;
     box-shadow: none;
-}
-
-#ui-datepicker-div {
-    background-color: white !important;
-    /* border: 1px solid black !important; */
-    padding: 0.5em;
-}
-
-.ui-datepicker-prev {
-    margin-right: 1em !important;
-}
-
-.ui-datepicker-calendar tr {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: center;
 }
 
 /* PROFILE PAGE */
