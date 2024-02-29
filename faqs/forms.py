@@ -10,5 +10,13 @@ class QuestionForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'text-navy'
+        placeholders = {
+            'question': 'Question',
+            'answer': 'Answer'
+        }
+        self.fields['question'].widget.attrs['autofocus'] = True
+        for field in self.fields:
+            placeholder = placeholders[field]
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['class'] = 'text-navy'
+            self.fields[field].label = False
