@@ -27,7 +27,7 @@ def profile(request):
 
     else:
         form = UserProfileForm(instance=profile)
-    bookings = profile.bookings.all()
+    bookings = profile.bookings.order_by('-date')
 
     template = 'profiles/profile.html'
     context = {
