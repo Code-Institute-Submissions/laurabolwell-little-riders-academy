@@ -76,7 +76,6 @@ class StripeWH_Handler:
                     email__iexact=billing_details.email,
                     phone_number__iexact=billing_details.phone,
                     country__iexact=billing_details.address.country,
-                    # postcode__iexact=billing_details.address.postal_code,
                     town_or_city__iexact=billing_details.address.city,
                     street_address1__iexact=billing_details.address.line1,
                     street_address2__iexact=billing_details.address.line2,
@@ -93,7 +92,8 @@ class StripeWH_Handler:
         if booking_exists:
             self._send_confirmation_email(booking)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verified booking already in database',
+                content=(f'Webhook received: {event["type"]} '
+                         '| SUCCESS: Verified booking already in database'),
                 status=200)
         else:
             booking = None
@@ -125,10 +125,14 @@ class StripeWH_Handler:
             except Exception as e:
                 if booking:
                     booking.delete()
-                return HttpResponse(content=f'Webhook received: {event["type"]} | ERROR: {e}', status=500)
+                return HttpResponse(
+                    content=f'Webhook received: {event["type"]} | ERROR: {e}',
+                    status=500
+                )
         self._send_confirmation_email(booking)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created booking in webhook',
+            content=(f'Webhook received: {event["type"]} '
+                     '| SUCCESS: Created booking in webhook'),
             status=200
         )
 
