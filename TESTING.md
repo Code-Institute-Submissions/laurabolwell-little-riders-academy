@@ -253,31 +253,26 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 ## Lighthouse Audit
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
-Avoid testing the local version (especially if developing in Gitpod), as this can have knock-on effects of performance.
-
-If you don't have Lighthouse in your Developer Tools,
-it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Don't just test the home page (unless it's a single-page application).
-Make sure to test the Lighthouse Audit results for all of your pages.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-Sample Lighthouse testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse-home-desktop.png) | Some minor warnings |
-| About | ![screenshot](documentation/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse-about-desktop.png) | Some minor warnings |
-| Gallery | ![screenshot](documentation/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
+| Home | ![screenshot](documentation/testing/lighthouse/mobile_home.png) | ![screenshot](documentation/testing/lighthouse/desktop_home.png) | Some minor warnings |
+| Lessons | ![screenshot](documentation/testing/lighthouse/mobile_lessons.png) | ![screenshot](documentation/testing/lighthouse/desktop_lessons.png) | Some minor warnings |
+| Lesson Details | ![screenshot](documentation/testing/lighthouse/mobile_lesson_details.png) | ![screenshot](documentation/testing/lighthouse/desktop_lesson_details.png) | Some minor warnings |
+| Add Lesson | ![screenshot](documentation/testing/lighthouse/mobile_add_lesson.png) | ![screenshot](documentation/testing/lighthouse/desktop_add_lesson.png) | Some minor warnings |
+| Edit Lesson | ![screenshot](documentation/testing/lighthouse/mobile_add_lesson.png) | ![screenshot](documentation/testing/lighthouse/desktop_edit_lesson.png) | Some minor warnings |
+| Basket | ![screenshot](documentation/testing/lighthouse/mobile_basket.png) | ![screenshot](documentation/testing/lighthouse/desktop_basket.png) | Some minor warnings |
+| Checkout | ![screenshot](documentation/testing/lighthouse/mobile_checkout.png) | ![screenshot](documentation/testing/lighthouse/desktop_checkout.png) | Some minor warnings |
+| Checkout Success | ![screenshot](documentation/testing/lighthouse/mobile_checkout_success.png) | ![screenshot](documentation/testing/lighthouse/desktop_checkout_success.png) | Some minor warnings |
+| Contact | ![screenshot](documentation/testing/lighthouse/mobile_contact.png) | ![screenshot](documentation/testing/lighthouse/desktop_contact.png) | Some minor warnings |
+| View Queries | ![screenshot](documentation/testing/lighthouse/mobile_view_queries.png) | ![screenshot](documentation/testing/lighthouse/desktop_view_queries.png) | Some minor warnings |
+| Add Testimonial | ![screenshot](documentation/testing/lighthouse/mobile_testimonials.png) | ![screenshot](documentation/testing/lighthouse/desktop_testimonials.png) | Some minor warnings |
+| Profile | ![screenshot](documentation/testing/lighthouse/mobile_profile.png) | ![screenshot](documentation/testing/lighthouse/desktop_profile.png) | Some minor warnings |
+| FAQs | ![screenshot](documentation/testing/lighthouse/mobile_faqs.png) | ![screenshot](documentation/testing/lighthouse/desktop_faqs.png) | Some minor warnings |
+| Add Question | ![screenshot](documentation/testing/lighthouse/mobile_add_question.png) | ![screenshot](documentation/testing/lighthouse/desktop_add_question.png) | Some minor warnings |
+| Edit Question | ![screenshot](documentation/testing/lighthouse/mobile_edit_question.png) | ![screenshot](documentation/testing/lighthouse/desktop_edit_question.png) | Some minor warnings |
+
 
 ## Defensive Programming
 
