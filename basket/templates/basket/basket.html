@@ -101,15 +101,16 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'lessons/includes/quantity_input_script.html' %}
-{% for item in basket_items %}
-{{ item.lesson.class_size | json_script:"id_lesson_class_size"}}
-{% endfor %}
+{% with class_size=10 %}
+{{ class_size | json_script:"id_lesson_class_size"}}
+{% endwith %}
+
 <script>
     // Update quantity on click
     $('.update-link').click(function (e) {
         var form = $(this).parent().prev('.update-form');
         form.submit();
-    })
+    });
     // Remove lesson on click
     $('.remove-lesson').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
@@ -125,6 +126,6 @@
             .done(function () {
                 location.reload();
             });
-    })
+    });
 </script>
 {% endblock %}

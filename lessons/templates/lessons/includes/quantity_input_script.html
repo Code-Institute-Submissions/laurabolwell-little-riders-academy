@@ -1,6 +1,6 @@
 <script>
     function handleEnableDisable(lessonId) {
-        var class_size= $('#id_lesson_class_size').text()
+        var class_size= $('#id_lesson_class_size').text();
         var currentValue = parseInt($(`#id_qty_${lessonId}`).val());
         var minusDisabled = currentValue <= 1;
         var plusDisabled = currentValue >= class_size;

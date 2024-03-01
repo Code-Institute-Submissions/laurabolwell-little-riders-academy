@@ -89,14 +89,14 @@
         const starContainers = document.getElementsByClassName("star-container");
         for (let i = 0; i < starContainers.length; i++) {
             let starDiv = starContainers[i];
-            stars = starDiv.getAttribute('data-stars'); // testimonial rating out of 5
+            let stars = starDiv.getAttribute('data-stars'); // testimonial rating out of 5
             for (let i = 1; i <= 5; i++) {
                 const star = document.createElement("i");
                 star.className = i <= stars ? "fa-solid fa-star" : "fa-regular fa-star";
                 star.classList.add("text-yellow", "mx-1");
                 starDiv.appendChild(star);
             }
-        };
+        }
     });
 </script>
 
