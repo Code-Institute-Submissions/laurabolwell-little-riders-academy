@@ -36,6 +36,7 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """ Handle checkout process """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -106,7 +107,7 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY
         )
-
+        # Prefill form if user is authenticated
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -172,7 +173,7 @@ def checkout_success(request, booking_number):
     messages.success(request, f'Booking successful! \
         Your booking number is {booking_number}. A \
         confirmation email will be sent to {booking.email}.')
-
+    # Delete basket contents 
     if 'basket' in request.session:
         del request.session['basket']
 
