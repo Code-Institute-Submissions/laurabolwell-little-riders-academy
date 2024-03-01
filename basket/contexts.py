@@ -4,7 +4,10 @@ from datetime import datetime
 
 
 def basket_contents(request):
-
+    """
+    Returns all the lessons currently in the basket,
+    the number of items and the total
+    """
     basket_items = []
     total = 0
     lesson_count = 0

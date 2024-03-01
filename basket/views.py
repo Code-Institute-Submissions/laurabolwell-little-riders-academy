@@ -18,21 +18,27 @@ def add_to_basket(request, lesson_id):
     redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {})
 
+    # Check if there is already a lesson of that type in the basket
     if lesson_id in list(basket.keys()):
+        # If so, check if there is already a lesson on that date
         if date in basket[lesson_id].keys():
+            # If so, increase the quantity
             basket[lesson_id][date] += quantity
             messages.success(
                 request,
                 f'Updated {lesson.name} on {date} quantity '
                 f'to {basket[lesson_id][date]}'
             )
+        # If not, add the new date and quantity to the object
         else:
             basket[lesson_id][date] = quantity
             messages.success(
                 request, f'Added {lesson.name} on {date} to your basket'
             )
+    # If no lesson of that type, add it to the basket
     else:
         basket[lesson_id] = {}
+        # Then add the date and quantity
         basket[lesson_id][date] = quantity
         messages.success(
             request, f'Added {lesson.name} on {date} to your basket'
