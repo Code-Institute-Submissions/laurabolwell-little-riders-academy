@@ -28,9 +28,11 @@ def leave_testimonial(request):
                 'Cannot save testimonial. Please ensure the form is valid.'
             )
 
+    # You must be logged in to leave a review
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         bookings = profile.bookings.all()
+        # Check the user has made a booking
         if bookings:
             testimonial_form = TestimonialForm()
             template = 'testimonials/leave_testimonial.html'
