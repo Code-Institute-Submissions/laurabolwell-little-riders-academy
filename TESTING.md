@@ -4,8 +4,6 @@ Return back to the [README.md](README.md) file.
 
 ## Code Validation
 
-
-
 ### HTML
 
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
@@ -46,61 +44,162 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 ### Python
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-The CI Python Linter can be used two different ways.
-- Copy/Paste your Python code directly into the linter.
-- As an API, using the "raw" URL appended to the linter URL.
-    - To find the "raw" URL, navigate to your file directly on the GitHub repo.
-    - On that page, GitHub provides a button on the right called "Raw" that you can click on.
-    - From that new page, copy the full URL, and paste it after the CI Python Linter URL (with a `/` separator).
-    - Check the example table below for a live demo.
-
-It's recommended to validate each file using the API URL.
-This will give you a custom URL which you can use on your testing documentation.
-It makes it easier to return back to a file to validate it again in the future.
-Use the steps above to generate your own custom URLs for each Python file.
-
-**IMPORTANT**: `E501 line too long` errors
-
-You must strive to fix any Python lines that are too long ( >80 characters ).
-In rare cases where you cannot break the lines [without breaking the functionality],
-then by adding `# noqa` to the end of those lines will ignore linting validation.
-
-`# noqa` = **NO Quality Assurance**
-
-**NOTE**: You must include 2 *spaces* before the `#`, and 1 *space* after the `#`.
-
-Do not use `# noqa` all over your project just to clear down validation errors!
-This can still cause a project to fail, for failing to fix actual PEP8 validation errors.
-
-Sometimes strings or variables get too long, or long `if` conditional statements.
-These are acceptable instances to use the `# noqa`.
-
-When trying to fix "line too long" errors, try to avoid using `/` to split lines.
-A better approach would be to use any type of opening bracket, and hit Enter just after that.
-
-Any opening bracket type will work: `(`, `[`, `{`.
-
-By using an opening bracket, Python knows where to appropriately indent the next line of code,
-without having to "guess" yourself and attempt to tab to the correct indentation level.
-
-Sample Python code validation documentation below (tables are extremely helpful!).
-
-**Note**: This gives examples of PP3 (Python-only), and Flask/Django files, so eliminate the ones not applicable to your own project.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.
+
+##### Basket app
+
+<details>
+<summary>Click to see the basket app python code validation</summary>
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| run.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/run.py) | ![screenshot](documentation/py-validation-run.png) | W291 trailing whitespace |
-| settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/boutique-ado/settings.py) | ![screenshot](documentation/py-validation-settings.png) | E501 line too long |
-| Blog views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/blog/views.py) | ![screenshot](documentation/py-validation-blog-views.png) | Pass: No Errors |
-| Checkout urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/checkout/urls.py) | ![screenshot](documentation/py-validation-checkout-urls.png) | W292 no newline at end of file |
-| Profiles models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/profiles/models.py) | ![screenshot](documentation/py-validation-profiles-models.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining Python files |
+| basket/apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/basket/apps.py) | ![screenshot](documentation/testing/code_validation/python/basket_apps.png) | Pass: No Errors |
+| basket/contexts.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/basket/contexts.py) | ![screenshot](documentation/testing/code_validation/python/basket_contexts.png) | Pass: No Errors |
+| basket/templatetags/basket_tools.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/basket/templatetags/basket_tools.py) | ![screenshot](documentation/testing/code_validation/python/basket_tools.png) | Pass: No Errors |
+| basket/apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/basket/urls.py) | ![screenshot](documentation/testing/code_validation/python/basket_urls.png) | Pass: No Errors |
+| basket/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/basket/views.py) | ![screenshot](documentation/testing/code_validation/python/basket_views.png) | Pass: No Errors |
+
+</details>
+
+##### Checkout app
+
+<details>
+<summary>Click to see the checkout app python code validation</summary>
+
+| File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| checkout/admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/checkout/admin.py) | ![screenshot](documentation/testing/code_validation/python/checkout_admin.png) | Pass: No Errors |
+| checkout/apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/checkout/apps.py) | ![screenshot](documentation/testing/code_validation/python/checkout_apps.png) | Pass: No Errors |
+| checkout/forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/checkout/forms.py) | ![screenshot](documentation/testing/code_validation/python/checkout_forms.png) | Pass: No Errors |
+| checkout/models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/checkout/models.py) | ![screenshot](documentation/testing/code_validation/python/checkout_models.png) | Pass: No Errors |
+| checkout/signals.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/checkout/signals.py) | ![screenshot](documentation/testing/code_validation/python/checkout_signals.png) | Pass: No Errors |
+| checkout/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/checkout/urls.py) | ![screenshot](documentation/testing/code_validation/python/checkout_urls.png) | Pass: No Errors |
+| checkout/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/checkout/views.py) | ![screenshot](documentation/testing/code_validation/python/checkout_views.png) | Pass: No Errors |
+| checkout/webhook-handler.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/checkout/webhook_handler.py) | ![screenshot](documentation/testing/code_validation/python/checkout_webhook_handler.png) | Pass: No Errors |
+| checkout/webhooks.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/checkout/webhooks.py) | ![screenshot](documentation/testing/code_validation/python/checkout_webhooks.png) | Pass: No Errors |
+
+</details>
+
+##### Contact app
+
+<details>
+<summary>Click to see the contact app python code validation</summary>
+
+| File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| contact/apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/contact/apps.py) | ![screenshot](documentation/testing/code_validation/python/contact_apps.png) | Pass: No Errors |
+| contact/forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/contact/forms.py) | ![screenshot](documentation/testing/code_validation/python/contact_forms.png) | Pass: No Errors |
+| contact/models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/contact/models.py) | ![screenshot](documentation/testing/code_validation/python/contact_models.png) | Pass: No Errors |
+| contact/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/contact/urls.py) | ![screenshot](documentation/testing/code_validation/python/contact_urls.png) | Pass: No Errors |
+| contact/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/contact/views.py) | ![screenshot](documentation/testing/code_validation/python/contact_views.png) | Pass: No Errors |
+
+</details>
+
+##### FAQs app
+
+<details>
+<summary>Click to see the FAQs app python code validation</summary>
+
+| File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| faqs/admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/faqs/admin.py) | ![screenshot](documentation/testing/code_validation/python/faqs_admin.png) | Pass: No Errors |
+| faqs/apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/faqs/apps.py) | ![screenshot](documentation/testing/code_validation/python/faqs_apps.png) | Pass: No Errors |
+| faqs/forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/faqs/forms.py) | ![screenshot](documentation/testing/code_validation/python/faqs_forms.png) | Pass: No Errors |
+| faqs/models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/faqs/models.py) | ![screenshot](documentation/testing/code_validation/python/faqs_models.png) | Pass: No Errors |
+| faqs/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/faqs/urls.py) | ![screenshot](documentation/testing/code_validation/python/faqs_urls.png) | Pass: No Errors |
+| faqs/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/faqs/views.py) | ![screenshot](documentation/testing/code_validation/python/faqs_views.png) | Pass: No Errors |
+
+</details>
+
+##### Home app
+
+<details>
+<summary>Click to see the home app python code validation</summary>
+
+| File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| home/apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/home/apps.py) | ![screenshot](documentation/testing/code_validation/python/home_apps.png) | Pass: No Errors |
+| home/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/home/urls.py) | ![screenshot](documentation/testing/code_validation/python/home_urls.png) | Pass: No Errors |
+| home/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/home/views.py) | ![screenshot](documentation/testing/code_validation/python/home_views.png) | Pass: No Errors |
+
+</details>
+
+##### Lessons app
+
+<details>
+<summary>Click to see the Lessons app python code validation</summary>
+
+| File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| lessons/admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/lessons/admin.py) | ![screenshot](documentation/testing/code_validation/python/lessons_admin.png) | Pass: No Errors |
+| lessons/apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/lessons/apps.py) | ![screenshot](documentation/testing/code_validation/python/lessons_apps.png) | Pass: No Errors |
+| lessons/forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/lessons/forms.py) | ![screenshot](documentation/testing/code_validation/python/lessons_forms.png) | Pass: No Errors |
+| lessons/models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/lessons/models.py) | ![screenshot](documentation/testing/code_validation/python/lessons_models.png) | Pass: No Errors |
+| lessons/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/lessons/urls.py) | ![screenshot](documentation/testing/code_validation/python/lessons_urls.png) | Pass: No Errors |
+| lessons/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/lessons/views.py) | ![screenshot](documentation/testing/code_validation/python/lessons_views.png) | Pass: No Errors |
+| lessons/widgets.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/lessons/widgets.py) | ![screenshot](documentation/testing/code_validation/python/lessons_widgets.png) | Pass: No Errors |
+
+</details>
+
+##### Little Riders Academy app
+
+<details>
+<summary>Click to see the Little Riders Academy app python code validation</summary>
+
+| File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| little_riders_academy/asgi.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/little_riders_academy/asgi.py) | ![screenshot](documentation/testing/code_validation/python/lra_asgi.png) | Pass: No Errors |
+| little_riders_academy/settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/little_riders_academy/settings.py) | ![screenshot](documentation/testing/code_validation/python/lra_settings.png) | Pass: No Errors |
+| little_riders_academy/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/little_riders_academy/urls.py) | ![screenshot](documentation/testing/code_validation/python/lra_urls.png) | Pass: No Errors |
+| little_riders_academy/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/little_riders_academy/views.py) | ![screenshot](documentation/testing/code_validation/python/lra_views.png) | Pass: No Errors |
+| little_riders_academy/wsgi.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/little_riders_academy/wsgi.py) | ![screenshot](documentation/testing/code_validation/python/lra_wsgi.png) | Pass: No Errors |
+
+
+</details>
+
+##### Profiles app
+
+<details>
+<summary>Click to see the Profiles app python code validation</summary>
+
+| File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| profiles/admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/profiles/admin.py) | ![screenshot](documentation/testing/code_validation/python/profiles_admin.png) | Pass: No Errors |
+| profiles/apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/profiles/apps.py) | ![screenshot](documentation/testing/code_validation/python/profiles_apps.png) | Pass: No Errors |
+| profiles/forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/profiles/forms.py) | ![screenshot](documentation/testing/code_validation/python/profiles_forms.png) | Pass: No Errors |
+| profiles/models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/profiles/models.py) | ![screenshot](documentation/testing/code_validation/python/profiles_models.png) | Pass: No Errors |
+| profiles/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/profiles/urls.py) | ![screenshot](documentation/testing/code_validation/python/profiles_urls.png) | Pass: No Errors |
+| profiles/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/profiles/views.py) | ![screenshot](documentation/testing/code_validation/python/profiles_views.png) | Pass: No Errors |
+
+</details>
+
+##### Testimonials app
+
+<details>
+<summary>Click to see the Testimonials app python code validation</summary>
+
+| File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| testimonials/admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/testimonials/admin.py) | ![screenshot](documentation/testing/code_validation/python/testimonials_admin.png) | Pass: No Errors |
+| testimonials/apps.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/testimonials/apps.py) | ![screenshot](documentation/testing/code_validation/python/testimonials_apps.png) | Pass: No Errors |
+| testimonials/forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/testimonials/forms.py) | ![screenshot](documentation/testing/code_validation/python/testimonials_forms.png) | Pass: No Errors |
+| testimonials/models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/testimonials/models.py) | ![screenshot](documentation/testing/code_validation/python/testimonials_admin.png) | Pass: No Errors |
+| testimonials/urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/testimonials/urls.py) | ![screenshot](documentation/testing/code_validation/python/testimonials_urls.png) | Pass: No Errors |
+| testimonials/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/testimonials/views.py) | ![screenshot](documentation/testing/code_validation/python/testimonials_views.png) | Pass: No Errors |
+
+</details>
+
+##### Root Level files
+
+<details>
+<summary>Click to see the root level files python code validation</summary>
+
+| File | CI URL | Screenshot | Notes |
+| --- | --- | --- | --- |
+| custom_storages.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/custom_storages.py) | ![screenshot](documentation/testing/code_validation/python/custom_storages.png) | Pass: No Errors |
+| custom_storages.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/manage.py) | ![screenshot](documentation/testing/code_validation/python/manage.png) | Pass: No Errors |
+
+</details>
 
 **IMPORTANT**: Django settings.py
 
