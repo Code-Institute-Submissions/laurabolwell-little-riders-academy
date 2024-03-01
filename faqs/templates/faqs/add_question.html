@@ -14,6 +14,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-8">
+                <!-- Add FAQ form -->
                 <form method="POST" action="{% url 'add_question' %}" class="form mt-3" >
                     {% csrf_token %}
                     {{ form | crispy }}

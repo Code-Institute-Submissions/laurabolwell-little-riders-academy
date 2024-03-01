@@ -21,6 +21,7 @@ def view_faqs(request):
 @login_required
 def add_question(request):
     """ Add a question to the FAQs """
+    # Can only be viewed by superusers
     if not request.user.is_superuser:
         messages.error(
             request, 'You do not have permission to access this page.'

@@ -17,6 +17,7 @@
         <div class="accordion mt-3" id="faqsaccordian">
             {% for query in queries %}
             <div class="accordion-item">
+                <!-- Accordian to display customer messages. First message expanded by default -->
                 <h2 class="accordion-header" id="query_heading_{{ query.id }}">
                     <button class="accordion-button {% if query.id != 1 %}collapsed{% endif %}" type="button"
                         data-bs-toggle="collapse" data-bs-target="#collapse_{{ query.id }}" aria-expanded="true"

@@ -46,12 +46,13 @@ def contact(request):
 @login_required
 def view_queries(request):
     """ A view to display all queries """
+    # Only viewable by superusers
     if not request.user.is_superuser:
         messages.error(
             request, 'You do not have permission to access this page.'
         )
         return redirect(reverse('contact'))
-
+    # Order by date with most recent first
     queries = Contact.objects.order_by('-contact_date')
 
     context = {
