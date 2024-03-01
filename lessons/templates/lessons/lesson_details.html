@@ -56,7 +56,7 @@
                     </form>
                     {% if request.user.is_superuser %}
                     <div class="text-center mt-3">
-                        <a href="{% url 'edit_lesson' lesson.id %}" class="btn btn-sm btn-yellow px-3 me-2">Edit</a>
+                        <a href="{% url 'edit_lesson' lesson.id %}" class="btn btn-sm btn-light-blue px-3 me-2">Edit</a>
                         <a href="#delete-lesson-{{ lesson.id }}-modal" class="btn btn-danger btn-sm px-3"
                             data-bs-toggle="modal">Delete</a>
                         <!-- inject the modals partials-template -->
