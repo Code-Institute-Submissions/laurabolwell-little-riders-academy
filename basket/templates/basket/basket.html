@@ -14,22 +14,23 @@
         <div class="row">
             <div class="col">
                 {% if basket_items %}
+                <!-- Table to display basket items: lesson name, date, price, quantity and subtotal -->
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Lesson</th>
-                                <th scope="col">Date</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Subtotal</th>
+                                <th scope="col" class="col-3">Lesson</th>
+                                <th scope="col" class="col-5">Date</th>
+                                <th scope="col" class="col-1">Price</th>
+                                <th scope="col" class="col-2">Quantity</th>
+                                <th scope="col" class="col-1">Subtotal</th>
                             </tr>
                         </thead>
                         <tbody>
                             {% for item in basket_items %}
                             <tr class="align-items-center">
                                 <th scope="row" class="text-uppercase">{{ item.lesson.name }}</th>
-                                <td>{{ item.date | date:"j F Y" }}</td>
+                                <td>{{ item.date | date:"j F Y" }} at {{ item.lesson.time }}</td>
                                 <td>£{{ item.lesson.price }}</td>
                                 <td>
                                     <form class="form update-form" method="POST" action="{% url 'adjust_basket' item.lesson_id %}">
@@ -57,7 +58,7 @@
                                             data-lesson_date="{{ item.date }}"><small>Remove</small></a>
                                     </div>
                                 </td>
-                                <td>{{ item.lesson.price | calc_subtotal:item.quantity }}</td>
+                                <td>£{{ item.lesson.price | calc_subtotal:item.quantity }}</td>
                             </tr>
                             {% endfor %}
                         </tbody>
@@ -68,10 +69,10 @@
                         <hr>
                         <h6><strong>Basket Total: £{{ total|floatformat:2 }}</strong></h6>
                         <hr>
-                        <a href="{% url 'lessons' %}" class="btn btn-navy">
+                        <a href="{% url 'lessons' %}" class="btn btn-navy mb-3">
                             <i class="fa-solid fa-chevron-left"></i> Back to Lessons
                         </a>
-                        <a href="{% url 'checkout' %}" class="btn btn-navy">
+                        <a href="{% url 'checkout' %}" class="btn btn-navy mb-3">
                             <i class="fa-solid fa-lock"></i> Secure Checkout
                         </a>
                     </div>
@@ -104,7 +105,7 @@
         var form = $(this).parent().prev('.update-form');
         form.submit();
     })
-    // Update quantity on click
+    // Remove lesson on click
     $('.remove-lesson').click(function (e) {
         var csrfToken = "{{ csrf_token }}";
         var lessonId = $(this).attr('id').split('remove_')[1];
