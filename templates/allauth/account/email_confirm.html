@@ -14,9 +14,7 @@
             <hr>
         </div>
     </div>
-</section>
 
-<section class="container">
     {% if confirmation %}
     <div class="row justify-content-center">
         <div class="col-10 col-md-8 col-lg-6 text-center">
@@ -39,7 +37,8 @@
     <div class="row justify-content-center">
         <div class="col-10 col-md-8 col-lg-6 text-center">
             {% url 'account_email' as email_url %}
-            {% blocktrans %}This e-mail confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new
+            {% blocktrans %}This e-mail confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue
+                a new
                 e-mail confirmation request</a>.{% endblocktrans %}
         </div>
     </div>
@@ -47,4 +46,3 @@
 </section>
 
 {% endblock %}
-
