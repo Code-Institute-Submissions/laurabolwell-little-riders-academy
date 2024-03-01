@@ -90,15 +90,15 @@
   <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/flatpickr.min.js"></script>
   <script>
     // Toast initialisation
-    let toastElList = [].slice.call(document.querySelectorAll('.toast'))
+    let toastElList = [].slice.call(document.querySelectorAll('.toast'));
     let toastList = toastElList.map(function (toastEl) {
       let option = {
         animation: true,
         autohide: false,
-      }
-      let bsToast = new bootstrap.Toast(toastEl, option)
+      };
+      let bsToast = new bootstrap.Toast(toastEl, option);
       bsToast.show();
-    })
+    });
   </script>
   {% endblock %}
 
