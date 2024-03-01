@@ -173,7 +173,7 @@ def checkout_success(request, booking_number):
     messages.success(request, f'Booking successful! \
         Your booking number is {booking_number}. A \
         confirmation email will be sent to {booking.email}.')
-    # Delete basket contents 
+    # Delete basket contents
     if 'basket' in request.session:
         del request.session['basket']
 
