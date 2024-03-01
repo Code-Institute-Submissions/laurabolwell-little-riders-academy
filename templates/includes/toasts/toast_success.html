@@ -1,3 +1,4 @@
+<!-- Success toast -->
 <div class="toast rounded-0 border-top-0" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header justify-content-between">
         <strong class="mr-auto">Success!</strong>
@@ -11,6 +12,7 @@
                 <hr class="mt-1 mb-3">
             </div>
         </div>
+        <!-- Show basket contents in toast (only if not on profile page) -->
         {% if total and not on_profile_page %}
         <h5 class="heading text-center">Your Basket ({{ lesson_count }})</h5>
         <div class="basket-notification-wrapper">
@@ -28,6 +30,7 @@
             </div>
             {% endfor %}
         </div>
+        <!-- Link to checkout -->
         <div class="row">
             <div class="col text-center">
                 <hr>

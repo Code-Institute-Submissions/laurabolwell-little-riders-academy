@@ -1,4 +1,4 @@
-
+<!-- Expand the navbar on large screens and above -->
 <nav class="navbar navbar-expand-lg p-3">
     <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}"><img src="{{ MEDIA_URL }}lra-logo.webp" alt="Little Riders Academy logo"
@@ -19,11 +19,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                 </li>
+                <!-- Dropdown account menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         Account
                     </a>
+                    <!-- Some menu options only available to superusers -->
                     <ul class="dropdown-menu dropdown-menu-end">
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
@@ -41,6 +43,7 @@
                     </ul>
                 </li>
             </ul>
+            <!-- Basket shows total only if there are items in the basket -->
             <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'view_basket' %}">
