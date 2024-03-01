@@ -28,6 +28,7 @@
                         <p class="mb-1 mt-0 small text-muted">Subtotal</p>
                     </div>
                 </div>
+                <!-- Details of all lessons in the basket -->
                 {% for item in basket_items %}
                 <div class="row">
                     <div class="col-8">
@@ -43,6 +44,7 @@
                 </div>
                 {% endfor %}
                 <hr class="my-2">
+                <!-- Booking total -->
                 <div class="row text-black text-right">
                     <div class="col-7 offset-2">
                         <p class="my-0">Booking Total:</p>
@@ -52,6 +54,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Billing details form -->
             <div class="col-12 col-lg-6">
                 <p class="text-muted">
                     Please fill out the form below to complete your order
@@ -74,6 +77,7 @@
                         {{ booking_form.country | as_crispy_field }}
                         <div class="form-check form-check-inline float-right mr-0">
                             {% if user.is_authenticated %}
+                            <!-- Checkbox to save details to profile -->
                             <label class="form-check-label" for="id-save-info">Save this delivery information to my
                                 profile</label>
                             <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
@@ -86,6 +90,7 @@
                             {% endif %}
                         </div>
                     </fieldset>
+                    <!-- Payment -->
                     <fieldset class="px-3">
                         <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
                         <!-- A Stripe card element will go here -->
@@ -119,6 +124,7 @@
         </div>
     </section>
 </main>
+<!-- Payment processing overlay -->
 <div id="loading-overlay">
     <h1 class="text-light logo-font loading-spinner">
         <span class="icon">

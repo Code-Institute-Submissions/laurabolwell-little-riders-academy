@@ -17,6 +17,7 @@
                     <strong>{{ booking.email }}</strong></p>
             </div>
         </div>
+        <!-- Booking summary -->
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
                 <div class="order-confirmation-wrapper p2">
@@ -29,6 +30,7 @@
                         </div>
                     </div>
                     <div class="row">
+                        <!-- Details of all lessons booked -->
                         <div class="col">
                             <small class="text-muted">Booking Details:</small>
                         </div>
@@ -51,7 +53,7 @@
                             <small class="text-muted">Billing Info:</small>
                         </div>
                     </div>
-
+                    <!-- Booking total -->
                     <div class="row my-3">
                         <div class="col-12 col-md-6 fw-bolder">
                             Booking Total
@@ -64,6 +66,7 @@
             </div>
         </div>
         <div class="row">
+            <!-- Links to return to profile page or lessons page -->
             <div class="col-12 text-center">
                 {% if from_profile %}
                 <a class="btn btn-navy mt-3" href="{% url 'profile' %}">Back to profile</a>
