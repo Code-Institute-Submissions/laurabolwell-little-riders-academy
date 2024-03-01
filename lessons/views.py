@@ -28,6 +28,7 @@ def lesson_details(request, lesson_id):
 @login_required
 def add_lesson(request):
     """ Add a lesson to the site """
+    # Only allow superusers to add a lesson
     if not request.user.is_superuser:
         messages.error(
             request, 'You do not have permission to access this page.'
@@ -59,6 +60,7 @@ def add_lesson(request):
 @login_required
 def edit_lesson(request, lesson_id):
     """ Edit a lesson's details """
+    # Only allow superusers to edit a lesson
     if not request.user.is_superuser:
         messages.error(
             request, 'You do not have permission to access this page.'
@@ -93,6 +95,7 @@ def edit_lesson(request, lesson_id):
 @login_required
 def delete_lesson(request, lesson_id):
     """ Delete a lesson from the site """
+    # Only allow superusers to delete a lesson
     if not request.user.is_superuser:
         messages.error(
             request, 'You do not have permission to access this page.'

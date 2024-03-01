@@ -14,6 +14,7 @@
         <div class="row justify-content-center">
             {% for lesson in lessons %}
             <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                <!-- Lesson cards showing overview of lesson information -->
                 <div class="card mx-auto my-3 text-navy" style="width: 17rem;">
                     <img src="{{ lesson.image.url }}" class="card-img-top" alt="{{ lesson.name }}">
                     <div class="card-body text-center">
@@ -21,6 +22,7 @@
                         <p class="card-text">{{ lesson.day }}s at {{ lesson.time }}</p>
                         <p class="card-text">Recommended for ages {{ lesson.min_age }} to {{ lesson.max_age }}</p>
                         <a href="{% url 'lesson_details' lesson.id %}" class="btn btn-navy">Full details</a>
+                        <!-- Edit and delete buttons only visible to superusers -->
                         {% if request.user.is_superuser %}
                         <div class="text-center mt-3">
                             <a href="{% url 'edit_lesson' lesson.id %}"
@@ -35,6 +37,7 @@
                 </div>
             </div>
             {% endfor %}
+            <!-- Option to add a new lesson for superusers -->
             {% if request.user.is_superuser %}
             <div class="col-12 text-center">
                 <a href="{% url 'add_lesson' %}" class="btn btn-navy mt-3">Add a New Lesson</a>

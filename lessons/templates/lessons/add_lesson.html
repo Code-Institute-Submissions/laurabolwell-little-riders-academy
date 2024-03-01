@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-
 {% block content %}
 <main>
     <section class="container page-section">
@@ -14,6 +13,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-8">
+                <!-- Add lesson form -->
                 <form method="POST" action="{% url 'add_lesson' %}" class="form mt-3" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
@@ -26,6 +26,5 @@
         </div>
     </section>
 </main>
-
 
 {% endblock %}
