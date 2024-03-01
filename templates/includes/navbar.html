@@ -24,7 +24,7 @@
                         aria-expanded="false">
                         Account
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-end">
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <li><a href="{% url 'add_lesson' %}" class="dropdown-item">Add a lesson</a></li>
@@ -32,6 +32,7 @@
                         <li><a href="{% url 'view_queries' %}" class="dropdown-item">View Customer Queries</a></li>
                         {% endif %}
                         <li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
+                        <li><a href="{% url 'leave_testimonial' %}" class="dropdown-item">Leave a Testimonial</a></li>
                         <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
                         {% else %}
                         <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
