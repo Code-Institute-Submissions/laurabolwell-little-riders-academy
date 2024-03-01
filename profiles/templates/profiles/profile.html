@@ -14,6 +14,7 @@
     <section>
         <div class="row justify-content-around">
             <div class="col-10 col-md-7 mb-5">
+                <!-- Display all previous bookings associated with this profile -->
                 <h4 class="heading text-center mb-4">Booking Information</h4>
                 <div class="booking-history table-responsive">
                     <table class="table table-sm">
@@ -50,6 +51,7 @@
                 </div>
             </div>
             <div class="col-10 col-md-5 px-5">
+                <!-- Default billing information -->
                 <h4 class="heading text-center mb-4">Default Billing Information</h4>
                 <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}

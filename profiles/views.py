@@ -40,6 +40,10 @@ def profile(request):
 
 
 def booking_history(request, booking_number):
+    """
+    Shows the user the full booking confirmation
+    from historical bookings
+    """
     booking = get_object_or_404(Booking, booking_number=booking_number)
 
     messages.info(
