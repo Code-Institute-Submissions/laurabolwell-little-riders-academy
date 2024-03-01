@@ -154,7 +154,6 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | little_riders_academy/views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/little_riders_academy/views.py) | ![screenshot](documentation/testing/code_validation/python/lra_views.png) | Pass: No Errors |
 | little_riders_academy/wsgi.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/laurabolwell/little-riders-academy/main/little_riders_academy/wsgi.py) | ![screenshot](documentation/testing/code_validation/python/lra_wsgi.png) | Pass: No Errors |
 
-
 </details>
 
 ##### Profiles app
@@ -201,74 +200,20 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 </details>
 
-**IMPORTANT**: Django settings.py
-
-The Django settings.py file comes with 4 lines that are quite long, and will throw the `E501 line too long` error.
-This is default behavior, but can be fixed by adding `# noqa` to the end of those lines.
-
-Example:
-
-```python
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",  # noqa
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",  # noqa
-    },
-]
-```
-
-**IMPORTANT**: migration and pycache files
-
-You do not have to ever validate files from the `migrations/` or `pycache/` folders!
-Ignore these `.py` files, and validate just the files that you've created or modified.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ## Browser Compatibility
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss testing the live/deployed site on various browsers.
-
-Consider testing at least 3 different browsers, if available on your system.
-
-Recommended browsers to consider:
-- [Chrome](https://www.google.com/chrome)
-- [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
-- [Edge](https://www.microsoft.com/edge)
-- [Safari](https://support.apple.com/downloads/safari)
-- [Brave](https://brave.com/download)
-- [Opera](https://www.opera.com/download)
-
-**IMPORTANT**: You must provide screenshots of the tested browsers, to "prove" that you've actually tested them.
-
-Please note, there are services out there that can test multiple browser compatibilities at the same time.
-Some of these are paid services, but some are free.
-If you use these, you must provide a link to the source used for attribution, and multiple screenshots of the results.
-
-Sample browser testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
-| Browser | Home | About | Contact | etc | Notes |
+| Browser | Home | Lessons | Lesson Details | Checkout | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Chrome | ![screenshot](documentation/browser-chrome-home.png) | ![screenshot](documentation/browser-chrome-about.png) | ![screenshot](documentation/browser-chrome-contact.png) | ![screenshot](documentation/browser-chrome-etc.png) | Works as expected |
-| Firefox | ![screenshot](documentation/browser-firefox-home.png) | ![screenshot](documentation/browser-firefox-about.png) | ![screenshot](documentation/browser-firefox-contact.png) | ![screenshot](documentation/browser-firefox-etc.png) | Works as expected |
-| Edge | ![screenshot](documentation/browser-edge-home.png) | ![screenshot](documentation/browser-edge-about.png) | ![screenshot](documentation/browser-chrome-edge.png) | ![screenshot](documentation/browser-edge-etc.png) | Works as expected |
-| Safari | ![screenshot](documentation/browser-safari-home.png) | ![screenshot](documentation/browser-safari-about.png) | ![screenshot](documentation/browser-safari-contact.png) | ![screenshot](documentation/browser-safari-etc.png) | Minor CSS differences |
-| Brave | ![screenshot](documentation/browser-brave-home.png) | ![screenshot](documentation/browser-brave-about.png) | ![screenshot](documentation/browser-brave-contact.png) | ![screenshot](documentation/browser-brave-etc.png) | Works as expected |
-| Opera | ![screenshot](documentation/browser-opera-home.png) | ![screenshot](documentation/browser-opera-about.png) | ![screenshot](documentation/browser-opera-contact.png) | ![screenshot](documentation/browser-opera-etc.png) | Minor differences |
-| repeat for any other tested browsers | x | x | x | x | x |
+| Chrome | ![screenshot](documentation/testing/browser_testing/chrome_home.png) | ![screenshot](documentation/testing/browser_testing/chrome_lessons.png) | ![screenshot](documentation/testing/browser_testing/chrome_lesson_details.png) | ![screenshot](documentation/testing/browser_testing/chrome_checkout.png) | Works as expected |
+| Firefox | ![screenshot](documentation/testing/browser_testing/firefox_home.png) | ![screenshot](documentation/testing/browser_testing/firefox_lessons.png) | ![screenshot](documentation/testing/browser_testing/firefox_lesson_details.png) | ![screenshot](documentation/testing/browser_testing/firefox_checkout.png) | Works as expected |
+| Edge | ![screenshot](documentation/testing/browser_testing/edge_home.png) | ![screenshot](documentation/testing/browser_testing/edge_lessons.png) | ![screenshot](documentation/testing/browser_testing/edge_lesson_details.png) | ![screenshot](documentation/testing/browser_testing/edge_checkout.png) | Works as expected |
+| Safari | ![screenshot](documentation/browser-safari-home.png) | ![screenshot](documentation/browser-safari-about.png) | ![screenshot](documentation/browser-safari-contact.png) | ![screenshot](documentation/browser-safari-etc.png) |  |
+| Brave | ![screenshot](documentation/testing/browser_testing/brave_home.png) | ![screenshot](documentation/testing/browser_testing/brave_lessons.png) | ![screenshot](documentation/testing/browser_testing/brave_lesson_details.png) | ![screenshot](documentation/testing/browser_testing/brave_checkout.png) | Works as expected |
+| Opera | ![screenshot](documentation/testing/browser_testing/opera_home.png) | ![screenshot](documentation/testing/browser_testing/opera_lessons.png) | ![screenshot](documentation/testing/browser_testing/opera_lesson_details.png) | ![screenshot](documentation/testing/browser_testing/opera_checkout.png) | Works as expected |
 
 ## Responsiveness
 
