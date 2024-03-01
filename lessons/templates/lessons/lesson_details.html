@@ -80,6 +80,7 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'lessons/includes/quantity_input_script.html' %}
+<!-- Pass the class size to give max value for quantity button -->
 {{ lesson.class_size | json_script:"id_lesson_class_size"}}
 <script>
     document.addEventListener("DOMContentLoaded", function () {
