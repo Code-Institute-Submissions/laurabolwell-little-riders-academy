@@ -383,57 +383,78 @@ etc.
 
 ![screenshot](documentation/features/edit_lesson_modal.png)
 
-- **Add a new lesson button**
+#### FAQs Page
+
+- **FAQs Accordian**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
+![screenshot](documentation/features/faqs_accordian.png)
 
-- **Add a new lesson button**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+- **FAQs Add Question Button**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/faqs_add_question_button.png)
+
+- **FAQs Edit and Delete Buttons**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/faqs_edit_delete_buttons.png)
+
+- **FAQs Delete Modal**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/faqs_delete_modal.png)
+
+- **FAQs Add Question Form**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/faqs_add_question.png)
+
+- **FAQs Edit Question Form**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/faqs_edit_question.png)
+
+- **FAQs Edit Question Modal**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/faqs_edit_modal.png)
+
+#### Contact Page
+
+- **Contact Form**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/contact_form.png)
+
+![screenshot](documentation/features/contact_form_logged_in.png)
+
+#### View Queries Page
+
+- **View Queries Accordian**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
+![screenshot](documentation/features/view_queries.png)
+
+#### Leave a Testimonial Page
+
+- **Testimonial Form**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/testimonial.png)
+
+####
+
 - **Add a new lesson button**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
