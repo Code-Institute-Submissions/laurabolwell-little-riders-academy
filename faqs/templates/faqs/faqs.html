@@ -14,6 +14,12 @@
                 <hr class="block-divider">
             </div>
         </div>
+        <!-- Button to add a question only for superusers -->
+        <div class="text-center">
+            {% if request.user.is_superuser %}
+                <a href="{% url 'add_question' %}" class="btn btn-navy my-3">Add a question</a>
+            {% endif %}
+            </div>
         <!-- Accordian to display FAQs. First question expanded by default -->
         <div class="accordion mt-3" id="faqsaccordian">
             {% for question in questions %}
@@ -48,12 +54,6 @@
             </div>
             {% endfor %}
         </div>
-        <!-- Button to add a question only for superusers -->
-        {% if request.user.is_superuser %}
-        <div class="text-center">
-            <a href="{% url 'add_question' %}" class="btn btn-navy mt-5">Add a question</a>
-        </div>
-        {% endif %}
     </section>
 </main>
 
