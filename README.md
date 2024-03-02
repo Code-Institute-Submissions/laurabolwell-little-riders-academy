@@ -541,6 +541,11 @@ etc.
 
 ![screenshot](documentation/features/checkout_success_page.png)
 
+- **Booking Confirmation Email**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/email_confirmation.png)
 ### Future Features
 
 🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
