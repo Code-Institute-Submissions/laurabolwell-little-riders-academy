@@ -10,8 +10,6 @@ class TestimonialForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         placeholders = {
-            'display_name': 'Anonymous',
-            'rating': 'Rating',
             'review': 'Please write your review here'
         }
         labels = {
@@ -20,8 +18,9 @@ class TestimonialForm(forms.ModelForm):
             'review': 'Please leave your testimonial here'
         }
         self.fields['display_name'].widget.attrs['autofocus'] = True
+        self.fields['review'].widget.attrs['placeholder'] = placeholders[
+            'review'
+            ]
         for field in self.fields:
-            placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'text-navy'
             self.fields[field].widget.attrs['label'] = labels
