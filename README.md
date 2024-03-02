@@ -104,35 +104,51 @@ Example:
 
 ## User Stories
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, list all of your user stories for the project.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to find out what the business is about , so that I can see if it would be suitable for me to use.
+- As a new site user, I would like to view a list of the lessons available, so that I can see if any of them are suitable for my child.
+- As a new site user, I would like to view full details of each type of lesson, so that I view lesson days/times, price and full details so see if the lesson is suitable for my child.
+- As a new site user, I would like to see what other customers think of the lessons, so that I can make an informed decision as to whether I want to use them.
+- As a new site user, I would like to have basic questions about the lessons answered, so that I know all necessary information to be able to bring my child to them.
+- As a new site user, I would like to contact the business owner, so that I can ask any additional questions I may have.
+
+### New and Returning Site Users
+
+- As a new/returning site user, I would like to easily select the date and quantity for lessons I want to book, so that I can book lessons on the correct date and for the correct number of children.
+- As a new/returning site user, I would like to easily add lessons to my basket, so that I can book and pay for more than one at a time.
+- As a new/returning site user, I would like to see a brief overview of my basket once I have added lessons to it, so that I can book and pay for more than one at a time.
+- As a new/returning site user, I would like to view the lessons in my basket, so I can check I am happy with all the details before booking/paying.
+- As a new/returning site user, I would like to easily edit the lessons in my basket, so that I can fix any errors/change my mind without having to go back and start again.
+- As a new/returning site user, I would like to easily remove lessons from my basket, so that I can correct any error or change my mind.
+- As a new/returning site user, I would like to book and pay for a lesson for my child, so that my child can attend the lesson.
+- As a new/returning site user, I would like to easily enter my payment information, so that I can book the lesson.
+- As a new/returning site user, I would like to feel my payment information is safe and secure, so that I can confidently provide the information needed to make a purchase.
+- As a new/returning site user, I would like to view a booking confirmation after checkout, so that I know that the booking has been successful.
+- As a new/returning site user, I would like to receive an email confirmation after checking out, so that I keep the confirmation for my records.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a returning site user, I would like to easily create an account, so that I can checkout faster in the future.
+- As a returning site user, I would like to receive a confirmation email after registering, so that I know that my account registration was successful.
+- As a returning site user, I would like to easily login or logout, so that I can access my personal account information.
+- As a returning site user, I would like to easily view my bookings at any time, so that I can see how many lessons my child has attended in the past and any which are coming up in the future.
+- As a returning site user, I would like to have a personalised user profile, so that I can save my details and checkout faster in future.
+- As a returning site user, I would like to leave a testimonial, so that I can let other users know what I think of the lessons.
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a site administrator, I should be able to add a new lesson to the site, so that I can offer more types of lessons to customers.
+- As a site administrator, I should be able to edit a lesson, so that I can change the details of the classes.
+- As a site administrator, I should be able to delete a lesson, so that I can stop offering lessons which are unable to run.
+- As a site administrator, I should be asked to confirm whether I want to delete/edit a lesson, so that I can't accidentally perform these actions.
+- As a site administrator, I should be able to view customer messages that have been sent through the contact app, so that I can answer customer queries.
+- As a site administrator, I should be able to add a FAQ, so that I can reduce the amount of contact emails I am receiving.
+- As a site administrator, I should be able to edit a FAQ, so that I can reduce the amount of contact emails I am receiving.
+- As a site administrator, I should be asked to confirm whether I want to delete/edit an FAQ, so that I can't accidentally perform these actions.
+- As a site administrator, I should be able to see messages to confirm whether all these actions have been successful.
+
 
 ## Wireframes
 
@@ -225,48 +241,294 @@ etc.
 
 ## Features
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ### Existing Features
 
-- **Title for feature #1**
+#### All Pages on the Site Have:
+
+- **Navbar**
+
+    - A responsive navbar displayed clearly at the top of the page which allows the user to navigate around the site. On the left of the navbar is the business logo which also acts as a link back to the home page. On the right are links to the lesson, FAQs and contat pages, as well as an account dropdown menu which will show different options depending on if the user is logged in/out and whether they are a superuser.
+
+![screenshot](documentation/features/navbar.png)
+
+![screenshot](documentation/features/navbar_with_hover.png)
+
+![screenshot](documentation/features/navbar_with_dropdown.png)
+
+- **Navbar mobile toggler**
+
+    - On screen sizes of medium and below, the navbar collapses to a burger toggler. This gives the navbar a clean look and stops it becoming too cluttered. Both the burger icon and dropdown menu are on the right side of the screen, this provides a good user experience as most users would use their right thumb to click on the icon and then the dropdown menu appears in close proximity to it. Once the navbar has collapsed the basket link moves to a button placed at the bottom right of the page.
+
+![screenshot](documentation/features/navbar_toggler.png)
+
+![screenshot](documentation/features/navbar_collapsed.png)
+
+![screenshot](documentation/features/checkout_button.png)
+
+- **Footer**
+
+    - The footer contains links to the external Facebook, Instagram and YouTube sites of the group which all open in new tabs. It also has a link to the Contact page of the website which opens in the same window. Universally recognisable icons were used rather than text to the give the footer a clean look. The icons change color when hovered over to give instant feedback to the user.
+
+![screenshot](documentation/features/footer.png)
+![screenshot](documentation/features/footer_with_hover.png)
+
+#### Home Page
+
+- **Hero Image**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/feature01.png)
+![screenshot](documentation/features/home_hero.png)
 
-- **Title for feature #2**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/feature02.png)
-
-- **Title for feature #3**
+- **About Us Section**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/feature03.png)
+![screenshot](documentation/features/home_about.png)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- **Testimonials Section**
 
-Repeat as necessary for as many features as your site contains.
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-Hint: the more, the merrier!
+![screenshot](documentation/features/home_testimonials.png)
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+#### Lessons Page
+
+- **Lessons Cards**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/lessons_superuser.png)
+![screenshot](documentation/features/lessons.png)
+
+- **Add New Lesson Button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/lesson_add_new_button.png)
+
+#### Lesson Details Page
+
+- **Lesson Full Details**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/lesson_details_superuser.png)
+![screenshot](documentation/features/lesson_details.png)
+
+- **Lesson Details Edit and Delete Buttons**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/lesson_details_edit_delete_buttons.png)
+
+- **Delete Lesson Modal**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/lesson_details_delete_modal.png)
+
+- **Datepicker**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/lesson_details_datepicker.png)
+
+- **Quantity Buttons**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/lesson_details_quantity_buttons.png)
+![screenshot](documentation/features/lesson_details_min_quantity.png)
+![screenshot](documentation/features/lesson_details_max_quantity.png)
+
+- **Add to Basket Buttons**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/lesson_details_add_to_basket_button.png)
+
+
+#### Add Lesson Page
+
+- **Add Lesson Form**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/add_lesson.png)
+
+- **Add Lesson Form Buttons**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/add_lesson_buttons.png)
+
+#### Edit Lesson Page
+
+- **Edit Lesson Form**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/edit_lesson.png)
+
+- **Edit Lesson Buttons**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/edit_lesson_buttons.png)
+
+- **Edit Lesson Modal**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/edit_lesson_modal.png)
+
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
+- **Add a new lesson button**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/less_add_new_button.png)
 
 ### Future Features
 
