@@ -1,104 +1,46 @@
 # [LITTLE RIDERS ACADEMY](https://little-riders-academy-7a3f050ed053.herokuapp.com)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+Little Riders Academy is a website for a business which teaches cycling lessons to young children. Parents can view the different lessons available, as well as being able to book and pay for them on the website. Users can checkout as a guest, or they can choose to create an account where their information can be saved to their profile for a faster checkout in future. As a logged in user they can also leave a testimonial to be displayed on the website. Other features include a FAQs page and a contact form. Admin users can add, edit and delete lessons, add edit and delete FAQs, and view messages that customers have sent through the contact form.
 
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
+The website is designed to be fully responsive, allowing visitors to view it on a wide range of devices.
 
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
+![screenshot](documentation/intro/amiresponsive.png)
 
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
-
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
-https://ui.dev/amiresponsive?url=https://little-riders-academy-7a3f050ed053.herokuapp.com
-
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
-
-![screenshot](documentation/mockup.png)
-
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-https://pandao.github.io/editor.md/en.html
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+I used [amiresponsive](https://ui.dev/amiresponsive?url=https://little-riders-academy-7a3f050ed053.herokuapp.com)
+ to create this image.
 
 ## UX
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you will briefly explain your design processes.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ### Colour Scheme
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+The website uses a plain white background with a navy-blue navbar and footer to give the site a clean look. Yellow and lighter blues are used for text on the dark background, buttons and hover effects. Although the lessons are aimed at children, the website itself is aimed at the parents who will be booking the lessons.
 
-Explain your colours and the colour scheme.
+- `#192841` used for navbar, footer and the majority of buttons.
+- `#FFFD37` used for navbar and footer text, and for hover effects on buttons.
+- `#0ACDFF` used for hover effects on footer and other accents on forms and links.
+- `#D6F7FF` used for hover effect on navbar and text on navy buttons.
+- `#FFFFFF` used for the main background.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+I used [coolors.co](https://coolors.co/192841-fffd37-0acdff-d6f7ff-ffffff) to generate my colour palette.
 
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
+![screenshot](documentation/intro/coolors.png)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
-
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
-
-![screenshot](documentation/coolors.png)
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
+I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file. I have also used these root variables to create custom text, background and button classes to use throughout the site.
 
 ```css
 :root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
+    --navy: #192841;
+    --yellow: #FFFD37;
+    --sky-blue: #0ACDFF;
+    --light-blue: #D6F7FF;
 }
 ```
 
 ### Typography
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- [Aboreto](https://fonts.google.com/specimen/Aboretot) was used for the primary headers and titles.
 
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
-
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
+- [Roboto](https://fonts.google.com/?query=roboto) was used for all other secondary text.
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
 
