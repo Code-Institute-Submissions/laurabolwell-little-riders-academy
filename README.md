@@ -486,76 +486,60 @@ etc.
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
 ![screenshot](documentation/features/basket_adjust.png)
-- **Add a new lesson button**
+
+#### Checkout Page
+
+- **Checkout Booking Details Form and Booking Summary**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/checkout_booking_summary.png)
+
+- **Checkout Button**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/checkout_disabled_button.png)
+![screenshot](documentation/features/checkout_complete_button.png)
+
+
+- **Checkout Payment Input**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/checkout_payment_input.png)
+
+- **Checkout Sign Up/ Sign In Links**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/checkout_create_account_links.png)
+
+- **Checkout Logged In User Booking Details Form and Booking Summary**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/checkout_logged_in_user.png)
+
+- **Checkout Save Info Checkbox**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/checkout_save_info_checkbox.png)
+
+#### Checkout Success Page
+
+- **Booking Summary Message**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/checkout_success_message.png)
+
+- **Booking Confirmation and Details**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/features/less_add_new_button.png)
+![screenshot](documentation/features/checkout_success_page.png)
 
 ### Future Features
 
