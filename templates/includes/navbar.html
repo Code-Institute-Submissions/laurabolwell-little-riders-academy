@@ -26,7 +26,7 @@
                         Account
                     </a>
                     <!-- Some menu options only available to superusers -->
-                    <ul class="dropdown-menu dropdown-menu-end">
+                    <ul class="dropdown-menu">
                         {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                         <li><a href="{% url 'add_lesson' %}" class="dropdown-item">Add a lesson</a></li>
