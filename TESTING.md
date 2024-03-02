@@ -211,7 +211,6 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | Chrome | ![screenshot](documentation/testing/browser_testing/chrome_home.png) | ![screenshot](documentation/testing/browser_testing/chrome_lessons.png) | ![screenshot](documentation/testing/browser_testing/chrome_lesson_details.png) | ![screenshot](documentation/testing/browser_testing/chrome_checkout.png) | Works as expected |
 | Firefox | ![screenshot](documentation/testing/browser_testing/firefox_home.png) | ![screenshot](documentation/testing/browser_testing/firefox_lessons.png) | ![screenshot](documentation/testing/browser_testing/firefox_lesson_details.png) | ![screenshot](documentation/testing/browser_testing/firefox_checkout.png) | Works as expected |
 | Edge | ![screenshot](documentation/testing/browser_testing/edge_home.png) | ![screenshot](documentation/testing/browser_testing/edge_lessons.png) | ![screenshot](documentation/testing/browser_testing/edge_lesson_details.png) | ![screenshot](documentation/testing/browser_testing/edge_checkout.png) | Works as expected |
-| Safari | ![screenshot](documentation/browser-safari-home.png) | ![screenshot](documentation/browser-safari-about.png) | ![screenshot](documentation/browser-safari-contact.png) | ![screenshot](documentation/browser-safari-etc.png) |  |
 | Brave | ![screenshot](documentation/testing/browser_testing/brave_home.png) | ![screenshot](documentation/testing/browser_testing/brave_lessons.png) | ![screenshot](documentation/testing/browser_testing/brave_lesson_details.png) | ![screenshot](documentation/testing/browser_testing/brave_checkout.png) | Works as expected |
 | Opera | ![screenshot](documentation/testing/browser_testing/opera_home.png) | ![screenshot](documentation/testing/browser_testing/opera_lessons.png) | ![screenshot](documentation/testing/browser_testing/opera_lesson_details.png) | ![screenshot](documentation/testing/browser_testing/opera_checkout.png) | Works as expected |
 
@@ -438,16 +437,6 @@ Below are the results from the tests that I've written for this application:
 | 1 passed | 16 passed | ![screenshot](documentation/js-test-coverage.png) |
 | x | x | repeat for all remaining tests |
 
-#### Jest Test Issues
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this section to list any known issues you ran into while writing your Jest tests.
-Remember to include screenshots (where possible), and a solution to the issue (if known).
-
-This can be used for both "fixed" and "unresolved" issues.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 ### Python (Unit Testing)
 
@@ -477,102 +466,23 @@ Below are the results from the various apps on my application that I've tested:
 | Lessons | 100% | ![screenshot](documentation/testing/automated_testing/python/lessons_test.png) | ![screenshot](documentation/testing/automated_testing/python/lessons_coverage.png) |
 
 
-#### Unit Test Issues
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this section to list any known issues you ran into while writing your unit tests.
-Remember to include screenshots (where possible), and a solution to the issue (if known).
-
-This can be used for both "fixed" and "unresolved" issues.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ## Bugs
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+Most minor issues and bugs were rectified quickly during the development process. I used github issues to track any issues which I found more difficult to solve. Previously closed/fixed bugs can be tracked [here](https://github.com/laurabolwell/little-riders-academy/issues).
 
-This section is primarily used for JavaScript and Python applications,
-but feel free to use this section to document any HTML/CSS bugs you might run into.
-
-It's very important to document any bugs you've discovered while developing the project.
-Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
-
-**PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- JS Uncaught ReferenceError: `foobar` is undefined/not defined
-
-    ![screenshot](documentation/bug01.png)
-
-    - To fix this, I _____________________.
-
-- JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
-
-    ![screenshot](documentation/bug02.png)
-
-    - To fix this, I _____________________.
-
-- Python `'ModuleNotFoundError'` when trying to import module from imported package
-
-    ![screenshot](documentation/bug03.png)
-
-    - To fix this, I _____________________.
-
-- Django `TemplateDoesNotExist` at /appname/path appname/template_name.html
-
-    ![screenshot](documentation/bug04.png)
-
-    - To fix this, I _____________________.
-
-- Python `E501 line too long` (93 > 79 characters)
-
-    ![screenshot](documentation/bug04.png)
-
-    - To fix this, I _____________________.
+| Bug | Status |
+| --- | --- |
+| [Error when form is incorrect (but payment still taken and booking created) ](https://github.com/laurabolwell/little-riders-academy/issues/1) | Closed |
+| [Bookings being created twice if postcode isn't an exact match](https://github.com/laurabolwell/little-riders-academy/issues/2) | Closed |
+| [Required attribute on datapicker not working](https://github.com/laurabolwell/little-riders-academy/issues/3) | Closed |
+| [Basket quantity update and delete buttons not working since updating date format](https://github.com/laurabolwell/little-riders-academy/issues/4) | Closed |
 
 ## Unfixed Bugs
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- On the checkout page, the fix I have implemented to fix issue one works except when profile information is preloaded in the form. The fix works by disabling the submit button and listening for changes to the email field and re-enables it when the email passes the Django regex validation criteria. When the form is preloaded, there is no change to the email field so the buttom will be disabled even if the email address is valid. 
 
-You will need to mention unfixed bugs and why they were not fixed.
-This section should include shortcomings of the frameworks or technologies used.
-Although time can be a big variable to consider, paucity of time and difficulty understanding
-implementation is not a valid reason to leave bugs unfixed.
+    ![screenshot](documentation/testing/email_validation.png)
 
-If you've identified any unfixed bugs, no matter how small, be sure to list them here.
-It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
-they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
-
-Some examples:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
-
-    ![screenshot](documentation/unfixed-bug01.png)
-
-    - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
-
-- For PP3, when using a helper `clear()` function, any text above the height of the terminal does not clear, and remains when you scroll up.
-
-    ![screenshot](documentation/unfixed-bug02.png)
-
-    - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
-
-- When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
-
-    ![screenshot](documentation/unfixed-bug03.png)
-
-    - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-There are no remaining bugs that I am aware of.
+Other than this, there are no remaining bugs that I am aware of.
 
 Return back to the [README.md](README.md) file.
