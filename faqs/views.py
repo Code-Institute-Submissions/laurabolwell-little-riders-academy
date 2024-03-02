@@ -57,7 +57,7 @@ def edit_question(request, question_id):
         messages.error(
             request, 'You do not have permission to access this page.'
         )
-        return redirect(reverse('contact'))
+        return redirect(reverse('faqs'))
 
     question = get_object_or_404(Question, pk=question_id)
 
