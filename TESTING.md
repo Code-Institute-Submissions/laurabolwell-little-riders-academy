@@ -400,28 +400,39 @@ The aforementioned tests are just an example of a few different project scenario
 
 ## User Story Testing
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Testing user stories is actually quite simple, once you've already got the stories defined on your README.
-
-Most of your project's **features** should already align with the **user stories**,
-so this should as simple as creating a table with the user story, matching with the re-used screenshot
-from the respective feature.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-| User Story | Screenshot |
-| --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature01.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature02.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature03.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature04.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature05.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature09.png) |
-| repeat for all remaining user stories | x |
+| User Story | Screenshot | |
+| --- | --- | --- |
+| - As a new site user, I would like to find out what the business is about , so that I can see if it would be suitable for me to use. | ![screenshot](documentation/features/home_about.png) | |
+| - As a new site user, I would like to view a list of the lessons available, so that I can see if any of them are suitable for my child. | ![screenshot](documentation/features/lessons.png) | |
+| - As a new site user, I would like to view full details of each type of lesson, so that I view lesson days/times, price and full details so see if the lesson is suitable for my child. | ![screenshot](documentation/features/lesson_details.png) | |
+| - As a new site user, I would like to see what other customers think of the lessons, so that I can make an informed decision as to whether I want to use them. | ![screenshot](documentation/features/home_testimonials.png) | |
+| - As a new site user, I would like to have basic questions about the lessons answered, so that I know all necessary information to be able to bring my child to them. | ![screenshot](documentation/features/faqs_accordian.png) | |
+| - As a new site user, I would like to contact the business owner, so that I can ask any additional questions I may have. | ![screenshot](documentation/features/contact_form.png) | ![screenshot](documentation/features/contact_form_logged_in.png) |
+| - As a new/returning site user, I would like to easily select the date and quantity for lessons I want to book, so that I can book lessons on the correct date and for the correct number of children. | ![screenshot](documentation/features/lesson_details_datepicker.png) |  ![screenshot](documentation/features/lesson_details_quantity_buttons.png) |
+| - As a new/returning site user, I would like to easily add lessons to my basket, so that I can book and pay for more than one at a time. | ![screenshot](documentation/features/lesson_details_add_to_basket_button.png) | |
+| - As a new/returning site user, I would like to see a brief overview of my basket once I have added lessons to it, so that I can book and pay for more than one at a time. | ![screenshot](documentation/features/basket_overview_message.png) | |
+| - As a new/returning site user, I would like to view the lessons in my basket, so I can check I am happy with all the details before booking/paying. | ![screenshot](documentation/features/basket.png) | |
+| - As a new/returning site user, I would like to easily edit the lessons in my basket, so that I can fix any errors/change my mind without having to go back and start again. | ![screenshot](documentation/features/basket_adjust.png) | |
+| - As a new/returning site user, I would like to easily remove lessons from my basket, so that I can correct any error or change my mind. | ![screenshot](documentation/features/basket_adjust.png) | |
+| - As a new/returning site user, I would like to book and pay for a lesson for my child, so that my child can attend the lesson. | ![screenshot](documentation/features/checkout_booking_summary.png) | |
+| - As a new/returning site user, I would like to easily enter my payment information, so that I can book the lesson. | ![screenshot](documentation/features/checkout_payment_input.png) | |
+| - As a new/returning site user, I would like to feel my payment information is safe and secure, so that I can confidently provide the information needed to make a purchase. | ![screenshot](documentation/features/checkout_payment_input.png) | |
+| - As a new/returning site user, I would like to view a booking confirmation after checkout, so that I know that the booking has been successful. | ![screenshot](documentation/features/checkout_success_message.png) | ![screenshot](documentation/features/checkout_success_page.png) |
+| - As a new/returning site user, I would like to receive an email confirmation after checking out, so that I keep the confirmation for my records. | ![screenshot](documentation/features/email_confirmation.png) | |
+| - As a returning site user, I would like to easily create an account, so that I can checkout faster in the future. | ![screenshot](documentation/features/sign_up.png) | |
+| - As a returning site user, I would like to easily login or logout, so that I can access my personal account information. | ![screenshot](documentation/features/sign_in.png) | ![screenshot](documentation/features/sign_out.png) |
+| - As a returning site user, I would like to easily view my bookings at any time, so that I can see how many lessons my child has attended in the past and any which are coming up in the future. | ![screenshot](documentation/features/profile.png) | |
+| - As a returning site user, I would like to have a personalised user profile, so that I can save my details and checkout faster in future. | ![screenshot](documentation/features/profile.png) | |
+| - As a returning site user, I would like to leave a testimonial, so that I can let other users know what I think of the lessons. | ![screenshot](documentation/features/testimonial.png) | |
+| - As a site administrator, I should be able to add a new lesson to the site, so that I can offer more types of lessons to customers. | ![screenshot](documentation/features/add_lesson.png) | |
+| - As a site administrator, I should be able to edit a lesson, so that I can change the details of the classes. | ![screenshot](documentation/features/edit_lesson.png) | ![screenshot](documentation/features/edit_lesson_modal.png) |
+| - As a site administrator, I should be able to delete a lesson, so that I can stop offering lessons which are unable to run. | ![screenshot](documentation/features/lesson_details_edit_delete_buttons.png) | ![screenshot](documentation/features/delete_lesson_modal.png) |
+| - As a site administrator, I should be asked to confirm whether I want to delete/edit a lesson, so that I can't accidentally perform these actions. | ![screenshot](documentation/features/edit_lesson_modal.png) | ![screenshot](documentation/features/delete_lesson_modal.png) |
+| - As a site administrator, I should be able to view customer messages that have been sent through the contact app, so that I can answer customer queries. | ![screenshot](documentation/features/view_queries.png) | |
+| - As a site administrator, I should be able to add a FAQ, so that I can reduce the amount of contact emails I am receiving. | ![screenshot](documentation/features/faqs_add_question.png) | |
+| - As a site administrator, I should be able to edit a FAQ, so that I can reduce the amount of contact emails I am receiving. | ![screenshot](documentation/features/faqs_edit_question.png) | ![screenshot](documentation/features/faqs_edit_modal.png) |
+| - As a site administrator, I should be asked to confirm whether I want to delete/edit an FAQ, so that I can't accidentally perform these actions. | ![screenshot](documentation/features/faqs_delete_modal.png) | ![screenshot](documentation/features/faqs_edit_modal.png) |
+| - As a site administrator, I should be able to see messages to confirm whether all these actions have been successful. | ![screenshot](documentation/features/lesson_edited.png) | ![screenshot](documentation/features/message_deleted.png) |
 
 ## Automated Testing
 
