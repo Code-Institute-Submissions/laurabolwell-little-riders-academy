@@ -982,11 +982,7 @@ You can fork this repository by using the following steps:
 
 ### Local VS Deployment
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site on Heroku.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+There are no known differences between the local development site and the live deployed version on Heroku.
 
 ## Credits
 
@@ -999,14 +995,14 @@ Use this space to discuss any differences between the local version you've devel
 | [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
 | [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
 | [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
-| [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
+| [Django Documentation](https://docs.djangoproject.com/en/5.0/ref/templates/builtins/) | entire site | Using template tags to format dates |
 | [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
 | [FreeCodeCamp](https://www.freecodecamp.org/news/javascript-date-format-how-to-format-a-date-in-js/) | basket update/delete buttons | Changing date format in javascript |
 | [StackOverflow](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown) | error pages | 10 second countdown timer |
 | [Django Project Forum](https://forum.djangoproject.com/t/pass-template-content-variable-to-javascript/22313) | lesson details page | passing template variables to js file |
 | [StackOverflow](https://stackoverflow.com/questions/13371765/how-to-find-the-previous-sibling-of-parent3) | basket template js | finding previous sibling of parent |
+| [W3 Schools](https://www.w3schools.com/js/js_loop_for.asp) | home page postload script | used to generate the testimonial stars |
+| [Django Documentation](https://docs.djangoproject.com/en/5.0/topics/testing/) | entire site | used for writing python tests |
 
 ### Media
 
