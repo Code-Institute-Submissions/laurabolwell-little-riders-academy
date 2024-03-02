@@ -85,8 +85,14 @@ def edit_question(request, question_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_question(request, question_id):
     """ Delete a question from the FAQs list """
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'You do not have permission to access this page.'
+        )
+        return redirect(reverse('faqs'))
     question = get_object_or_404(Question, pk=question_id)
     question.delete()
     messages.success(request, 'Question deleted!')
