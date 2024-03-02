@@ -998,7 +998,7 @@ Use this space to discuss any differences between the local version you've devel
 | [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
 | [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
 | [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
-| [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+| [FreeCodeCamp](https://www.freecodecamp.org/news/javascript-date-format-how-to-format-a-date-in-js/) | basket update/delete buttons | Changing date format in javascript |
 | [StackOverflow](https://stackoverflow.com/questions/31106189/create-a-simple-10-second-countdown) | error pages | 10 second countdown timer |
 | [Django Project Forum](https://forum.djangoproject.com/t/pass-template-content-variable-to-javascript/22313) | lesson details page | passing template variables to js file |
 | [StackOverflow](https://stackoverflow.com/questions/13371765/how-to-find-the-previous-sibling-of-parent3) | basket template js | finding previous sibling of parent |
