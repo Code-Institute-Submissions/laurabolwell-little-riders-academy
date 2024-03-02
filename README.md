@@ -453,33 +453,39 @@ etc.
 
 ![screenshot](documentation/features/testimonial.png)
 
-####
+#### Profile Page
 
-- **Add a new lesson button**
-
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
-
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+- **Profile Information Update Form and Past Booking Overview**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/profile.png)
+
+- **Past Booking Details**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/profile_booking_info.png)
+
+#### Basket Page
+
+- **Basket Overview Message**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
-- **Add a new lesson button**
+![screenshot](documentation/features/basket_overview_message.png)
+
+- **Basket Items Details**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
 
-![screenshot](documentation/features/less_add_new_button.png)
+![screenshot](documentation/features/basket.png)
+
+- **Basket Adjust**
+
+    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+
+![screenshot](documentation/features/basket_adjust.png)
 - **Add a new lesson button**
 
     - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
