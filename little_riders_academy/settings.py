@@ -221,7 +221,7 @@ STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-    DEFAULT_FROM_EMAIL = 'little-riders-academy@example.com'
+    DEFAULT_FROM_EMAIL = 'info@littleridersacademy.com'
 else:
     EMAIL_BACKEND = EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # noqa
     EMAIL_USE_TLS = True
@@ -229,4 +229,4 @@ else:
     EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
-    DEFAULT_FROM_EMAIL = os.environ.get('info@littleridersacademy.com')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
