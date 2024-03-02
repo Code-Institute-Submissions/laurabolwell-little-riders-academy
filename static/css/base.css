@@ -119,6 +119,14 @@ h2, .heading {
     color: var(--light-blue);
 }
 
+.nav-link:hover {
+    color: var(--light-blue)
+}
+
+.dropdown-menu {
+    text-align: right;
+}
+
 .dropdown-item {
     color: var(--navy);
 }
@@ -276,12 +284,12 @@ input[type=number] {
 /* Remove accordian header highlight */
 .accordion-button:not(.collapsed) {
     background-color: var(--light-blue);
+    border-color: var(--sky-blue);
 }
 
 .accordion-button:focus {
     z-index: 3;
     border-color: var(--sky-blue);
-    outline: 0;
     box-shadow: none;
 }
 
