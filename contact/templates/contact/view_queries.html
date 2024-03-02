@@ -32,8 +32,8 @@
                     class="accordion-collapse collapse {% if query.id == 1 %}show{% endif %}"
                     aria-labelledby="query_heading_{{ query.id }}" data-bs-parent="#faqsaccordian">
                     <div class="accordion-body">
-                        {{ query.booking_number }}
-                        {{ query.query }}
+                        <p>Booking Number: {{ query.booking_number }}</p>
+                        <p>Message: {{ query.query }}</p>
                     </div>
                 </div>
             </div>
