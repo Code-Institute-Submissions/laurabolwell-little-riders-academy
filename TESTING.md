@@ -216,39 +216,21 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 ## Responsiveness
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+I've considered different size devices when designing my website and tested regularly throughout the development process to ensure full responsiveness. I've tested my deployed project on multiple devices to check for responsiveness issues.
 
-Use this space to discuss testing the live/deployed site on various device sizes.
+| Device | Mobile | Tablet | Desktop | Notes |
+| --- | --- | --- | --- | --- |
+| Homepage | ![screenshot](documentation/testing/responsiveness_testing/mobile_home.png) | ![screenshot](documentation/testing/responsiveness_testing/tablet_home.png) | ![screenshot](documentation/testing/responsiveness_testing/desktop_home.png) | Works as expected |
+| Lessons | ![screenshot](documentation/testing/responsiveness_testing/mobile_lessons.png) | ![screenshot](documentation/testing/responsiveness_testing/tablet_lessons.png) | ![screenshot](documentation/testing/responsiveness_testing/desktop_lessons.png) | Works as expected |
+| Lesson Details | ![screenshot](documentation/testing/responsiveness_testing/mobile_lesson_details.png) | ![screenshot](documentation/testing/responsiveness_testing/tablet_lesson_details.png) | ![screenshot](documentation/testing/responsiveness_testing/desktop_lesson_details.png) | Works as expected |
+| Basket | ![screenshot](documentation/testing/responsiveness_testing/mobile_basket.png) | ![screenshot](documentation/testing/responsiveness_testing/tablet_basket.png) | ![screenshot](documentation/testing/responsiveness_testing/desktop_basket.png) | Works as expected |
+| Checkout | ![screenshot](documentation/testing/responsiveness_testing/mobile_checkout.png) | ![screenshot](documentation/testing/responsiveness_testing/tablet_checkout.png) | ![screenshot](documentation/testing/responsiveness_testing/desktop_checkout.png) | Works as expected |
+| Checkout Success | ![screenshot](documentation/testing/responsiveness_testing/mobile_checkout_success.png) | ![screenshot](documentation/testing/responsiveness_testing/tablet_checkout_success.png) | ![screenshot](documentation/testing/responsiveness_testing/desktop_checkout_success.png) | Works as expected |
+| Contact | ![screenshot](documentation/testing/responsiveness_testing/mobile_contact.png) | ![screenshot](documentation/testing/responsiveness_testing/tablet_contact.png) | ![screenshot](documentation/testing/responsiveness_testing/desktop_contact.png) | Works as expected |
+| FAQs | ![screenshot](documentation/testing/responsiveness_testing/mobile_faqs.png) | ![screenshot](documentation/testing/responsiveness_testing/tablet_faqs.png) | ![screenshot](documentation/testing/responsiveness_testing/desktop_faqs.png) | Works as expected |
+| Profile | ![screenshot](documentation/testing/responsiveness_testing/mobile_profile.png) | ![screenshot](documentation/testing/responsiveness_testing/tablet_profile.png) | ![screenshot](documentation/testing/responsiveness_testing/desktop_profile.png) | Works as expected |
+| Testimonial | ![screenshot](documentation/testing/responsiveness_testing/mobile_testimonial.png) | ![screenshot](documentation/testing/responsiveness_testing/tablet_testimonial.png) | ![screenshot](documentation/testing/responsiveness_testing/desktop_testimonial.png) | Works as expected |
 
-The minimum requirement is for the following 3 tests:
-- Mobile
-- Tablet
-- Desktop
-
-**IMPORTANT**: You must provide screenshots of the tested responsiveness, to "prove" that you've actually tested them.
-
-Using the "amiresponsive" mockup image (or similar) does not suffice the requirements.
-Consider using some of the built-in device sizes in the Developer Tools.
-
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well.
-It showcases a higher level of manual tests, and can be seen as a positive inclusion!
-
-Sample responsiveness testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've tested my deployed project on multiple devices to check for responsiveness issues.
-
-| Device | Home | About | Contact | etc | Notes |
-| --- | --- | --- | --- | --- | --- |
-| Mobile (DevTools) | ![screenshot](documentation/responsive-mobile-home.png) | ![screenshot](documentation/responsive-mobile-about.png) | ![screenshot](documentation/responsive-mobile-contact.png) | ![screenshot](documentation/responsive-mobile-etc.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](documentation/responsive-tablet-home.png) | ![screenshot](documentation/responsive-tablet-about.png) | ![screenshot](documentation/responsive-tablet-contact.png) | ![screenshot](documentation/responsive-tablet-etc.png) | Works as expected |
-| Desktop | ![screenshot](documentation/responsive-desktop-home.png) | ![screenshot](documentation/responsive-desktop-about.png) | ![screenshot](documentation/responsive-desktop-contact.png) | ![screenshot](documentation/responsive-desktop-etc.png) | Works as expected |
-| XL Monitor | ![screenshot](documentation/responsive-xl-home.png) | ![screenshot](documentation/responsive-xl-about.png) | ![screenshot](documentation/responsive-xl-contact.png) | ![screenshot](documentation/responsive-xl-etc.png) | Scaling starts to have minor issues |
-| 4K Monitor | ![screenshot](documentation/responsive-4k-home.png) | ![screenshot](documentation/responsive-4k-about.png) | ![screenshot](documentation/responsive-4k-contact.png) | ![screenshot](documentation/responsive-4k-etc.png) | Noticeable scaling issues |
-| Google Pixel 7 Pro | ![screenshot](documentation/responsive-pixel-home.png) | ![screenshot](documentation/responsive-pixel-about.png) | ![screenshot](documentation/responsive-pixel-contact.png) | ![screenshot](documentation/responsive-pixel-etc.png) | Works as expected |
-| iPhone 14 | ![screenshot](documentation/responsive-iphone-home.png) | ![screenshot](documentation/responsive-iphone-about.png) | ![screenshot](documentation/responsive-iphone-contact.png) | ![screenshot](documentation/responsive-iphone-etc.png) | Works as expected |
-| repeat for any other tested browsers | x | x | x | x | x |
 
 ## Lighthouse Audit
 
@@ -277,10 +259,9 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 Defensive programming was manually tested with the below user acceptance testing:
 
-| Page | Expectation | Test | Result | Fix | Screenshot |
+| | Expectation | Test | Result | Fix | Screenshot |
 | --- | --- | --- | --- | --- | --- |
-| Unauthenticated users should not be able to access pages requiring authentication and standard users should not be able to access superuser pages.| | | | | |
-| | Lesson add page only accessible to superusers | Tried to access 'add_lesson' without logging in | The feature behaved as expected and redirected to login page | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/lesson_add_redirect.png) |
+| Unauthenticated users should not be able to access pages requiring authentication and standard users should not be able to access superuser pages. | Lesson add page only accessible to superusers | Tried to access 'add_lesson' without logging in | The feature behaved as expected and redirected to login page | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/lesson_add_redirect.png) |
 | | Lesson add page only accessible to superusers | Tried to access 'add_lesson' by logging in as a regular user | The feature behaved as expected and redirected to lessons page with an error message | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/lesson_add_not_super.png) |
 | | Lesson edit page only accessible to superusers | Tried to access 'edit_lesson' without logging in | The feature behaved as expected and redirected to login page | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/lesson_edit_redirect.png) |
 | | Lesson edit page only accessible to superusers | Tried to access 'edit_lesson' by logging in as a regular user | The feature behaved as expected and redirected to lessons page with an error message | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/lesson_edit_not_super.png) |
@@ -294,8 +275,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | FAQ delete page only accessible to superusers | Tried to access 'delete_question' by logging in as a regular user | The feature behaved as expected and redirected faqs page with an error message | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/faq_delete_not_super.png) |
 | | Leave testimonial page only accessible to logged in users | Tried to access 'leave_testimonial' without logging in | The feature behaved as expected and redirected to login page with an error message | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/testimonials_redirect.png) |
 | | Profile page only accessible to logged in users | Tried to access 'profile' without logging in | The feature behaved as expected and redirected to login page | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/profile_redirect.png) |
-| Users cannot submit empty forms | | | | | |
-| | Contact form cannot be submitted with empty required fields | Tested the page by trying to submit with a blank name | The form behaved as expected, and flagged that a name was needed | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/contact_name.png) |
+| Users cannot submit empty forms | Contact form cannot be submitted with empty required fields | Tested the page by trying to submit with a blank name | The form behaved as expected, and flagged that a name was needed | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/contact_name.png) |
 | | Contact form cannot be submitted with empty required fields | Tested the page by trying to submit with a blank email | The form behaved as expected, and flagged that an email was needed | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/contact_email.png) |
 | | Contact form cannot be submitted with empty required fields | Tested the page by trying to submit with a blank message | The form behaved as expected, and flagged that a message was needed | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/contact_message.png) |
 | | Add to basket form cannot be submitted with empty date field | Tested the page by trying to submit with a blank date | The form behaved as expected, and flagged that a date was needed | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/lesson_details_date.png) |
@@ -308,16 +288,12 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Add Lesson form will not allow submission with blank name description field | Tested the page by trying to submit with blank description field | The form behaved as expected, and flagged that a description was needed | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/add_lesson_description.png) |
 | | Add Lesson form will not allow submission with blank image field | Tested the page by trying to submit with blank image field | The form behaved as expected, and flagged that an image was needed | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/add_lesson_image.png) |
 | | Leave testimonial form will not allow submission with blank review field | Tested the page by trying to submit with blank review field | The form behaved as expected, and flagged that a review was needed | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/testimonials_blank_review.png) |
-| Email addresses must be valid | | | | | |
-| | Checkout form will not allow submission with an incorrect email address | Tested the page by trying to submit with incorrect format email addresses | The form behaved as expected, and the complete_checkout button disables when the email address is incorrect (it must match Django's GitHub code for "domain_regex") | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/valid_email.png) |
-| Data cannot be accidentally modified or deleted | | | | | |
-| | Cannot edit lesson data without checking with user | Tested the page by trying to edit lesson details | The form behaved as expected, and an edit_lesson modal appeared to ask if I definitely wanted to edit the lesson. | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/edit_lesson_modal.png) |
+| Email addresses must be valid | Checkout form will not allow submission with an incorrect email address | Tested the page by trying to submit with incorrect format email addresses | The form behaved as expected, and the complete_checkout button disables when the email address is incorrect (it must match Django's GitHub code for "domain_regex") | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/valid_email.png) |
+| Data cannot be accidentally modified or deleted | Cannot edit lesson data without checking with user | Tested the page by trying to edit lesson details | The form behaved as expected, and an edit_lesson modal appeared to ask if I definitely wanted to edit the lesson. | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/edit_lesson_modal.png) |
 | | Cannot delete lesson data without checking with user | Tested the page by trying to delete a lesson | The page behaved as expected, and a delete_lesson modal appeared to ask if I definitely wanted to delete the lesson. This happens on both the delete button on the main lessons page and the delete button on the lesson_details page. | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/delete_lesson_modal.png) |
-| Data cannot be accidentally modified or deleted | | | | | |
-| | Cannot edit a question without checking with user | Tested the page by trying to edit a question | The form behaved as expected, and an edit_question modal appeared to ask if I definitely wanted to edit the question | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/edit_question_modal.png) |
+| Data cannot be accidentally modified or deleted | Cannot edit a question without checking with user | Tested the page by trying to edit a question | The form behaved as expected, and an edit_question modal appeared to ask if I definitely wanted to edit the question | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/edit_question_modal.png) |
 | | Cannot delete a question without checking with user | Tested the page by trying to delete a question | The page behaved as expected, and a delete_question modal appeared to ask if I definitely wanted to delete the lesson. | Test concluded and passed | ![screenshot](documentation/testing/defensive_programming/delete_question_modal.png) |
-| All links and buttons work as expected | | | | | |
-| | All links and buttons on all pages have been extensively tested and all work as intended | | Pass | | |
+| All links and buttons work as expected | All links and buttons on all pages have been extensively tested and all work as intended | | Pass | | |
 
 ## User Story Testing
 
