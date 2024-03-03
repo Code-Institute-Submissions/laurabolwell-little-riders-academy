@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
-{% endblock %}
-
 {% block content %}
 <main>
     <!-- HERO IMAGE -->
@@ -83,21 +79,6 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Function to generate stars based on the rating
-        const starContainers = document.getElementsByClassName("star-container");
-        for (let i = 0; i < starContainers.length; i++) {
-            let starDiv = starContainers[i];
-            let stars = starDiv.getAttribute('data-stars'); // testimonial rating out of 5
-            for (let i = 1; i <= 5; i++) {
-                const star = document.createElement("i");
-                star.className = i <= stars ? "fa-solid fa-star" : "fa-regular fa-star";
-                star.classList.add("text-yellow", "mx-1");
-                starDiv.appendChild(star);
-            }
-        }
-    });
-</script>
+    <script src="{% static 'home/js/generate_stars.js' %}"></script>
 
 {% endblock %}
