@@ -188,7 +188,7 @@ footer a i:hover {
 /* BOOTSTRAP TOASTS */
 .toast-container {
     position: absolute;
-    top: 120px;
+    top: 117px;
     right: 10px;
     z-index: 99999999999;
 }
@@ -303,3 +303,9 @@ input[type=number] {
 }
 
 /* MEDIA QUERIES */
+@media screen and (min-width: 992px) {
+    .toast-container {
+        position: absolute;
+        top: 134px;
+    }
+}
