@@ -350,15 +350,11 @@ I fully acknowledge and understand that, in a real-world scenario, an extensive 
 
 ### JavaScript (Jest Testing)
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+I have not carried out any jest testing on this project due to the only javascript file in the project being the stripe_elements.js file which consists of code taken from the stripe documentation. All other scripts are written in the bottom of html files and rely heavily on template variables. I have tried to move the scripts to external js files to be able to test them but I cannot confidently pass through the loops of template variables to be used correctly, and so I have decided not to carry out jest testing so as not to risk losing any of the javascript functionality of the site.
 
-Adjust the code below (file names, etc.) to match your own project files/folders.
+If I had any other javascript files, these are the steps I would carry out to test them:
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I have used the [Jest](https://jestjs.io) JavaScript testing framework to test the application functionality.
-
-In order to work with Jest, I first had to initialize NPM.
+In order to work with Jest, first initialize NPM.
 
 - `npm init`
 - Hit `enter` for all options, except for **test command:**, just type `jest`.
@@ -450,7 +446,8 @@ Below are the results from the various apps on my application that I've tested:
 | App | Coverage | Test Results | Coverage |
 | --- | --- | --- | --- |
 | FAQs | 100% | ![screenshot](documentation/testing/automated_testing/python/faqs_test.png) | ![screenshot](documentation/testing/automated_testing/python/faqs_coverage.png) |
-| Lessons | 100% | ![screenshot](documentation/testing/automated_testing/python/lessons_test.png) | ![screenshot](documentation/testing/automated_testing/python/lessons_coverage.png) |
+| Lessons | 94% | ![screenshot](documentation/testing/automated_testing/python/lessons_test.png) | ![screenshot](documentation/testing/automated_testing/python/lessons_coverage.png) |
+| Contact | 98% | ![screenshot](documentation/testing/automated_testing/python/contact_test.png) | ![screenshot](documentation/testing/automated_testing/python/contact_coverage.png) |
 
 
 ## Bugs
