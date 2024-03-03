@@ -94,96 +94,91 @@ I've used CSS `:root` variables to easily update the global colour scheme by cha
 
 ## Wireframes
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, display your wireframe screenshots using a Markdown `table`.
-Instructions on how to do Markdown `tables` start on line #213 on this site: https://pandao.github.io/editor.md/en.html
-
-Alternatively, dropdowns are a way to condense several wireframes into a collapsible menu to save space.
-Dropdowns in Markdown are considered some of the only acceptable HTML components that are allowed for assessment purposes.
-
-**IMPORTANT**! **IMPORTANT**! **IMPORTANT**!
-The example below uses the `details` and `summary` code elements.
-However, for these scripts to work, I've had to add spaces within the `< >` elements.
-
-You MUST remove these spaces for it to work properly on your own README/TESTING files.
-Remove the spaces within the `< >` brackets for the `details` and `summary` code elements,
-for the Mobile, Tablet, and Desktop wireframes.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
 ### Mobile Wireframes
 
-< details >
-< summary > Click here to see the Mobile Wireframes < / summary >
+<details>
+<summary> Click here to see the Tablet Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/mobile-home.png)
+  - ![screenshot](documentation/wireframes/mobile_home.png)
 
-About
-  - ![screenshot](documentation/wireframes/mobile-about.png)
+Lessons
+  - ![screenshot](documentation/wireframes/mobile_lessons.png)
 
-Contact
-  - ![screenshot](documentation/wireframes/mobile-contact.png)
+Lesson Details
+  - ![screenshot](documentation/wireframes/mobile_lesson_details.png)
 
-Gallery
-  - ![screenshot](documentation/wireframes/mobile-gallery.png)
+Basket
+  - ![screenshot](documentation/wireframes/mobile_basket.png)
 
-etc.
-  - repeat for any remaining mobile wireframes
+Checkout
+  - ![screenshot](documentation/wireframes/mobile_checkout.png)
 
-< / details >
+Profile
+  - ![screenshot](documentation/wireframes/mobile_profile.png)
+
+
+</details>
 
 ### Tablet Wireframes
 
-< details >
-< summary > Click here to see the Tablet Wireframes < / summary >
+<details>
+<summary> Click here to see the Tablet Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/tablet-home.png)
+  - ![screenshot](documentation/wireframes/tablet_home.png)
 
-About
-  - ![screenshot](documentation/wireframes/tablet-about.png)
+Lessons
+  - ![screenshot](documentation/wireframes/tablet_lessons.png)
 
-Contact
-  - ![screenshot](documentation/wireframes/tablet-contact.png)
+Lesson Details
+  - ![screenshot](documentation/wireframes/tablet_lesson_details.png)
 
-Gallery
-  - ![screenshot](documentation/wireframes/tablet-gallery.png)
+Basket
+  - ![screenshot](documentation/wireframes/tablet_basket.png)
 
-etc.
-  - repeat for any remaining tablet wireframes
+Checkout
+  - ![screenshot](documentation/wireframes/tablet_checkout.png)
 
-< / details >
+Profile
+  - ![screenshot](documentation/wireframes/tablet_profile.png)
+
+</details>
 
 ### Desktop Wireframes
 
-< details >
-< summary > Click here to see the Desktop Wireframes < / summary >
+<details>
+<summary> Click here to see the Tablet Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/desktop-home.png)
+  - ![screenshot](documentation/wireframes/desktop_home.png)
 
-About
-  - ![screenshot](documentation/wireframes/desktop-about.png)
+Lessons
+  - ![screenshot](documentation/wireframes/desktop_lessons.png)
 
-Contact
-  - ![screenshot](documentation/wireframes/desktop-contact.png)
+Lesson Details
+  - ![screenshot](documentation/wireframes/desktop_lesson_details.png)
 
-Gallery
-  - ![screenshot](documentation/wireframes/desktop-gallery.png)
+Basket
+  - ![screenshot](documentation/wireframes/desktop_basket.png)
 
-etc.
-  - repeat for any remaining desktop wireframes
+Checkout
+  - ![screenshot](documentation/wireframes/desktop_checkout.png)
 
-< / details >
+Profile
+  - ![screenshot](documentation/wireframes/desktop_profile.png)
+
+</details>
 
 ## Features
 
 ### Existing Features
+
+<details>
+<summary> Click here to see the Features </summary>
 
 #### All Pages on the Site Have:
 
@@ -489,6 +484,8 @@ etc.
 
 ![screenshot](documentation/features/email_confirmation.png)
 
+</details>
+
 ### Future Features
 
 - Superuser View Bookings
@@ -504,6 +501,7 @@ etc.
 - [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) used for an enhanced responsive layout.
 - [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site.
+- [jQuery](https://jquery.com/) used for user interaction on the site.
 - [Python](https://www.python.org) used as the back-end programming language.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
