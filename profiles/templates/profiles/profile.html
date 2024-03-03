@@ -35,7 +35,7 @@
                                     <ul class="list-unstyled">
                                         {% for item in booking.bookingitems.all %}
                                         <li class="small">
-                                            {{ item.lesson.name}} on {{ item.date | date:"j F y" }} for {{ item.quantity }} {% if quantity == 1 %}child{% else %}children{% endif %}
+                                            {{ item.lesson.name}} on {{ item.date | date:"j F y" }} at {{ item.lesson.time }} for {{ item.quantity }} {% if quantity == 1 %}child{% else %}children{% endif %}
                                         </li>
                                         {% endfor %}
                                     </ul>

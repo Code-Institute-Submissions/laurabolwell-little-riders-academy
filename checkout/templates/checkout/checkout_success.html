@@ -38,7 +38,7 @@
                     {% for item in booking.bookingitems.all %}
                     <div class="row my-3">
                         <div class="col-12 col-md-5 ">
-                                <span class="text-uppercase fw-bolder">{{ item.lesson.name }}</span> on {{ item.date | date:"j F Y"}}
+                                <span class="text-uppercase fw-bolder">{{ item.lesson.name }}</span> on {{ item.date | date:"j F Y"}} at {{ item.lesson.time }}
                         </div>
                         <div class="col-6 col-md-5">
                             <p class="small mb-0">(For {{ item.quantity }}{% if item.quantity == 1 %} child{% else %} children{% endif %} @ £{{ item.lesson.price }} each)</p>
