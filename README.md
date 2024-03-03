@@ -218,19 +218,19 @@ etc.
 
 - **Hero Image**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Large image of children on bikes with the business logo in an overlay on top.
 
 ![screenshot](documentation/features/home_hero.png)
 
 - **About Us Section**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Basic information about the site and business. Also contains a button linking to the main lessons page.
 
 ![screenshot](documentation/features/home_about.png)
 
 - **Testimonials Section**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Testimonials uploaded by users are displayed in a carousel at the bottom of the page. They include a star rating (out of 5), a written comment, and a name (users have the option to keep this anonymous) and date that the review was left. The testimonials will auto scroll or users can navigate through them by clicking at each edge of the card.
 
 ![screenshot](documentation/features/home_testimonials.png)
 
@@ -238,14 +238,14 @@ etc.
 
 - **Lessons Cards**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Contains a picture and then a basic overview of the day, time and recommended age range. There is a large 'Full Details' button on each card to move through to the lesson details page. If a superuser is logged in, the edit and delete buttons will become visible on each card.
 
 ![screenshot](documentation/features/lessons_superuser.png)
 ![screenshot](documentation/features/lessons.png)
 
 - **Add New Lesson Button**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If a superuser is logged in, the 'Add a new lesson' button is visible underneath the lessons.
 
 ![screenshot](documentation/features/lesson_add_new_button.png)
 
@@ -253,32 +253,32 @@ etc.
 
 - **Lesson Full Details**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Full details of the lesson including a detailed description, day, time, price, duration, recommended age, and maximum class size.
 
 ![screenshot](documentation/features/lesson_details_superuser.png)
 ![screenshot](documentation/features/lesson_details.png)
 
 - **Lesson Details Edit and Delete Buttons**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    -  If a superuser is logged in, the edit and delete buttons will become visible.
 
 ![screenshot](documentation/features/lesson_details_edit_delete_buttons.png)
 
 - **Delete Lesson Modal**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If a superuser chooses to delete a lesson, a modal will pop up to ask for confirmation before deleting.
 
 ![screenshot](documentation/features/lesson_details_delete_modal.png)
 
 - **Datepicker**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - The datepicker has all dates disabled apart from those days when a lesson is taking place. Users can book lessons up to 6 weeks in advance, so all dates further ahead than that are also disables, as well as all past dates.
 
 ![screenshot](documentation/features/lesson_details_datepicker.png)
 
 - **Quantity Buttons**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Quantity buttons so that users can book more than one child onto a lesson. The buttons disable below 1, and disable when the quantity is increased to the maximum class size.
 
 ![screenshot](documentation/features/lesson_details_quantity_buttons.png)
 ![screenshot](documentation/features/lesson_details_min_quantity.png)
@@ -286,7 +286,7 @@ etc.
 
 - **Add to Basket Buttons**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Large add to basket button to take users through to view their basket, and also a back button to go back to the lessons without having to use the browser back button.
 
 ![screenshot](documentation/features/lesson_details_add_to_basket_button.png)
 
@@ -295,13 +295,13 @@ etc.
 
 - **Add Lesson Form**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Gives superusers the ability to add a new lesson to the website. All fields are required, some have been prepopulated with default values, the day and time are to be selected from a dropdown. Users must also upload an image to use.
 
 ![screenshot](documentation/features/add_lesson.png)
 
 - **Add Lesson Form Buttons**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Only accessible to superusers. Options to add the lesson to the site, or to cancel and go back without having to use the browser back button.
 
 ![screenshot](documentation/features/add_lesson_buttons.png)
 
@@ -309,19 +309,19 @@ etc.
 
 - **Edit Lesson Form**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Only accessible to superusers. The edit lesson form is prepopulated with all the information of the lesson the superuser is editing.
 
 ![screenshot](documentation/features/edit_lesson.png)
 
 - **Edit Lesson Buttons**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Options to update the lesson details, or to cancel and go back without having to use the browser back button.
 
 ![screenshot](documentation/features/edit_lesson_buttons.png)
 
 - **Edit Lesson Modal**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If the superuser presses the edit button on the form, the edit modal will pop up and ask user to confirm before making the changes.
 
 ![screenshot](documentation/features/edit_lesson_modal.png)
 
@@ -329,43 +329,43 @@ etc.
 
 - **FAQs Accordian**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Accordian showing FAQs. The questions are in the accordian header and the answers are in the collapsed body sections so users can quickly find the question they want answered at a glance. The first question already has its answer expanded.
 
 ![screenshot](documentation/features/faqs_accordian.png)
 
 - **FAQs Add Question Button**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If the user is a superuser, the Add Question button will be visible at the top of the page.
 
 ![screenshot](documentation/features/faqs_add_question_button.png)
 
 - **FAQs Edit and Delete Buttons**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If the user is a superuser, the edit and delete buttons will be visible underneath the answer of each question.
 
 ![screenshot](documentation/features/faqs_edit_delete_buttons.png)
 
 - **FAQs Delete Modal**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If the superuser clicks on the delete button for a question, a modal will pop up asking for confirmation before deleting.
 
 ![screenshot](documentation/features/faqs_delete_modal.png)
 
 - **FAQs Add Question Form**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Only accessible to superusers. The form cannot be submitted with either the question or answer field blank. Buttons at the bottom give the user the options to add the question to the site or cancel and return to the previous page.
 
 ![screenshot](documentation/features/faqs_add_question.png)
 
 - **FAQs Edit Question Form**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Only accessible to superusers. The form is prepopulated with the question and answer that the user is editing. Buttons at the bottom give the user options to update the question or cancel and return to the previous page.
 
 ![screenshot](documentation/features/faqs_edit_question.png)
 
 - **FAQs Edit Question Modal**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If the user clicks on the update question button, a modal will pop up asking the user to confirm before making the changes.
 
 ![screenshot](documentation/features/faqs_edit_modal.png)
 
@@ -373,7 +373,7 @@ etc.
 
 - **Contact Form**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Accessible to anyone. Name, email and message fields are required, the booking number field can be filled in if the query relates to a particular booking or left blank if not. If the user is logged in, the contact form's name and email fields will be prepopulated with the user's information.
 
 ![screenshot](documentation/features/contact_form.png)
 
@@ -383,7 +383,7 @@ etc.
 
 - **View Queries Accordian**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Only accessible to superusers. Name, email address and date shown in the header, the message is shown in the collapsed body section. Messages are displayed in order from newest date.
 
 ![screenshot](documentation/features/view_queries.png)
 
@@ -391,7 +391,7 @@ etc.
 
 - **Testimonial Form**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - All fields are compulsory. Display name is prepopulated with 'Anonymous' to let users know that they do not have to have their name displayed on the website. Rating is out of 5 and presented as a dropdown select.
 
 ![screenshot](documentation/features/testimonial.png)
 
@@ -399,13 +399,13 @@ etc.
 
 - **Profile Information Update Form and Past Booking Overview**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Profile page shows default billing information on the one side of the page, and past booking information on the other. All fields on the billing info are optional and the form can be submitted with any of the fields being left blank.
 
 ![screenshot](documentation/features/profile.png)
 
 - **Past Booking Details**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If a user clicks on the booking number of a past booking on the profile page, they will be taken to the checkout success page of that booking which contains all the information related to it. An information message will appear in the corner to let them know that this is a historical booking.
 
 ![screenshot](documentation/features/profile_booking_info.png)
 
@@ -413,19 +413,19 @@ etc.
 
 - **Basket Overview Message**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - When a lesson is added to the basket, a message appears in the corner to let the user know that the add to basket has been successful and also give them an overview of the basket contents and the total.
 
 ![screenshot](documentation/features/basket_overview_message.png)
 
 - **Basket Items Details**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Full details of all items in the basket, with buttons to go back to the lessons page or move forward to secure checkout
 
 ![screenshot](documentation/features/basket.png)
 
 - **Basket Adjust**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Alongside each lesson booked there are quantity selector buttons for users to adjust the number of children they are booking in. The update button will adjust these changes in the basket, and the delete button removes the lesson on that particular date entirely.
 
 ![screenshot](documentation/features/basket_adjust.png)
 
@@ -433,13 +433,13 @@ etc.
 
 - **Checkout Booking Details Form and Booking Summary**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Booking summary shown on right hand side of page so users can check that they are happy with the booking one last time before paying. Billing details to be input in the form on the left. 
 
 ![screenshot](documentation/features/checkout_booking_summary.png)
 
 - **Checkout Button**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Checkout form cannot be submitted until all fields are validated. The checkout button is disabled until the email address is accepted by Django regex validation criteria, and all other fields are validated in the form.
 
 ![screenshot](documentation/features/checkout_disabled_button.png)
 ![screenshot](documentation/features/checkout_complete_button.png)
@@ -447,25 +447,25 @@ etc.
 
 - **Checkout Payment Input**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Stripe payment input build into checkout page.
 
 ![screenshot](documentation/features/checkout_payment_input.png)
 
 - **Checkout Sign Up/ Sign In Links**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If user is not logged in, links remind them that they can checkout faster next time by logging in and saving their information.
 
 ![screenshot](documentation/features/checkout_create_account_links.png)
 
 - **Checkout Logged In User Booking Details Form and Booking Summary**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If the user is logged in, any saved information will be prepopulated in the checkout form.
 
 ![screenshot](documentation/features/checkout_logged_in_user.png)
 
 - **Checkout Save Info Checkbox**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - If a logged in user checks this box, any information they input in the form will be saved to their profile for future checkouts.
 
 ![screenshot](documentation/features/checkout_save_info_checkbox.png)
 
@@ -473,49 +473,30 @@ etc.
 
 - **Booking Summary Message**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Success message displays in top corner to let user know that the booking was successful.
 
 ![screenshot](documentation/features/checkout_success_message.png)
 
 - **Booking Confirmation and Details**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Full details of the lessons that have been booked along with an booking number and total. A message lets the user know that an email has been sent to the email address given on the booking. At the bottom there is a link to return to the lessons page.
 
 ![screenshot](documentation/features/checkout_success_page.png)
 
 - **Booking Confirmation Email**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - Email confirmation sent when bookings are successful.
 
 ![screenshot](documentation/features/email_confirmation.png)
+
 ### Future Features
 
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- Title for future feature #1
-    - Any additional notes about this feature.
-- Title for future feature #2
-    - Any additional notes about this feature.
-- Title for future feature #3
-    - Any additional notes about this feature.
+- Superuser View Bookings
+    - A page for the superuser to see all the bookings that have been made.
+- Booking tracker
+    - A counter to keep track of how many places have been booked in each lesson and only allow bookings up to the maximum class size.
 
 ## Tools & Technologies Used
-
-🛑🛑🛑🛑🛑 START OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-In this section, you should explain the various tools and technologies used to develop the project.
-Make sure to put a link (where applicable) to the source, and explain what each was used for.
-Some examples have been provided, but this is just a sample only, your project might've used others.
-Feel free to delete any unused items below as necessary.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
@@ -528,17 +509,12 @@ Feel free to delete any unused items below as necessary.
 - [GitHub](https://github.com) used for secure online code storage.
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
 - [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
-- [Codeanywhere](https://codeanywhere.com) used as a cloud-based IDE for development.
 - [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Materialize](https://materializecss.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
-- [Flask](https://flask.palletsprojects.com) used as the Python framework for the site.
+- [Flatpickr](https://flatpickr.js.org/examples/) used for the datepicker on the lesson_details page.
 - [Django](https://www.djangoproject.com) used as the Python framework for the site.
-- [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask.
-- [SQLAlchemy](https://www.sqlalchemy.org) used as the relational database management with Flask.
 - [PostgreSQL](https://www.postgresql.org) used as the relational database management.
 - [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
-- [Cloudinary](https://cloudinary.com) used for online static file storage.
 - [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
 - [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
 
