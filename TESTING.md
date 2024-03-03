@@ -10,12 +10,23 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flaurabolwell.github.io%2Flittle-riders-academy%2Findex.html) | ![screenshot](documentation/html-validation-home.png) | Section lacks header h2-h6 warning |
-| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flaurabolwell.github.io%2Flittle-riders-academy%2Fcontact.html) | ![screenshot](documentation/html-validation-contact.png) | obsolete iframe warnings |
-| Quiz | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flaurabolwell.github.io%2Flittle-riders-academy%2Fquiz.html) | ![screenshot](documentation/html-validation-quiz.png) | Pass: No Errors |
-| Add Blog | n/a | ![screenshot](documentation/html-validation-add-blog.png) | Duplicate IDs found, and fixed |
-| Checkout | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining HTML files |
+| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-riders-academy-7a3f050ed053.herokuapp.com%2F) | ![screenshot](documentation/testing/code_validation/html/home.png) | Pass: No Errors |
+| Lessons | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-riders-academy-7a3f050ed053.herokuapp.com%2Flessons%2F) | ![screenshot](documentation/testing/code_validation/html/lessons.png) | Pass: No Errors |
+| Lesson Details | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-riders-academy-7a3f050ed053.herokuapp.com%2Flessons%2F2%2F) | ![screenshot](documentation/testing/code_validation/html/lesson_details.png) | Pass: No Errors |
+| Basket | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-riders-academy-7a3f050ed053.herokuapp.com%2Fbasket%2F) | ![screenshot](documentation/testing/code_validation/html/basket.png) | Pass: No Errors |
+| Checkout | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-riders-academy-7a3f050ed053.herokuapp.com%2Fcheckout%2F) | ![screenshot](documentation/testing/code_validation/html/checkout.png) | Pass: No Errors |
+| Checkout Success | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-riders-academy-7a3f050ed053.herokuapp.com%2Fcheckout%2Fcheckout_success%2F7803C6DD41234FF5BADB5909BA137BA3) | ![screenshot](documentation/testing/code_validation/html/checkout_success.png) | Pass: No Errors |
+| FAQs | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-riders-academy-7a3f050ed053.herokuapp.com%2Ffaqs%2F) | ![screenshot](documentation/testing/code_validation/html/faqs.png) | Pass: No Errors |
+| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Flittle-riders-academy-7a3f050ed053.herokuapp.com%2Fcontact%2F) | ![screenshot](documentation/testing/code_validation/html/contact.png) | Pass: No Errors |
+| Add lesson | Page requires login, validated by source code | ![screenshot](documentation/testing/code_validation/html/add_lesson.png) | Pass: No Errors |
+| Edit lesson | Page requires login, validated by source code | ![screenshot](documentation/testing/code_validation/html/edit_lesson.png) | Pass: No Errors |
+| Add question | Page requires login, validated by source code | ![screenshot](documentation/testing/code_validation/html/add_question.png) | Pass: No Errors |
+| Edit question | Page requires login, validated by source code | ![screenshot](documentation/testing/code_validation/html/edit_question.png) | Pass: No Errors |
+| Profile | Page requires login, validated by source code | ![screenshot](documentation/testing/code_validation/html/profile.png) | Pass: No Errors |
+| Testimonial | Page requires login, validated by source code | ![screenshot](documentation/testing/code_validation/html/testimonial.png) | "Error: Attribute label not allowed on element input at this point." x 3. Error occurs in code rendered by django forms. |
+| View Queries | Page requires login, validated by source code | ![screenshot](documentation/testing/code_validation/html/view_queries.png) | Pass: No Errors |
+
+
 
 ### CSS
 
@@ -234,7 +245,7 @@ I've considered different size devices when designing my website and tested regu
 
 ## Lighthouse Audit
 
-I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues. There are some performance issues across the site due to the javascript librabries being loaded.
 
 | Page | Mobile | Desktop |
 | --- | --- | --- |

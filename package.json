@@ -1,0 +1,23 @@
+{
+  "name": "little-riders-academy",
+  "version": "1.0.0",
+  "description": "Little Riders Academy is a website for a business which teaches cycling lessons to young children. Parents can view the different lessons available, as well as being able to book and pay for them on the website. Users can checkout as a guest, or they can choose to create an account where their information can be saved to their profile for a faster checkout in future. As a logged in user they can also leave a testimonial to be displayed on the website. Other features include a FAQs page and a contact form. Admin users can add, edit and delete lessons, add edit and delete FAQs, and view messages that customers have sent through the contact form.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurabolwell/little-riders-academy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurabolwell/little-riders-academy/issues"
+  },
+  "homepage": "https://github.com/laurabolwell/little-riders-academy#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
