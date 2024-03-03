@@ -235,7 +235,7 @@ footer a i:hover {
 
 /* HOMEPAGE */
 .hero-outer {
-    height: calc(100vh - 124px);
+    height: calc(100vh - 106px);
     background: url("/media/hero-image.webp") no-repeat right top;
     background-size: cover;
     -webkit-background-size: cover;
@@ -250,6 +250,7 @@ footer a i:hover {
     left: 5%;
     height: 100px;
 }
+
 .logo {
     width: 500px;
     height: auto;
@@ -304,8 +305,17 @@ input[type=number] {
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 992px) {
+    .hero-outer {
+        height: calc(100vh - 124px);
+    }
     .toast-container {
         position: absolute;
         top: 134px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    #hero-logo, .logo {
+        display: none;
     }
 }
