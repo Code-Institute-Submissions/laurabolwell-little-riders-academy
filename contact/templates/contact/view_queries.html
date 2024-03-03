@@ -19,12 +19,11 @@
             <div class="accordion-item">
                 <!-- Accordian to display customer messages. First message expanded by default -->
                 <h2 class="accordion-header" id="query_heading_{{ query.id }}">
-                    <button class="accordion-button {% if query.id != 1 %}collapsed{% endif %}" type="button"
+                    <button class="accordion-button {% if query.id != 1 %}collapsed{% endif %} d-flex justify_content_between" type="button"
                         data-bs-toggle="collapse" data-bs-target="#collapse_{{ query.id }}" aria-expanded="true"
                         aria-controls="collapse_{{ query.id }}">
-                        <div class="col-3">From: {{ query.name }}</div>
-                        <div class="col-4">Email: {{ query.email }}</div>
-                        <div class="col-4">Sent on: {{ query.contact_date | date:"j F y" }}</div>
+                        <span class="mx-3">From: {{ query.name }}</span>
+                        <span class="mx-3">Sent on: {{ query.contact_date | date:"j F y" }}</span>
                     </button>
 
                 </h2>
@@ -32,6 +31,7 @@
                     class="accordion-collapse collapse {% if query.id == 1 %}show{% endif %}"
                     aria-labelledby="query_heading_{{ query.id }}" data-bs-parent="#faqsaccordian">
                     <div class="accordion-body">
+                        <p>Email: {{ query.email }}</p>
                         <p>Booking Number: {{ query.booking_number }}</p>
                         <p>Message: {{ query.query }}</p>
                     </div>
