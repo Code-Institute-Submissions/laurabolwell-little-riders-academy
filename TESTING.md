@@ -254,23 +254,23 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
-| Page | Mobile | Desktop | Notes |
-| --- | --- | --- | --- |
-| Home | ![screenshot](documentation/testing/lighthouse/mobile_home.png) | ![screenshot](documentation/testing/lighthouse/desktop_home.png) | Some minor warnings |
-| Lessons | ![screenshot](documentation/testing/lighthouse/mobile_lessons.png) | ![screenshot](documentation/testing/lighthouse/desktop_lessons.png) | Some minor warnings |
-| Lesson Details | ![screenshot](documentation/testing/lighthouse/mobile_lesson_details.png) | ![screenshot](documentation/testing/lighthouse/desktop_lesson_details.png) | Some minor warnings |
-| Add Lesson | ![screenshot](documentation/testing/lighthouse/mobile_add_lesson.png) | ![screenshot](documentation/testing/lighthouse/desktop_add_lesson.png) | Some minor warnings |
-| Edit Lesson | ![screenshot](documentation/testing/lighthouse/mobile_add_lesson.png) | ![screenshot](documentation/testing/lighthouse/desktop_edit_lesson.png) | Some minor warnings |
-| Basket | ![screenshot](documentation/testing/lighthouse/mobile_basket.png) | ![screenshot](documentation/testing/lighthouse/desktop_basket.png) | Some minor warnings |
-| Checkout | ![screenshot](documentation/testing/lighthouse/mobile_checkout.png) | ![screenshot](documentation/testing/lighthouse/desktop_checkout.png) | Some minor warnings |
-| Checkout Success | ![screenshot](documentation/testing/lighthouse/mobile_checkout_success.png) | ![screenshot](documentation/testing/lighthouse/desktop_checkout_success.png) | Some minor warnings |
-| Contact | ![screenshot](documentation/testing/lighthouse/mobile_contact.png) | ![screenshot](documentation/testing/lighthouse/desktop_contact.png) | Some minor warnings |
-| View Queries | ![screenshot](documentation/testing/lighthouse/mobile_view_queries.png) | ![screenshot](documentation/testing/lighthouse/desktop_view_queries.png) | Some minor warnings |
-| Add Testimonial | ![screenshot](documentation/testing/lighthouse/mobile_testimonials.png) | ![screenshot](documentation/testing/lighthouse/desktop_testimonials.png) | Some minor warnings |
-| Profile | ![screenshot](documentation/testing/lighthouse/mobile_profile.png) | ![screenshot](documentation/testing/lighthouse/desktop_profile.png) | Some minor warnings |
+| Page | Mobile | Desktop |
+| --- | --- | --- |
+| Home | ![screenshot](documentation/testing/lighthouse/mobile_home.png) | ![screenshot](documentation/testing/lighthouse/desktop_home.png) |
+| Lessons | ![screenshot](documentation/testing/lighthouse/mobile_lessons.png) | ![screenshot](documentation/testing/lighthouse/desktop_lessons.png) |
+| Lesson Details | ![screenshot](documentation/testing/lighthouse/mobile_lesson_details.png) | ![screenshot](documentation/testing/lighthouse/desktop_lesson_details.png) |
+| Add Lesson | ![screenshot](documentation/testing/lighthouse/mobile_add_lesson.png) | ![screenshot](documentation/testing/lighthouse/desktop_add_lesson.png) |
+| Edit Lesson | ![screenshot](documentation/testing/lighthouse/mobile_add_lesson.png) | ![screenshot](documentation/testing/lighthouse/desktop_edit_lesson.png) |
+| Basket | ![screenshot](documentation/testing/lighthouse/mobile_basket.png) | ![screenshot](documentation/testing/lighthouse/desktop_basket.png) |
+| Checkout | ![screenshot](documentation/testing/lighthouse/mobile_checkout.png) | ![screenshot](documentation/testing/lighthouse/desktop_checkout.png) |
+| Checkout Success | ![screenshot](documentation/testing/lighthouse/mobile_checkout_success.png) | ![screenshot](documentation/testing/lighthouse/desktop_checkout_success.png) |
+| Contact | ![screenshot](documentation/testing/lighthouse/mobile_contact.png) | ![screenshot](documentation/testing/lighthouse/desktop_contact.png) |
+| View Queries | ![screenshot](documentation/testing/lighthouse/mobile_view_queries.png) | ![screenshot](documentation/testing/lighthouse/desktop_view_queries.png) |
+| Add Testimonial | ![screenshot](documentation/testing/lighthouse/mobile_testimonials.png) | ![screenshot](documentation/testing/lighthouse/desktop_testimonials.png) |
+| Profile | ![screenshot](documentation/testing/lighthouse/mobile_profile.png) | ![screenshot](documentation/testing/lighthouse/desktop_profile.png) |
 | FAQs | ![screenshot](documentation/testing/lighthouse/mobile_faqs.png) | ![screenshot](documentation/testing/lighthouse/desktop_faqs.png) | Some minor warnings |
-| Add Question | ![screenshot](documentation/testing/lighthouse/mobile_add_question.png) | ![screenshot](documentation/testing/lighthouse/desktop_add_question.png) | Some minor warnings |
-| Edit Question | ![screenshot](documentation/testing/lighthouse/mobile_edit_question.png) | ![screenshot](documentation/testing/lighthouse/desktop_edit_question.png) | Some minor warnings |
+| Add Question | ![screenshot](documentation/testing/lighthouse/mobile_add_question.png) | ![screenshot](documentation/testing/lighthouse/desktop_add_question.png) |
+| Edit Question | ![screenshot](documentation/testing/lighthouse/mobile_edit_question.png) | ![screenshot](documentation/testing/lighthouse/desktop_edit_question.png) |
 
 
 ## Defensive Programming
