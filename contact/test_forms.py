@@ -24,7 +24,6 @@ class TestContactForm(TestCase):
             'booking_number': '', 'name': 'Test',
             'email': 'Test@test.com', 'query': 'Test',
         })
-        print(form.errors)
         self.assertTrue(form.is_valid())
 
     def test_fields_are_excluded_from_form(self):
