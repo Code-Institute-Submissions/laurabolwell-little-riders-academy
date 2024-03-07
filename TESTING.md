@@ -413,14 +413,6 @@ Once ready, to run the tests, use this command:
 
 - `npm test --coverage`
 
-Below are the results from the tests that I've written for this application:
-
-| Test Suites | Tests | Screenshot |
-| --- | --- | --- |
-| 1 passed | 16 passed | ![screenshot](documentation/js-test-coverage.png) |
-| x | x | repeat for all remaining tests |
-
-
 ### Python (Unit Testing)
 
 I have used Django's built-in unit testing framework to test the application functionality.
@@ -449,6 +441,8 @@ Below are the results from the various apps on my application that I've tested:
 | Lessons | 94% | ![screenshot](documentation/testing/automated_testing/python/lessons_test.png) | ![screenshot](documentation/testing/automated_testing/python/lessons_coverage.png) |
 | Contact | 98% | ![screenshot](documentation/testing/automated_testing/python/contact_test.png) | ![screenshot](documentation/testing/automated_testing/python/contact_coverage.png) |
 
+I ran a total of 45 tests across the Lessons, Contact and FAQs apps and the overall coverage of my Python unit testing on the application was 73%.
+![screenshot](documentation/testing/automated_testing/python/full_coverage_report.png)
 
 ## Bugs
 
